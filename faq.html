@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./images/logo/faveicon.jpg"
+            type="image/x-icon">
+        <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+        <link rel="stylesheet"
+            href="assets/fontaswesome/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="./css/custom.css">
+        <link href="./css/tailwind.css" rel="stylesheet" />
+              <title>Traveli- Travel booking HTML Template</title>
+        <script>
+         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+             document.documentElement.classList.add("dark");
+         } else {
+             document.documentElement.classList.remove("dark");
+         }
+      </script>
+    </head>
+    <body>
+        <!-- PRELOADER -->
+        <!-- <div id="preloader">
+         <div class="loader_line"></div>
+         </div> -->
+        <!-- /PRELOADER -->
+        <!--01. Header section start -->
+        <header class="hidden md:block">
+            <div class="bg-title">
+                <div class="container">
+                    <div class="flex justify-between items-center py-4">
+                        <div>
+                            <a class="font-medium text-sm text-white mr-7"
+                                href="tel:+880 171 4588 484"><i class="fa-solid
+                                    mr-1 fa-phone"></i>+880 171 4588 484</a>
+                            <a class="font-medium text-sm text-white border-r
+                                pr-6 " href="mailto:hillviewhotel@gmail.com"><i
+                                    class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
+                            <a class="text-white text-sm px-6" href="http://"
+                                target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a class="text-white text-sm " href="http://"
+                                target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a class="text-white text-sm px-6" href=""><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div>
+                            <select class="bg-transparent text-yello " name=""
+                                id="">
+                                USD<i class="fa-solid block mr-3 fa-sort-down"></i>
+                                <option value="USD">USD</option>
+                                <option value="USD">USD</option>
+                            </select>
+                            <select class="bg-transparent text-yello border-l
+                                inline-block pl-3 border-white " name="" id="">
+                                ENGLISH<i class="fa-solid fa-sort-down"></i>
+                                <option value="ENGLISH">ENGLISH</option>
+                                <option value="ENGLISH">ENGLISH</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-icon pt-[22px] pb-[25px]">
+                <div class="container flex justify-between items-center">
+                    <h2 class="text-[30px] font-semibold"><span
+                            class="text-green">Bhalo</span><span
+                            class="text-yello">Hotels</span></h2>
+                    <ul class="flex justify-center items-center gap-5">
+                        <!--                                               -->
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href=""><span>Home </span> <i
+                                    class="fa-solid fa-sort-down"></i></a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Rooms</a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Events</a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Blog</a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href=""><span>Pages </span> <i
+                                    class="fa-solid fa-sort-down"></i></a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Contact</a></li>
+                    </ul>
+                    <div class="flex items-center gap-4">
+                        <span>$0.00</span>
+                        <span class="w-[38px] bg-[#e7eaec] relative h-[38px]
+                            rounded-full flex justify-center items-center"><i
+                                class="fa-solid fa-basket-shopping"></i> <span
+                                class="absolute w-4 h-4 bg-yello rounded-full
+                                top-0 right-0 flex justify-center items-center
+                                text-sm font-semibold ">1</span></span>
+                        <img class="w-[55px] h-[55px] rounded-full"
+                            src="./images/icons/Ellipse 642.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header section start -->
+        <!-- Sign In section start -->
+        <section class="bg-[#F8F7F1] pt-[60px] mb-[0px] md:mb-[130px] relative
+            ">
+
+            <div class="container ">
+                <div class="pb-10">
+                    <h2 class="text-center text-[40px] text-title font-bold
+                        leading-[44px] mb-6 ">Frequently Asked <span
+                            class="inline-block
+                            relative before:absolute before:w-[192px]
+                            before:h-[55px] before:z-[-4] before:-left-1 z-10
+                            before:bg-yello transform before:rounded-sm
+                            before:-skew-x-[4deg] ">Questions</span></h2>
+                    <p class="max-w-[618px] mx-auto text-center leading-[26px]
+                        text-black-lite">I seek to push the limits of creativity
+                        to create highly -engaging, user-friendly, and memorable
+                        interactive experiences.</p>
+                </div>
+                <hr class="text-[#CFCFCF] mb-[60px]">
+
+            </div>
+
+        </section>
+        <!-- Sign In section end -->
+        <section>
+            <div class="container">
+                <div class=" w-full mx-auto pt-[80px] md:pt-[80px]">
+                    <div>
+                        <h2 class="border-b border-[#6E7990]" id="accordion-example-heading-1">
+                          <button type="button" class="focus:outline-none focus:ring-offset-0 flex items-center justify-between w-full p-[18px] font-semibold text-[22px] text-left  border-none  rounded-t-xl  focus:ring-0" aria-expanded="true" aria-controls="accordion-example-body-1">
+                            <span>Is My Microwave Giving Me Cancer?</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          </button>
+                        </h2>
+                        <div id="accordion-example-body-1" class="hidden border-none" aria-labelledby="accordion-example-heading-1">
+                          <div class="p-5 border-none bg-[#F8F7F1]  ">
+                            <p class="mb-2 text-[#333333]">We use Royal mail and DHL to send most of our UK orders.Euro Car Parts reserves the right to use discretion in any circumstance where it makes more sense to use an alternative delivery method.</p>
+           
+                          </div>
+                        </div>
+                        <h2 class="border-b border-[#6E7990]" id="accordion-example-heading-2">
+                          <button type="button" class="focus:outline-none focus:ring-offset-0 flex items-center justify-between w-full p-[18px] font-semibold text-[22px] text-left  border-none  rounded-t-xl  focus:ring-0" aria-expanded="true" aria-controls="accordion-example-body-2">
+                            <span>How Long Am I Contagious When I Have The Flu Or A Cold?</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          </button>
+                        </h2>
+                        <div id="accordion-example-body-2" class="hidden border-none" aria-labelledby="accordion-example-heading-2">
+                          <div class="p-5 border-none bg-[#F8F7F1]  ">
+                            <p class="mb-2 text-[#333333]">We use Royal mail and DHL to send most of our UK orders.Euro Car Parts reserves the right to use discretion in any circumstance where it makes more sense to use an alternative delivery method.</p>
+           
+                          </div>
+                        </div>
+                        <h2 class="border-b border-[#6E7990]" id="accordion-example-heading-3">
+                          <button type="button" class="focus:outline-none focus:ring-offset-0 flex items-center justify-between w-full p-[18px] font-semibold text-[22px] text-left  border-none  rounded-t-xl  focus:ring-0" aria-expanded="true" aria-controls="accordion-example-body-3">
+                            <span>How To Book An Appointment?</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          </button>
+                        </h2>
+                        <div id="accordion-example-body-3" class="hidden border-none" aria-labelledby="accordion-example-heading-3">
+                          <div class="p-5 border-none bg-[#F8F7F1]  ">
+                            <p class="mb-2 text-[#333333]">We use Royal mail and DHL to send most of our UK orders.Euro Car Parts reserves the right to use discretion in any circumstance where it makes more sense to use an alternative delivery method.</p>
+           
+                          </div>
+                        </div>
+                      </div>
+            
+                    <button class="mx-auto underline text-lg font-semibold mt-[30px] block">See all FAQs</button>          
+                 </div>
+            </div>
+        </section>
+
+       
+
+
+        <!-- 09. Footer Section Start -->
+        <footer class="bg-footer bg-no-repeat pt-[320px] md:pt-[320px]
+            after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full
+            after:absolute after:z-[-1] bg-cover relative bg-top ">
+            <img class="absolute left-0 bottom-20 z-[-1]"
+                src="./images/icons/Group 22.png" alt="">
+            <div class="container">
+                <div class="grid grid-cols-12 pb-[60px] gap-[30px] ">
+                    <div class="col-span-12 lg:col-span-6 ">
+                        <div>
+                            <h4 class="text-[30px] font-semibold text-white ">About
+                                Hotel</h4>
+                            <span class="w-[60px] h-[2px] bg-yello block
+                                mt-[6px] "></span>
+                            <span class="w-[35px] h-[2px] bg-yello block
+                                mt-[6px]"></span>
+                            <p class="leading-[30px] pt-10 text-white w-2/3 ">Welcome
+                                to the best five-star deluxe hotel in New York.
+                                Hotel elementum sesue the aucan vestibulum
+                                aliquam justo in sapien rutrum volutpat.</p>
+                            <a class="text-white block pt-[25px]" href=""><i
+                                    class="fa-solid text-yello mr-2 fa-map"></i>
+                                Check on google map</a>
+                        </div>
+                    </div>
+                    <div class="col-span-6 lg:col-span-3 ">
+                        <div>
+                            <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
+                            <span class="w-[60px] h-[2px] bg-yello block
+                                mt-[6px] "></span>
+                            <span class="w-[35px] h-[2px] bg-yello block
+                                mt-[6px]"></span>
+                            <ul class="mt-10 space-y-4 ">
+                                <li><a class="text-white font-semibold" href="">Home</a></li>
+                                <li><a class="text-white font-semibold" href="">Home</a></li>
+                                <li><a class="text-white font-semibold" href="">Home</a></li>
+                                <li><a class="text-white font-semibold" href="">Home</a></li>
+                                <li><a class="text-white font-semibold" href="">Home</a></li>
+                                <li><a class="text-white font-semibold" href="">Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-6 lg:col-span-3 ">
+                        <div>
+                            <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
+                            <span class="w-[60px] h-[2px] bg-yello block
+                                mt-[6px] "></span>
+                            <span class="w-[35px] h-[2px] bg-yello block
+                                mt-[6px]"></span>
+                            <p class="leading-[30px] pt-10 text-white ">1616
+                                Broadway NY, New York 10001 <br>
+                                United States of America
+                            </p>
+                            <a class="text-white block text-[26px] font-medium
+                                pt-[25px]" href="tel:855 100 4444"><i
+                                    class="fa-solid transform -rotate-45 mr-2
+                                    fa-phone-volume"></i>855 100 4444</a>
+                            <a class="text-white block pt-[25px]"
+                                href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
+                            <img src="./images/icons/Vector 3.png" alt="">
+                            <ul class="pt-[22px] flex gap-7">
+                                <li class=""><a href=""><i class="fa-brands
+                                            text-white fa-facebook-f"></i></a></li>
+                                <li class=""><a href=""><i class="fa-brands
+                                            text-white fa-twitter"></i></a></li>
+                                <li class=""><a href=""><i class="fa-brands
+                                            text-white fa-instagram"></i></a></li>
+                                <li class=""><a href=""><i class="fa-brands
+                                            text-white fa-youtube"></i></a></li>
+                                <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-white">
+                <p class="py-[30px] text-center text-white ">© 2022 Portfolio @
+                    All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- 09. Footer Section End -->
+        <script src="./js/vendor/jquary.min.js"></script>
+      <!-- flowbite add -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

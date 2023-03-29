@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./images/logo/faveicon.jpg"
+            type="image/x-icon">
+        <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+        <link rel="stylesheet"
+            href="assets/fontaswesome/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="./css/custom.css">
+        <link href="./css/tailwind.css" rel="stylesheet" />
+              <title>Traveli- Travel booking HTML Template</title>
+        <script>
+         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+             document.documentElement.classList.add("dark");
+         } else {
+             document.documentElement.classList.remove("dark");
+         }
+      </script>
+    </head>
+    <body>
+        <!-- PRELOADER -->
+        <!-- <div id="preloader">
+         <div class="loader_line"></div>
+         </div> -->
+        <!-- /PRELOADER -->
+        <!--01. Header section start -->
+        <header class="hidden md:block">
+            <div class="bg-title">
+                <div class="container">
+                    <div class="flex justify-between items-center py-4">
+                        <div>
+                            <a class="font-medium text-sm text-white mr-7"
+                                href="tel:+880 171 4588 484"><i class="fa-solid
+                                    mr-1 fa-phone"></i>+880 171 4588 484</a>
+                            <a class="font-medium text-sm text-white border-r
+                                pr-6 " href="mailto:hillviewhotel@gmail.com"><i
+                                    class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
+                            <a class="text-white text-sm px-6" href="http://"
+                                target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a class="text-white text-sm " href="http://"
+                                target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a class="text-white text-sm px-6" href=""><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div>
+                            <select class="bg-transparent text-yello " name=""
+                                id="">
+                                USD<i class="fa-solid block mr-3 fa-sort-down"></i>
+                                <option value="USD">USD</option>
+                                <option value="USD">USD</option>
+                            </select>
+                            <select class="bg-transparent text-yello border-l
+                                inline-block pl-3 border-white " name="" id="">
+                                ENGLISH<i class="fa-solid fa-sort-down"></i>
+                                <option value="ENGLISH">ENGLISH</option>
+                                <option value="ENGLISH">ENGLISH</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-icon pt-[22px] pb-[25px]">
+                <div class="container flex justify-between items-center">
+                    <h2 class="text-[30px] font-semibold"><span
+                            class="text-green">Bhalo</span><span
+                            class="text-yello">Hotels</span></h2>
+                    <ul class="flex justify-center items-center gap-5">
+                        <!--                                               -->
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href=""><span>Home </span> <i
+                                    class="fa-solid fa-sort-down"></i></a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Rooms</a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Events</a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Blog</a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href=""><span>Pages </span> <i
+                                    class="fa-solid fa-sort-down"></i></a></li>
+                        <li><a class="font-medium text-lg flex items-center
+                                gap-1 text-title" href="">Contact</a></li>
+                    </ul>
+                    <div class="flex items-center gap-4">
+                        <span>$0.00</span>
+                        <span class="w-[38px] bg-[#e7eaec] relative h-[38px]
+                            rounded-full flex justify-center items-center"><i
+                                class="fa-solid fa-basket-shopping"></i> <span
+                                class="absolute w-4 h-4 bg-yello rounded-full
+                                top-0 right-0 flex justify-center items-center
+                                text-sm font-semibold ">1</span></span>
+                        <img class="w-[55px] h-[55px] rounded-full"
+                            src="./images/icons/Ellipse 642.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header section start -->
+        <!-- blog section start -->
+        <section class="before:bg-body-bg-gray relative before:absolute
+            before:top-0 before:left-0 before:h-[481px] before:w-full
+            before:z-[-1] pt-[60px]">
+            <div class="container">
+                <div class="pb-10">
+                    <h2 class="text-center text-[40px] text-title font-bold
+                        leading-[44px] mb-6 ">My Lates <span class="inline-block
+                            relative before:absolute before:w-[102px]
+                            before:h-[55px] before:z-[-4] before:-left-2 z-10
+                            before:bg-yello transform before:rotate-[4deg] ">Blog</span></h2>
+                    <p class="max-w-[618px] mx-auto text-center leading-[26px]
+                        text-black-lite">I seek to push the limits of creativity
+                        to create highly -engaging, user-friendly, and memorable
+                        interactive experiences.</p>
+                </div>
+                <hr class="text-[#CFCFCF] mb-[60px]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+                    gap-[30px] ">
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="rounded-xl shadow-icon">
+                            <div>
+                                <img class="w-full"
+                                    src="./images/blog_images/Rectangle 27.png"
+                                    alt="">
+                            </div>
+                            <div class="px-6 pt-6 bg-white ">
+                                <span class="flex text-title text-sm mb-4"><img
+                                        class="pr-1"
+                                        src="./images/icons/Icon.svg" alt="">SEPTEMBER
+                                    19, 2022</span>
+                                <h3 class="text-[22px] text-title font-semibold
+                                    mb-[6px] ">The Bottom Line on Dietary
+                                    Supplements</h3>
+                                <p class="leading-6 text-black-lite font-medium
+                                    ">One may not need charts and graphs at this
+                                    point to know that in the past couple of
+                                    years expecially, the buying and selling
+                                    on....</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-8
+                                px-6 pt-6 ">
+                                <div class="flex items-center gap-3">
+                                    <img class="h-10 w-10"
+                                        src="./images/blog_images/Image (1).png"
+                                        alt="">
+                                    <div>
+                                        <h5 class="font-semibold text-title ">John
+                                            Singleton</h5>
+                                        <p class="text-xs text-black-lite ">Nutritionist</p>
+                                    </div>
+                                </div>
+                                <a class="text-[17px] text-green-lite
+                                    font-semibold hover:tracking-wider time
+                                    group " href="">Read More <img
+                                        class="inline-block transform time
+                                        group-hover:rotate-45 "
+                                        src="./images/icons/Send.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav class=" mx-auto text-center mt-[60px] mb-[100px]" aria-label="Page navigation example">
+                    <ul class="inline-flex items-center -space-x-px">
+                        <li>
+                            <a href="#" class="flex justify-center items-center mr-3
+                                leading-tight text-[#286F6C] bg-[#F0F0F0] rounded-full
+                                 hover:bg-[#286F6C] time w-[45px] h-[45px] hover:text-white
+                                ">
+                                <span class="sr-only">Previous</span>
+                                <svg aria-hidden="true" class="w-5 h-5"
+                                    fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd" d="M12.707 5.293a1 1
+                                        0 010 1.414L9.414 10l3.293 3.293a1 1 0
+                                        01-1.414 1.414l-4-4a1 1 0
+                                        010-1.414l4-4a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time rounded-l-lg w-[45px] h-[45px] hover:text-white
+                            ">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time  w-[45px] h-[45px] hover:text-white
+                            ">2</a>
+                        </li>
+                        <li class="hidden md:block">
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time w-[45px] h-[45px] hover:text-white
+                            ">3</a>
+                        </li>
+                        <li class="hidden md:block">
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time  w-[45px] h-[45px] hover:text-white
+                            ">4</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time  w-[45px] h-[45px] hover:text-white
+                            ">...</a>
+                        </li>
+                        <li class="hidden md:block">
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time  w-[45px] h-[45px] hover:text-white
+                            ">37</a>
+                        </li>
+                        <li class="hidden md:block">
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time  w-[45px] h-[45px] hover:text-white
+                            ">38</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time w-[45px] h-[45px] hover:text-white
+                            ">39</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-center items-center 
+                            leading-tight text-black font-semibold bg-[#F0F0F0] 
+                             hover:bg-[#286F6C] hover:rounded-lg time rounded-r-lg w-[45px] h-[45px] hover:text-white
+                            ">40</a>
+                        </li>
+                   
+                        <li>
+                            <a href="#" class="flex justify-center items-center ml-3
+                            leading-tight text-[#286F6C] bg-[#F0F0F0] rounded-full
+                             hover:bg-[#286F6C] time w-[45px] h-[45px] hover:text-white">
+                                <span class="sr-only">Next</span>
+                                <svg aria-hidden="true" class="w-5 h-5"
+                                    fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd" d="M7.293 14.707a1 1
+                                        0 010-1.414L10.586 10 7.293 6.707a1 1 0
+                                        011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1
+                                        1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </section>
+        <!-- blog section end -->
+
+              <!-- 09. Footer Section Start -->
+      <footer class="md:bg-footer bg-no-repeat pt-8 md:pt-[320px] bg-[#0D2F3F] md:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
+        <img class="absolute left-0 bottom-20 z-[-1]" src="./images/icons/Group 22.png" alt="">
+         <div class="container">
+            <div class="grid grid-cols-12 pb-[60px] gap-[30px]  ">
+               <div class="col-span-12 lg:col-span-6 ">
+                  <div>
+                     <h4 class="text-[30px] font-semibold text-white ">About Hotel</h4>
+                     <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                     <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                     <p class="leading-[30px] pt-10 text-white md:w-2/3 ">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                     <a class="text-white block pt-[25px]" href=""><i class="fa-solid text-yello mr-2  fa-map"></i> Check on google map</a>
+                  </div>
+               </div>
+               <div class="col-span-12 sm:col-span-6 lg:col-span-3 ">
+                  <div>
+                     <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
+                     <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                     <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                     <ul class="mt-10 space-y-4 ">
+                        <li><a class="text-white font-semibold" href="">Home</a></li>
+                        <li><a class="text-white font-semibold" href="">Rooms & Suites</a></li>
+                        <li><a class="text-white font-semibold" href="">Restaurant</a></li>
+                        <li><a class="text-white font-semibold" href="">Spa & Wellness</a></li>
+                        <li><a class="text-white font-semibold" href="">About Hotel</a></li>
+                        <li><a class="text-white font-semibold" href="">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-span-12 sm:col-span-6 lg:col-span-3 ">
+                  <div>
+                     <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
+                     <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                     <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                     <p class="leading-[30px] pt-10 text-white  ">1616 Broadway NY, New York 10001 <br>
+                        United States of America
+                     </p>
+                     <a class="text-white block text-[26px] font-medium pt-[25px]" href="tel:855 100 4444"><i class="fa-solid transform -rotate-45 mr-2 fa-phone-volume"></i>855 100 4444</a>
+                     <a class="text-white block pt-[25px]" href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
+                     <img src="./images/icons/Vector 3.png" alt="">
+                     <ul class="pt-[22px] flex gap-7">
+                        <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li>
+                        <li class=""><a href=""><i class="fa-brands text-white fa-twitter"></i></a></li>
+                        <li class=""><a href=""><i class="fa-brands text-white fa-instagram"></i></a></li>
+                        <li class=""><a href=""><i class="fa-brands text-white fa-youtube"></i></a></li>
+                        <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <hr class="text-white">
+            <p class="py-[30px] text-center text-white ">© 2022 Portfolio @ All Rights Reserved</p>
+         </div>
+      </footer>
+      <!-- 09. Footer Section End -->
+        <script src="./js/vendor/jquary.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

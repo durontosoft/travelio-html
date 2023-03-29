@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
+      <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+      <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+      <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <link href="https://cdn.datatables.net/rowreorder/1.3.2/css/rowReorder.dataTables.min.css" rel="stylesheet"/>
+      <link href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css" rel="stylesheet"/>
+
+      
+      
+
+      <link rel="stylesheet" href="./css/custom.css">
+      <link href="./css/tailwind.css" rel="stylesheet" />
+            <title>Traveli- Travel booking HTML Template</title>
+      <script>
+         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+             document.documentElement.classList.add("dark");
+         } else {
+             document.documentElement.classList.remove("dark");
+         }
+      </script>
+   </head>
+   <body>
+      <!-- PRELOADER -->
+      <!-- <div id="preloader">
+         <div class="loader_line"></div>
+         </div> -->
+      <!-- /PRELOADER -->
+      <!--01. Header section start -->
+      <header class="hidden md:block">
+         <div class="bg-title">
+            <div class="container">
+               <div class="flex justify-between items-center py-4">
+                  <div>
+                     <a class="font-medium text-sm text-white mr-7" href="tel:+880 171 4588 484"><i class="fa-solid mr-1 fa-phone"></i>+880 171 4588 484</a>
+                     <a class="font-medium text-sm text-white border-r pr-6 " href="mailto:hillviewhotel@gmail.com"><i class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
+                     <a class="text-white text-sm px-6" href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a class="text-white text-sm " href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                     <a class="text-white text-sm px-6" href=""><i class="fa-brands fa-twitter"></i></a>
+                  </div>
+                  <div>
+                     <select class="bg-transparent text-yello " name="" id="">
+                        USD<i class="fa-solid block mr-3 fa-sort-down"></i>
+                        <option value="USD">USD</option>
+                        <option value="USD">USD</option>
+                     </select>
+                     <select class="bg-transparent text-yello border-l inline-block pl-3 border-white " name="" id="">
+                        ENGLISH<i class="fa-solid  fa-sort-down"></i>
+                        <option value="ENGLISH">ENGLISH</option>
+                        <option value="ENGLISH">ENGLISH</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="shadow-icon pt-[22px] pb-[25px]">
+            <div class="container flex justify-between items-center">
+               <h2 class="text-[30px] font-semibold"><span class="text-green">Bhalo</span><span class="text-yello">Hotels</span></h2>
+               <ul class="flex justify-center items-center gap-5">
+                  <!--                                               -->
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-title" href=""><span>Home </span>  <i class="fa-solid fa-sort-down"></i></a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-title" href="">Rooms</a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-title" href="">Events</a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-title" href="">Blog</a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-title" href=""><span>Pages </span>  <i class="fa-solid fa-sort-down"></i></a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-title" href="">Contact</a></li>
+               </ul>
+               <div class="flex items-center gap-4">
+                  <span>$0.00</span>
+                  <span class="w-[38px] bg-[#e7eaec] relative h-[38px] rounded-full flex justify-center items-center"><i class="fa-solid fa-basket-shopping"></i> <span class="absolute w-4 h-4 bg-yello rounded-full top-0 right-0 flex justify-center items-center text-sm font-semibold ">1</span></span>
+                  <img class="w-[55px] h-[55px] rounded-full" src="./images/icons/Ellipse 642.png" alt="">
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header section start -->
+      <section class="pt-8     mx-auto grid grid-cols-12 justify-center  ">
+        <div class="hidden md:block  col-span-1"></div>
+        <div class="col-span-12 md:col-span-10">
+           <div class="relative">
+              <img class="w-full h-[375px] object-cover text-center block mx-auto"  src="./images/account/Rectangle4000.png" alt="">
+           
+              <button class="absolute right-16 border border-white px-5 py-2.5 text-sm font-bold text-title  rounded-[25px] bottom-6"><i class="fa-solid fa-pen"></i> Edit cover</button>
+           
+           </div>
+        
+        </div>
+                
+                <div class="hidden md:block col-span-1"></div>
+              </section>
+      <!-- Sign In section start -->
+      <section class="pb-[50px] md:pb-[100px]   mb-[0px] md:mb-[130px] relative">
+        <div class="container ">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 md:col-span-3">
+                    <div class="rounded-xl shadow-icon py-[50px] border-1 border-[#E6E8EC] md:bg-[#FCFCFD] -mt-[94px] md:-mt-[115px] ">
+                        <img class="md:mx-auto w-[90px] h-[90px] md:w-[120px] md:h-[120px] rounded-full" src="./images/icons/Ellipse 642.png" alt="">
+                        <p class="md:text-center pl-4 text-sm font-medium pt-4 pb-6 text-title"><i class="fa-solid text-red mr-1 fa-pen"></i> Update avatar</p>
+                        <h3 class="text-xl font-semibold text-title pb-3 pl-[38px]">Shadhin lablu</h3>
+                        <ul class="edit">
+                            <li><a class="menu-inactive" href="./myAccount.html"><img class="mr-2" src="./images/icons/user.svg" alt=""> My Account</a></li>
+                            <li><a class="menu-live" href="./myBooking.html"><img class="mr-2" src="./images/icons/calander.svg" alt=""> My Booking</a></li>
+                            <li><a class="menu-inactive" href="./bookMark.html"><img class="mr-2" src="./images/icons/mark.svg" alt=""> BookMark</a></li>
+                            <li><a class="menu-inactive" href=""><img class="mr-2" src="./images/icons/users.svg" alt=""> Refer & Earn</a></li>
+                            <li><a class="menu-inactive  " href="./changePassword.html"><img class="mr-2" src="./images/icons/password.svg" alt=""> Change Password</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-9">
+                   <div class="md:px-[30px] py-5 md:py-[45px] ">
+                     
+<div class="mb-4 border-b border-[#D9D9D9]">
+    <ul class="tab flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+        <li class="mr-2" role="presentation">
+            <button class="inline-block relative border-green-lite text-title font-medium border-b-4 py-4 px-3  md:p-4  " id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Hotel Booking</button>
+        </li>
+        <li class="mr-2" role="presentation">
+            <button class="inline-block relative border-green-lite text-title font-medium border-b-4  py-4 px-3  md:p-4 " id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Event Booking</button>
+        </li>
+        <li class="mr-2" role="presentation">
+            <button class="inline-block relative border-green-lite text-title font-medium border-b-4  py-4 px-3  md:p-4  " data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Car Rental</button>
+        </li>
+        
+    </ul>
+</div>
+<div id="myTabContent">
+    <div class="hidden  rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<table id="example" class="display nowrap" style="width:100%">
+    <thead class="font-medium text-white  uppercase bg-title">
+        <tr>
+            <th scope="col" class="pl-[30px] py-5">
+                Title
+            </th>
+            <th scope="col" class="pl-[30px] py-5">
+                Order Date
+            </th>
+            <th scope="col" class="pl-[30px] py-5">
+                Execution Time
+            </th>
+            <th scope="col" class="pl-[30px] py-5">
+                Total
+            </th>
+            <th scope="col" class="pl-[30px] py-5">
+                Paid
+            </th>
+            <th scope="col" class="pl-[30px] py-5">
+                Remain
+            </th>
+            <th scope="col" class="px-[30px] py-5">
+                Action
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="">
+            <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+            </th>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                01/10/2022
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                1 night
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $999
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $500
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $499
+            </td>
+           
+            <td class="whitespace-nowrap">
+                <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+            </td>
+          
+           
+        </tr>
+        <tr class="">
+            <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+            </th>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                01/10/2022
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                1 night
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $999
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $500
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $499
+            </td>
+           
+            <td class="whitespace-nowrap">
+                <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+            </td>
+          
+           
+        </tr>
+        <tr class="">
+            <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+            </th>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                01/10/2022
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                1 night
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $999
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $500
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $499
+            </td>
+           
+            <td class="whitespace-nowrap">
+                <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+            </td>
+          
+           
+        </tr>
+        <tr class="">
+            <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+            </th>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                01/10/2022
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                1 night
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $999
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $500
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $499
+            </td>
+           
+            <td class="whitespace-nowrap">
+                <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+            </td>
+          
+           
+        </tr>
+        <tr class="">
+            <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+            </th>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                01/10/2022
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                1 night
+            </td>
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $999
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $500
+            </td>
+           
+            <td class="text-black-lite font-medium whitespace-nowrap">
+                $499
+            </td>
+           
+            <td class="whitespace-nowrap">
+                <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+            </td>
+          
+           
+        </tr>
+       
+    </tbody>
+        </table>
+
+
+    </div>
+    <div class="hidden rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <table id="example1" class="display nowrap" style="width:100%">
+            <thead class="font-medium text-white  uppercase bg-title">
+                <tr>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Title
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Order Date
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Execution Time
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Total
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Paid
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Remain
+                    </th>
+                    <th scope="col" class="px-[30px] py-5">
+                        Action
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+               
+            </tbody>
+                </table>
+    </div>
+    <div class="hidden rounded-lg " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <table id="example2" class="display nowrap" style="width:100%">
+            <thead class="font-medium text-white  uppercase bg-title">
+                <tr>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Title
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Order Date
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Execution Time
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Total
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Paid
+                    </th>
+                    <th scope="col" class="pl-[30px] py-5">
+                        Remain
+                    </th>
+                    <th scope="col" class="px-[30px] py-5">
+                        Action
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite pl-[30px] font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite pl-[30px] font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite pl-[30px] font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite pl-[30px] font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite pl-[30px] font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+                <tr class="">
+                    <th scope="row" class=" text-title font-normal -ml-3 whitespace-nowrap ">River Sight
+                    </th>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        01/10/2022
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        1 night
+                    </td>
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $999
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $500
+                    </td>
+                   
+                    <td class="text-black-lite font-medium whitespace-nowrap">
+                        $499
+                    </td>
+                   
+                    <td class="whitespace-nowrap">
+                        <button class=" bg-title h-[26px] gap-2 rounded-[3px] mb-2 text-white  w-24 flex justify-center items-center"><i class="fa-solid fa-circle-info"></i>Details</button>
+                        <button class=" bg-yello h-[26px] gap-2 rounded-[3px] text-title  w-24 flex justify-center items-center"><i class="fa-solid fa-print"></i>Invoice</button>
+                    </td>
+                  
+                   
+                </tr>
+               
+            </tbody>
+                </table>
+    </div>
+
+</div>
+
+                   </div>
+                </div>
+
+            </div>
+        </div>
+      </section>
+      <!-- Sign In section end -->
+
+        <!-- 09. Footer Section Start -->
+        <footer class="md:bg-footer bg-no-repeat pt-8 md:pt-[320px] bg-[#0D2F3F] md:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
+            <img class="absolute left-0 bottom-20 z-[-1]" src="./images/icons/Group 22.png" alt="">
+             <div class="container">
+                <div class="grid grid-cols-12 pb-[60px] gap-[30px]  ">
+                   <div class="col-span-12 lg:col-span-6 ">
+                      <div>
+                         <h4 class="text-[30px] font-semibold text-white ">About Hotel</h4>
+                         <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                         <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                         <p class="leading-[30px] pt-10 text-white md:w-2/3 ">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                         <a class="text-white block pt-[25px]" href=""><i class="fa-solid text-yello mr-2  fa-map"></i> Check on google map</a>
+                      </div>
+                   </div>
+                   <div class="col-span-12 lg:col-span-3 ">
+                      <div>
+                         <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
+                         <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                         <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                         <ul class="mt-10 space-y-4 ">
+                            <li><a class="text-white font-semibold" href="">Home</a></li>
+                            <li><a class="text-white font-semibold" href="">Rooms & Suites</a></li>
+                            <li><a class="text-white font-semibold" href="">Restaurant</a></li>
+                            <li><a class="text-white font-semibold" href="">Spa & Wellness</a></li>
+                            <li><a class="text-white font-semibold" href="">About Hotel</a></li>
+                            <li><a class="text-white font-semibold" href="">Contact</a></li>
+                         </ul>
+                      </div>
+                   </div>
+                   <div class="col-span-12 lg:col-span-3 ">
+                      <div>
+                         <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
+                         <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                         <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                         <p class="leading-[30px] pt-10 text-white  ">1616 Broadway NY, New York 10001 <br>
+                            United States of America
+                         </p>
+                         <a class="text-white block text-[26px] font-medium pt-[25px]" href="tel:855 100 4444"><i class="fa-solid transform -rotate-45 mr-2 fa-phone-volume"></i>855 100 4444</a>
+                         <a class="text-white block pt-[25px]" href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
+                         <img src="./images/icons/Vector 3.png" alt="">
+                         <ul class="pt-[22px] flex gap-7">
+                            <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li>
+                            <li class=""><a href=""><i class="fa-brands text-white fa-twitter"></i></a></li>
+                            <li class=""><a href=""><i class="fa-brands text-white fa-instagram"></i></a></li>
+                            <li class=""><a href=""><i class="fa-brands text-white fa-youtube"></i></a></li>
+                            <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <hr class="text-white">
+                <p class="py-[30px] text-center text-white ">© 2022 Portfolio @ All Rights Reserved</p>
+             </div>
+          </footer>
+          <!-- 09. Footer Section End -->
+      <script src="./js/vendor/jquary.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/rowreorder/1.3.2/js/dataTables.rowReorder.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+
+
+
+
+
+
+
+
+      <script src="./js/main.js"></script>
+      <script>
+        $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    } );
+    var table1 = $('#example1').DataTable( {
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    } );
+    var table2 = $('#example2').DataTable( {
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    } );
+} );
+      </script>
+   </body>
+</html>
