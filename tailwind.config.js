@@ -24,7 +24,7 @@ module.exports = {
           sm: "100%",
           md: "100%",
           lg: "992px",
-          xl: "1200px"
+          xl: "1240px"
        }
      
   
@@ -36,9 +36,9 @@ module.exports = {
       backgroundImage: {
         'touricon': "url('/images/icons/touricon.png')",
         'touricon1': "url('/images/icons/touricon1.png')",
-        'offerBg1': "url('/images/Specialoffers/Rectangle 3555.jpg')",
-        'offerBg2': "url('/images/Specialoffers/Rectangle2.png')",
-        'offerBg3': "url('/images/Specialoffers/Rectangle1.png')",
+        'offerBg1': "url('/images/home/offer.jpg')",
+        'offerBg2': "url('/images/home/offer1.jpg')",
+        'offerBg3': "url('/images/home/offer2.jpg')",
         'sign': "url('/images/background/Group.png')",
         'footer': "url('/images/background/footer.png')",
         'homeTwoBg-dark': "url('/images/background/bgtwo.jpg')",

@@ -6,17 +6,20 @@
       <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
       <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
       <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+      <!-- custom css link -->
       <link rel="stylesheet" href="./css/custom.css">
+      <!-- tailwind css link -->
       <link href="./css/tailwind.css" rel="stylesheet" />
-            <title>Traveli- Travel booking HTML Template</title>
-      <script>
-         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-             document.documentElement.classList.add("dark");
-         } else {
-             document.documentElement.classList.remove("dark");
-         }
-      </script>
+      <!--nice-select css link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+      <!-- title -->
+      <title>Traveli- Travel booking HTML Template</title>
+      <!--flowbite js link  -->
+      <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
+      <!-- datepicker js link -->
+      <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
    </head>
    <body>
       <!-- PRELOADER -->
@@ -110,8 +113,8 @@
       </section>
       <!-- Sign In section end -->
 
-       <!-- 09. Footer Section Start -->
-       <footer class="md:bg-footer bg-no-repeat pt-8 md:pt-[320px] bg-[#0D2F3F] md:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
+      <!-- 09. Footer Section Start -->
+      <footer class="lg:bg-footer bg-no-repeat pt-8 md:pt-[80px] lg:pt-[320px] bg-[#0D2F3F] lg:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
          <img class="absolute left-0 bottom-20 z-[-1]" src="./images/icons/Group 22.png" alt="">
           <div class="container">
              <div class="grid grid-cols-12 pb-[60px] gap-[30px]  ">
@@ -124,7 +127,7 @@
                       <a class="text-white block pt-[25px]" href=""><i class="fa-solid text-yello mr-2  fa-map"></i> Check on google map</a>
                    </div>
                 </div>
-                <div class="col-span-12 lg:col-span-3 ">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
                    <div>
                       <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
                       <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
@@ -139,7 +142,7 @@
                       </ul>
                    </div>
                 </div>
-                <div class="col-span-12 lg:col-span-3 ">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
                    <div>
                       <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
                       <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
@@ -165,8 +168,14 @@
           </div>
        </footer>
        <!-- 09. Footer Section End -->
-      <script src="./js/vendor/jquary.min.js"></script>
-      <script src="./js/main.js"></script>
-   </body>
-</html>
+       <!-- jquary link -->
+       <script src="./js/vendor/jquary.min.js"></script>
+       <!--nice select link  -->
+       <script src="./js/vendor/select.min.js"></script>
+       <!-- swiper js link -->
+       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+       <!-- main js link -->
+       <script src="./js/main.js"></script>
+    </body>
+ </html>
     

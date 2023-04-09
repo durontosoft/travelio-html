@@ -2,6 +2,9 @@
 html {
     font-family: 'Roboto', sans-serif !important;
 }
+html, body{
+    overflow-x: hidden;
+}
 
 h1,
 h2,
@@ -12,6 +15,9 @@ h6 {
     font-family: 'Barlow', sans-serif !important;
 }
 
+.Barlow{
+    font-family: 'Barlow', sans-serif !important;
+}
 .edit a {
     font-family: 'Barlow', sans-serif !important;
 }
@@ -103,6 +109,16 @@ span.datepicker-cell{
   }
 
   /* selct css */
+  .nice-select:after{
+    border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 5px solid yellow !important;
+  transform: rotate(0deg) !important;
+  }
+  .nice-select:after {
+    border-bottom:none !important;
+    right: 5px;
+}
   .nice-select {
     -webkit-tap-highlight-color: none !important;
     background-color: transparent !important;
@@ -250,7 +266,7 @@ span.datepicker-cell{
   
 
     .nice-select.header-select{
-        border:none;
+       border: none;
     }
     .nice-select.header-select .list {
         color: #000 !important;
@@ -433,7 +449,7 @@ table.dataTable>tbody>tr.child ul.dtr-details {
     transform-origin: center;
     display: inline-block;
 }
-.no-icon.
+
 
 @keyframes okkk {
     0% {
@@ -472,6 +488,98 @@ table.dataTable>tbody>tr.child ul.dtr-details {
     display: none;
     overflow: hidden;
 }
+
+/* slider css */
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: '' !important;
+}
+.swiper-button-lock{
+    display: flex !important ;
+}
+.swiper-button-prev, .swiper-button-next{
+top: 90% !important;
+width: 45px !important;
+height: 45px !important;
+border:1px solid #399F6E;
+background-color: transparent;
+border-radius: 50%;
+color: #399F6E !important;
+transition: all .3s ease-in-out ;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    background: #399F6E;
+    color: white !important;
+}
+
+.swiper-button-prev{
+    left: 47% !important;
+}
+.swiper-button-next{
+    left: 53% !important;
+}
+.swiper-button-prev-ForOffers, .swiper-button-next-ForOffers, .swiper-button-prev-event, .swiper-button-next-event, .swiper-button-prev-TourEvent, .swiper-button-next-TourEvent{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #399F6E;
+    color: white;
+    z-index: 110 !important;
+    border-radius: 50%;
+}
+.swiper-button-prev-NewTravel, .swiper-button-next-NewTravel{
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #399F6E;
+    color: white;
+    z-index: 110 !important;
+    border-radius: 50%;
+}
+.swiper-button-prev-NewTravel:hover, .swiper-button-next-NewTravel:hover{
+    background: #399F6E;
+}
+.swiper-button-prev-NewTravel:hover i, .swiper-button-next-NewTravel:hover i{
+    color: white;
+}
+.swiper-button-prev-TourEvent, .swiper-button-next-TourEvent{
+    top: 30%;
+}
+.swiper-button-prev-ForOffers, .swiper-button-prev-TourEvent{
+    left: -20px;
+}
+.swiper-button-next-ForOffers, .swiper-button-next-TourEvent{
+    right:-20px;
+}
+.swiper-button-prev-event{
+    left: -20px !important;
+}
+.swiper-button-next-event{
+    right:-20px !important;
+}
+.swiper-button-next-NewTravel{
+right: -20px;
+}
+.swiper-button-next-NewTravel{
+right: 0px;
+top: -90px;
+}
+.swiper-button-prev-NewTravel{
+right: 70px;
+top: -90px;
+}
+
+
 
 
 /* modal */
@@ -560,84 +668,7 @@ table.dataTable>tbody>tr.child ul.dtr-details {
 }
 
 
-/* input remove auto fill background */
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-    -webkit-text-fill-color: gray;
-    /* -webkit-box-shadow: 0 0 0px 1000px transparent inset; */
-    transition: background-color 5000s ease-in-out 0s;
-    background: none !important;
-}
-
-
-/* active color */
-
-.is-active {
-    color: #FA5252 !important;
-}
-
-
-/* slider img */
-
-.slick-slide {
-    padding: 30px;
-}
-
-.brand-img {
-    max-width: 100% !important;
-    width: auto !important;
-    height: auto !important;
-    overflow: hidden;
-    text-align: center;
-}
-
-
-/* owl-carousel */
-
-.owl-carousel .owl-stage {
-    display: flex;
-    align-items: center;
-}
-
-.owl-carousel .owl-stage .owl-item {
-    padding: 20px 30px;
-}
-
-.fix {
-    display: none;
-}
-
-.close {
-    position: absolute;
-    top: -12.5px;
-    right: -12.5px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    text-indent: -9999px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 50px !important;
-    height: 50px !important;
-    top: -20px !important;
-    right: -20px !important;
-    border-radius: 50%;
-}
-
-.close-light {
-    background-image: url(../images/icons/closelight.jpg);
-}
-
-.close-dark {
-    background-image: url(../images/icons/closeDark.png);
-}
-
-.modal a.close-modal {
-    display: none;
-}
 
 
 /* preloader */
@@ -780,10 +811,42 @@ input:-webkit-autofill:focus {
         width: 30px !important;
         height: 30px !important;
     }
+    .swiper-button-prev{
+        left: 40% !important;
+    }
+    .swiper-button-next{
+        left: 50% !important;
+    }
+    .swiper-button-prev-ForOffers, .swiper-button-prev-TourEvent{
+        left: 0px;
+    }
+    .swiper-button-next-ForOffers, .swiper-button-next-TourEvent{
+        right:0px;
+    }
 }
 
 @media only screen and (max-width: 567px) {
     .portfolio_list {
         column-count: 1 !important;
     }
+    .swiper-button-prev{
+        left: 30% !important;
+    }
+    .swiper-button-next{
+        left: 50% !important;
+    }
+    .swiper-button-prev-ForOffers{
+        left: 0px;
+    }
+    .swiper-button-next-ForOffers{
+        right:0px;
+    }
+    .swiper-button-prev-event{
+        left: 0px !important;
+    }
+    .swiper-button-next-event{
+        right:0px !important;
+    }
+
+
 }

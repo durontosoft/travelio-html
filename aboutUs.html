@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="./images/logo/faveicon.jpg"
-            type="image/x-icon">
-        <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
-        <link rel="stylesheet"
-            href="assets/fontaswesome/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="./css/custom.css">
-        <link href="./css/tailwind.css" rel="stylesheet" />
-              <title>Traveli- Travel booking HTML Template</title>
-        <script>
-         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-             document.documentElement.classList.add("dark");
-         } else {
-             document.documentElement.classList.remove("dark");
-         }
-      </script>
-    </head>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
+      <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+      <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+      <!-- custom css link -->
+      <link rel="stylesheet" href="./css/custom.css">
+      <!-- tailwind css link -->
+      <link href="./css/tailwind.css" rel="stylesheet" />
+      <!--nice-select css link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+      <!-- title -->
+      <title>Traveli- Travel booking HTML Template</title>
+      <!--flowbite js link  -->
+      <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
+      <!-- datepicker js link -->
+      <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
+   </head>
     <body>
         <!-- PRELOADER -->
         <!-- <div id="preloader">
@@ -27,79 +28,75 @@
          </div> -->
         <!-- /PRELOADER -->
         <!--01. Header section start -->
-        <header class="hidden md:block">
-            <div class="bg-title">
-                <div class="container">
-                    <div class="flex justify-between items-center py-4">
-                        <div>
-                            <a class="font-medium text-sm text-white mr-7"
-                                href="tel:+880 171 4588 484"><i class="fa-solid
-                                    mr-1 fa-phone"></i>+880 171 4588 484</a>
-                            <a class="font-medium text-sm text-white border-r
-                                pr-6 " href="mailto:hillviewhotel@gmail.com"><i
-                                    class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
-                            <a class="text-white text-sm px-6" href="http://"
-                                target="_blank" rel="noopener noreferrer"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a class="text-white text-sm " href="http://"
-                                target="_blank" rel="noopener noreferrer"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a class="text-white text-sm px-6" href=""><i
-                                    class="fa-brands fa-twitter"></i></a>
-                        </div>
-                        <div>
-                            <select class="bg-transparent text-yello " name=""
-                                id="">
-                                USD<i class="fa-solid block mr-3 fa-sort-down"></i>
-                                <option value="USD">USD</option>
-                                <option value="USD">USD</option>
-                            </select>
-                            <select class="bg-transparent text-yello border-l
-                                inline-block pl-3 border-white " name="" id="">
-                                ENGLISH<i class="fa-solid fa-sort-down"></i>
-                                <option value="ENGLISH">ENGLISH</option>
-                                <option value="ENGLISH">ENGLISH</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+        <header class="">
+         <div class="bg-title hidden md:block">
+            <div class="container">
+               <div class="flex justify-between items-center">
+                  <div>
+                     <a class="font-medium text-sm text-white mr-7" href="tel:+880 171 4588 484"><i class="fa-solid mr-1 fa-phone"></i>+880 171 4588 484</a>
+                     <a class="font-medium text-sm text-white border-r pr-6 " href="mailto:hillviewhotel@gmail.com"><i class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
+                     
+                  </div>
+                  <div class="flxc">
+                     <select class="bg-white border-none header-select text-white " name="" id="">
+                        USD<i class="fa-solid block mr-3 fa-sort-down"></i>
+                        <option value="USD">USD</option>
+                        <option value="dfdf">USD</option>
+                     </select>
+                     <select class="bg-white border-none header-select text-white">
+                        <option data-display="Select">ENGLISH</option>
+                        <option value="Bangla">Bangla</option>
+                      </select>
+                      <div>
+                        <a class="text-white text-sm px-6" href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a class="text-white text-sm " href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                     <a class="text-white text-sm px-6" href=""><i class="fa-brands fa-twitter"></i></a>
+                      </div>
+                      <button class="w-[178px] bg-yello text-title h-[58px] font-semibold ">Sign In</button>
+                  </div>
+               </div>
             </div>
-            <div class="shadow-icon pt-[22px] pb-[25px]">
-                <div class="container flex justify-between items-center">
-                    <h2 class="text-[30px] font-semibold"><span
-                            class="text-green">Bhalo</span><span
-                            class="text-yello">Hotels</span></h2>
-                    <ul class="flex justify-center items-center gap-5">
-                        <!--                                               -->
-                        <li><a class="font-medium text-lg flex items-center
-                                gap-1 text-title" href=""><span>Home </span> <i
-                                    class="fa-solid fa-sort-down"></i></a></li>
-                        <li><a class="font-medium text-lg flex items-center
-                                gap-1 text-title" href="">Rooms</a></li>
-                        <li><a class="font-medium text-lg flex items-center
-                                gap-1 text-title" href="">Events</a></li>
-                        <li><a class="font-medium text-lg flex items-center
-                                gap-1 text-title" href="">Blog</a></li>
-                        <li><a class="font-medium text-lg flex items-center
-                                gap-1 text-title" href=""><span>Pages </span> <i
-                                    class="fa-solid fa-sort-down"></i></a></li>
-                        <li><a class="font-medium text-lg flex items-center
-                                gap-1 text-title" href="">Contact</a></li>
-                    </ul>
-                    <div class="flex items-center gap-4">
-                        <span>$0.00</span>
-                        <span class="w-[38px] bg-[#e7eaec] relative h-[38px]
-                            rounded-full flex justify-center items-center"><i
-                                class="fa-solid fa-basket-shopping"></i> <span
-                                class="absolute w-4 h-4 bg-yello rounded-full
-                                top-0 right-0 flex justify-center items-center
-                                text-sm font-semibold ">1</span></span>
-                        <img class="w-[55px] h-[55px] rounded-full"
-                            src="./images/icons/Ellipse 642.png" alt="">
-                    </div>
-                </div>
+         </div>
+         <div class="shadow-icon pt-[22px] pb-[25px]">
+            <div class="container flex justify-between items-center">
+               <h2 class="text-[30px] font-semibold"><span class="text-green">Bhalo</span><span class="text-yello">Hotels</span></h2>
+               <ul id="navbar" class="  h-full bg-title md:bg-transparent fixed w-full  pl-[90px] md:pl-0 pt-20 md:pt-0 space-y-[15px] md:space-y-0  -top-[200%] transform scale-x-0 md:scale-x-100 left-0 z-50 md:relative md:flex justify-end items-center gap-5  ">
+                  <li class="relative group duration-300 ease-in-out transition-all "><span class="font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title">
+                     <span>Home </span>  <i class="fa-solid -mt-2 fa-sort-down"></i></span>
+                     <ul class="absolute z-50 w-[200px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 time ">
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2 time " href="">Home One</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="">Home Two</a></li>
+                     </ul>
+                  
+                  </li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="">Rooms</a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="">Events</a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="./blog.html">Blog</a></li>
+                  <li class="relative group duration-300 ease-in-out transition-all "><span class="font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title" ><span>Pages </span>  <i class="fa-solid -mt-2  fa-sort-down"></i></span>
+                     <ul class="absolute z-50 w-[250px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 ">
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2 " href="./termsConditions.html">Terms & Conditions</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./privacyPolicy.html">Privacy Policy</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./OTP.html">OPT</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./noPageFound.html">404</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./myAccount.html">Profile</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./blogDetails.html">Blog Details</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./signIn.html">Sign In</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./OTP.html">OTP</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./aboutUs.html">About</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./bookingInfo.html">Booking info</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./costumerInfo.html">Customer info</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./eventListing.html">Event Listing</a></li>
+                        <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./faq.html">FAQ</a></li>
+                     </ul>
+                  </li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="./contactUs.html">Contact</a></li>
+                  <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                  <span  id="menu-toggle-close-icon" class="block md:hidden absolute top-4 right-4 "><i class="fa-solid text-white text-xl fa-xmark"></i></span>
+               </ul>
+               <span id="menu-toggle-open-icon" class="block md:hidden"><i class="fa-solid text-2xl fa-bars"></i></span>
             </div>
-        </header>
+         </div>
+      </header>
         <!-- Header section start -->
         <!-- Sign In section start -->
         <section class="bg-[#F8F7F1] pt-[60px] mb-[0px]  relative
@@ -107,13 +104,9 @@
 
             <div class="container ">
                 <div class="pb-10">
-                    <h2 class="text-center text-[40px] text-title font-bold
-                        leading-[44px] mb-6 ">About    <span
-                            class="inline-block
-                            relative before:absolute before:w-[55px]
-                            before:h-[55px] before:z-[-4] before:-left-1 z-10
-                            before:bg-yello transform before:rounded-md
-                            before:-rotate-[8deg] before:-skew-x-3 ">Us</span></h2>
+                    <h2 class="top-title">About    <span
+                            class=" before:w-[40px] md:before:w-[55px]
+                            top-rotate  ">Us</span></h2>
                     <p class="max-w-[618px] mx-auto text-center leading-[26px]
                         text-black-lite">I seek to push the limits of creativity
                         to create highly -engaging, user-friendly, and memorable
@@ -126,8 +119,8 @@
         </section>
         <!-- Sign In section end -->
       <!-- 09. Newsletter section Start -->
-      <section class="relative pb-[100px]">
-        <div class="absolute right-0 top-0 w-[49%]  ">
+      <section class="relative pb-[50px] md:pb-[100px]">
+        <div class="hidden lg:block absolute right-0 top-0 w-[49%]  ">
            <div class="relative before:w-full overflow-hidden before:h-full before:absolute before:right-0 before:top-0 before:bg-[#0d2f3f8c] before:rounded-l-3xl ">
               <img class="w-full h-[665px] " src="./images/about/sea.png" alt="">
               <button class="absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
@@ -141,11 +134,11 @@
         <div class="container">
            <div class="grid grid-cols-12 items-center gap-[30px]   ">
               
-              <div class="col-span-6">
+              <div class="col-span-12 lg:col-span-6">
                  
                     <div class="mb-8">
                         <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">More About Us</h2>
-                        <img class="" src="./images/icons/Line-1.png" alt="">
+                        <img class="w-[180px] md:w-auto" src="./images/icons/Line-1.png" alt="">
                      </div>
                      <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px] pt-[30px] ">
                         
@@ -185,7 +178,7 @@
      <!-- 09. Newsletter section End -->
 
      <section>
-        <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 ">
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
             <div class="col-span-1">
                 <div class="flex gap-[30px] items-center ">
                     <img src="./images/icons/planen.svg" alt="">
@@ -218,7 +211,7 @@
      </section>
 
            <!-- 06. Special offers section start -->
-           <section class="py-[100px]">
+           <section class="py-[50px] md:py-[100px]">
             <div class="container">
                <div class="mb-8">
                   <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Special offers</h2>
@@ -297,7 +290,7 @@
          <!-- 06. Special offers section end -->
 
                <!-- 08. Client Testimonial section start -->
-      <section class="pb-[100px]">
+      <section class="pb-[50px] md:pb-[100px]">
         <div class="container relative">
            <span class="w-7 h-7 block rounded-full absolute bg-green left-[10%] top-[25%]  "></span>
            <span class="w-5 h-5 block rounded-full absolute bg-green right-[10%] top-[25%] "></span>
@@ -323,7 +316,7 @@
 
      <!-- 09. Newsletter section Start -->
      <section class="relative  ">
-        <div class="absolute left-0 top-0 w-5/12 ">
+        <div class="hidden lg:block absolute left-0 top-0 w-5/12 ">
            <div class="relative">
               <img class="w-full h-[450px] " src="./images/common/Rectangle 3553.png" alt="">
               <button class="absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
@@ -334,20 +327,20 @@
            </div>
         </div>
         <div class="container">
-           <div class="grid grid-cols-12 items-center h-[440px] bg-body-bg ">
-              <div class="col-span-6">
+           <div class="grid grid-cols-12 items-center py-[50px] lg:py-0 lg:h-[440px] bg-body-bg ">
+              <div class="lg:col-span-6">
               </div>
-              <div class="col-span-6">
-                 <div class="w-9/12">
-                    <h2 class="text-[40px] text-title font-medium">Get Every Monthly <br> <span class="font-semibold">Newsletter</span> </h2>
-                    <img src="./images/icons/Vector 2.png" alt="">
+              <div class="col-span-12 lg:col-span-6">
+                 <div class="md:w-9/12">
+                    <h2 class="text-[25px] md:text-[40px] text-title font-medium">Get Every Monthly <br> <span class="font-semibold">Newsletter</span> </h2>
+                    <img class="w-[140px] md:w-auto" src="./images/icons/Vector 2.png" alt="">
                     <p class="pt-4 text-sm text-title font-medium ">Select a category that best suites your interest. Use filters to coustomize
                        your search and to find exactly what you want
                     </p>
                     <form class="shadow-icon mt-8">
                        <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                        <div class="relative">
-                          <input type="search" id="search" class="block w-full p-4 pl-10 text-sm text-gray-900 focus:outline-0  bg-white focus:border-none " placeholder="Enter your email address" required>
+                          <input type="search" id="search" class="block w-full p-4 md:pl-10 text-sm text-gray-900 focus:outline-0  bg-white focus:border-none " placeholder="Enter your email address" required>
                           <button type="submit" class="text-white absolute right-0 h-full bottom-0 bg-green  focus:outline-none focus:ring-blue-300 rounded-[4px] font-medium px-8"><i class="fa-regular mr-1 fa-envelope"></i> Subscribe</button>
                        </div>
                     </form>
@@ -359,7 +352,7 @@
      <!-- 09. Newsletter section End -->
 
           <!-- 08. Client Testimonial section start -->
-          <section class="py-[100px]">
+          <section class="py-[50px] md:py-[100px]">
             <div class="container relative">
                <div class="flex justify-between items-center mb-8">
                   <div>
@@ -439,105 +432,68 @@
             </div>
          </section>
          <!-- 08. Client Testimonial section end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- 09. Footer Section Start -->
-        <footer class="bg-footer bg-no-repeat pt-[320px] md:pt-[320px]
-            after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full
-            after:absolute after:z-[-1] bg-cover relative bg-top ">
-            <img class="absolute left-0 bottom-20 z-[-1]"
-                src="./images/icons/Group 22.png" alt="">
-            <div class="container">
-                <div class="grid grid-cols-12 pb-[60px] gap-[30px] ">
-                    <div class="col-span-12 lg:col-span-6 ">
-                        <div>
-                            <h4 class="text-[30px] font-semibold text-white ">About
-                                Hotel</h4>
-                            <span class="w-[60px] h-[2px] bg-yello block
-                                mt-[6px] "></span>
-                            <span class="w-[35px] h-[2px] bg-yello block
-                                mt-[6px]"></span>
-                            <p class="leading-[30px] pt-10 text-white w-2/3 ">Welcome
-                                to the best five-star deluxe hotel in New York.
-                                Hotel elementum sesue the aucan vestibulum
-                                aliquam justo in sapien rutrum volutpat.</p>
-                            <a class="text-white block pt-[25px]" href=""><i
-                                    class="fa-solid text-yello mr-2 fa-map"></i>
-                                Check on google map</a>
-                        </div>
-                    </div>
-                    <div class="col-span-6 lg:col-span-3 ">
-                        <div>
-                            <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
-                            <span class="w-[60px] h-[2px] bg-yello block
-                                mt-[6px] "></span>
-                            <span class="w-[35px] h-[2px] bg-yello block
-                                mt-[6px]"></span>
-                            <ul class="mt-10 space-y-4 ">
-                                <li><a class="text-white font-semibold" href="">Home</a></li>
-                                <li><a class="text-white font-semibold" href="">Home</a></li>
-                                <li><a class="text-white font-semibold" href="">Home</a></li>
-                                <li><a class="text-white font-semibold" href="">Home</a></li>
-                                <li><a class="text-white font-semibold" href="">Home</a></li>
-                                <li><a class="text-white font-semibold" href="">Home</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-span-6 lg:col-span-3 ">
-                        <div>
-                            <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
-                            <span class="w-[60px] h-[2px] bg-yello block
-                                mt-[6px] "></span>
-                            <span class="w-[35px] h-[2px] bg-yello block
-                                mt-[6px]"></span>
-                            <p class="leading-[30px] pt-10 text-white ">1616
-                                Broadway NY, New York 10001 <br>
-                                United States of America
-                            </p>
-                            <a class="text-white block text-[26px] font-medium
-                                pt-[25px]" href="tel:855 100 4444"><i
-                                    class="fa-solid transform -rotate-45 mr-2
-                                    fa-phone-volume"></i>855 100 4444</a>
-                            <a class="text-white block pt-[25px]"
-                                href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
-                            <img src="./images/icons/Vector 3.png" alt="">
-                            <ul class="pt-[22px] flex gap-7">
-                                <li class=""><a href=""><i class="fa-brands
-                                            text-white fa-facebook-f"></i></a></li>
-                                <li class=""><a href=""><i class="fa-brands
-                                            text-white fa-twitter"></i></a></li>
-                                <li class=""><a href=""><i class="fa-brands
-                                            text-white fa-instagram"></i></a></li>
-                                <li class=""><a href=""><i class="fa-brands
-                                            text-white fa-youtube"></i></a></li>
-                                <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
-                            </ul>
-                        </div>
-                    </div>
+      <!-- 09. Footer Section Start -->
+      <footer class="lg:bg-footer bg-no-repeat pt-8 md:pt-[80px] lg:pt-[320px] bg-[#0D2F3F] lg:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
+         <img class="absolute left-0 bottom-20 z-[-1]" src="./images/icons/Group 22.png" alt="">
+          <div class="container">
+             <div class="grid grid-cols-12 pb-[60px] gap-[30px]  ">
+                <div class="col-span-12 lg:col-span-6 ">
+                   <div>
+                      <h4 class="text-[30px] font-semibold text-white ">About Hotel</h4>
+                      <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                      <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                      <p class="leading-[30px] pt-10 text-white md:w-2/3 ">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                      <a class="text-white block pt-[25px]" href=""><i class="fa-solid text-yello mr-2  fa-map"></i> Check on google map</a>
+                   </div>
                 </div>
-                <hr class="text-white">
-                <p class="py-[30px] text-center text-white ">© 2022 Portfolio @
-                    All Rights Reserved</p>
-            </div>
-        </footer>
-        <!-- 09. Footer Section End -->
-        <script src="./js/vendor/jquary.min.js"></script>
-        <script src="./js/main.js"></script>
-
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
+                   <div>
+                      <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
+                      <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                      <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                      <ul class="mt-10 space-y-4 ">
+                         <li><a class="text-white font-semibold" href="">Home</a></li>
+                         <li><a class="text-white font-semibold" href="">Rooms & Suites</a></li>
+                         <li><a class="text-white font-semibold" href="">Restaurant</a></li>
+                         <li><a class="text-white font-semibold" href="">Spa & Wellness</a></li>
+                         <li><a class="text-white font-semibold" href="">About Hotel</a></li>
+                         <li><a class="text-white font-semibold" href="">Contact</a></li>
+                      </ul>
+                   </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
+                   <div>
+                      <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
+                      <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                      <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                      <p class="leading-[30px] pt-10 text-white  ">1616 Broadway NY, New York 10001 <br>
+                         United States of America
+                      </p>
+                      <a class="text-white block text-[26px] font-medium pt-[25px]" href="tel:855 100 4444"><i class="fa-solid transform -rotate-45 mr-2 fa-phone-volume"></i>855 100 4444</a>
+                      <a class="text-white block pt-[25px]" href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
+                      <img src="./images/icons/Vector 3.png" alt="">
+                      <ul class="pt-[22px] flex gap-7">
+                         <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li>
+                         <li class=""><a href=""><i class="fa-brands text-white fa-twitter"></i></a></li>
+                         <li class=""><a href=""><i class="fa-brands text-white fa-instagram"></i></a></li>
+                         <li class=""><a href=""><i class="fa-brands text-white fa-youtube"></i></a></li>
+                         <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <hr class="text-white">
+             <p class="py-[30px] text-center text-white ">© 2022 Portfolio @ All Rights Reserved</p>
+          </div>
+       </footer>
+       <!-- 09. Footer Section End -->
+       <!-- jquary link -->
+       <script src="./js/vendor/jquary.min.js"></script>
+       <!--nice select link  -->
+       <script src="./js/vendor/select.min.js"></script>
+       <!-- swiper js link -->
+       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+       <!-- main js link -->
+       <script src="./js/main.js"></script>
     </body>
-</html>
+ </html>

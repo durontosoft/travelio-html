@@ -63,15 +63,36 @@
     @apply w-5 h-5 text-yello checked:text-yello   border-[#BDBDBD] focus:bg-yello focus:ring-yello ;
   }
   .contact-input{
-    @apply border-0 w-full text-xl font-medium text-title placeholder:text-xs placeholder:text-[#6E7990] bg-transparent outline-none focus:ring-0 focus:outline-none focus:ring-offset-0;
+    @apply border-0 w-full text-xs font-medium text-title placeholder:text-xs placeholder:text-[#6E7990] bg-transparent outline-none focus:ring-0 focus:outline-none focus:ring-offset-0;
   }
   .contact-parent{
     @apply flex justify-between px-3 py-2 my-5 md:my-[30px] bg-[#FBFBFB] border-[#DBDBDB] rounded-lg border;
   }
   .faq{
-    @apply focus:outline-none focus:ring-offset-0 flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl  focus:ring-0;
+    @apply focus:outline-none focus:ring-offset-0 flex items-center justify-between w-full p-5 font-medium text-left border border-b-0  rounded-t-xl  focus:ring-0;
   }
-
+  .top-title{
+    @apply text-center text-[25px] md:text-[40px] text-title font-bold
+    md:leading-[44px] mb-6
+  }
+  .top-rotate{
+    @apply inline-block relative before:absolute before:h-10   md:before:h-[55px] before:z-[-4] before:-left-1 z-10 before:bg-yello transform before:rounded-sm before:-skew-x-[10deg]
+  }
+  .top-css{
+    @apply inline-block relative  text-sm md:text-[20px]  text-title border-b-4  py-4 px-2   md:p-4  pl-0 md:pl-0
+  }
+  .menu-link{
+    @apply font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title;
+  }
+  .nested-menu{
+    @apply text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before:translate-y-1/2
+  }
+.cities-title{
+  @apply text-2xl font-medium truncate  text-white pb-1.5
+}
+.cities-before{
+  @apply relative rounded-lg overflow-hidden  after:z-[0] after:absolute after:w-full after:h-[130px] after:bg-gradient-to-t from-[#112437CC] via-[#112437C8] to-[#11243700] after:bottom-0 after:left-0 rounded-[12px]
+}
 
 
 }
