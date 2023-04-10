@@ -76,7 +76,7 @@
     md:leading-[44px] mb-6
   }
   .top-rotate{
-    @apply inline-block relative before:absolute before:h-10   md:before:h-[55px] before:z-[-4] before:-left-1 z-10 before:bg-yello transform before:rounded-sm before:-skew-x-[10deg]
+    @apply inline-block relative before:absolute before:h-10   md:before:h-[55px] before:z-[-4] before:-left-1 z-10 before:bg-yello transform  before:-skew-x-[10deg] before:rounded
   }
   .top-css{
     @apply inline-block relative  text-sm md:text-[20px]  text-title border-b-4  py-4 px-2   md:p-4  pl-0 md:pl-0

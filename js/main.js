@@ -673,3 +673,22 @@ $(document).ready(function() {
       });
     }
     
+    $(document).ready(function() {
+      // Attach an event listener to all OTP input fields except the last one
+      $('input[id^="otp-input"]').not(':last').on('input', function() {
+        var digit = $(this).val();
+        // If the input length is 1 and there is a next input field, move the focus to the next input field
+        if (digit.length == 1 && $(this).next().length > 0) {
+          $(this).next().focus();
+        }
+      });
+    
+      // Attach an event listener to the last OTP input field
+      $('#otp-input-5').on('input', function() {
+        var digit = $(this).val();
+        // If the input length is greater than 1, restrict the input to one character
+        if (digit.length > 1) {
+          $(this).val(digit.slice(0,1));
+        }
+      });
+    });
