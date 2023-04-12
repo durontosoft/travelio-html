@@ -6,6 +6,8 @@
       <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
       <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
       <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="./css/vendor/daterangepicker.css">
+      <link rel="stylesheet" href="./css/vendor/select2.min.css">
       <!-- custom css link -->
       <link rel="stylesheet" href="./css/custom.css">
       <!-- tailwind css link -->
@@ -20,6 +22,7 @@
       <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
       <!-- datepicker js link -->
       <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
+
    </head>
    <body>
       <!-- PRELOADER -->
@@ -169,7 +172,7 @@
             </div>
          </div>
          <div class="container z-50  w-full mt-10 md:-mt-[70px] ">
-            <div class="p-[30px] md:flex  items-center justify-between rounded-lg bg-white shadow-icon ">
+            <div class="p-[30px] md:flex  items-center justify-between rounded-lg bg-white shadow-icon">
                <div class="relative max-w-sm">
                   <p class="text-[20px] font-medium text-title ">Where</p>
                   <div class="absolute inset-y-0 right-0 top-8 flex items-center pl-3 pointer-events-none">
@@ -177,34 +180,95 @@
                         <path d="M14 7C14 6.08075 13.8189 5.1705 13.4672 4.32122C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67878 0.532843C8.8295 0.18106 7.91925 0 7 0C6.08075 0 5.17049 0.18106 4.32122 0.532843C3.47194 0.884626 2.70026 1.40024 2.05025 2.05025C1.40024 2.70026 0.884626 3.47194 0.532843 4.32122C0.18106 5.1705 -1.36979e-08 6.08075 0 7C0 8.38557 0.409154 9.67434 1.10285 10.7616C1.10378 10.7631 1.10273 10.765 1.101 10.765C1.09927 10.765 1.09819 10.7669 1.09912 10.7683C2.74527 13.3456 4.96594 16.819 6.15876 18.6845C6.55206 19.2995 7.44916 19.2973 7.84236 18.6822L12.9011 10.7679C12.9019 10.7667 12.901 10.765 12.8995 10.765C12.898 10.765 12.8971 10.7633 12.8979 10.762C13.6171 9.63908 13.9995 8.33357 14 7ZM7 10C6.20435 10 5.44129 9.68393 4.87868 9.12132C4.31607 8.55871 4 7.79565 4 7C4 6.20435 4.31607 5.44129 4.87868 4.87868C5.44129 4.31607 6.20435 4 7 4C7.79565 4 8.55871 4.31607 9.12132 4.87868C9.68393 5.44129 10 6.20435 10 7C10 7.79565 9.68393 8.55871 9.12132 9.12132C8.55871 9.68393 7.79565 10 7 10Z" fill="#399F6E"/>
                         </svg>
                   </div>
-                  <input  type="text" class="bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[#757680] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0 dark:focus:border-blue-500" placeholder="Center Point, Lo...">
+                  <div class="location-select-wrapper c-select bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[rgba(117,118,128,0.2)] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0">
+                     <select class="location-select" id="hotelLocation" name="state">
+                         <option value="NW">Norway</option>
+                         <option value="SW">Swedeen</option>
+                         <option value="US">United States</option>
+                         <option value="Uk">United Kingdom</option>
+                         <option value="SW">Swedeen</option>
+                         <option value="US">United States</option>
+                         <option value="Uk">United Kingdom</option>
+                     </select>
+                 </div>
                 </div>
                <div class="relative max-w-sm mt-3 md:mt-0 ">
                   <p class="text-[20px] font-medium text-title ">From - To</p>
                   <div class="absolute inset-y-0 top-8  right-0 flex items-center pl-3 pointer-events-none">
                     <svg aria-hidden="true" class="w-5 h-5 text-[#399F6E] " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                   </div>
-                  <input datepicker type="text" class="bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[#757680] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0 dark:focus:border-blue-500" placeholder="Select date">
+                  <div class="input-group date-range">
+                     <input type="text" class="bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[rgba(117,118,128,0.2)] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0" id="hotelCheckIn" name="checkInOutRange" value="09/16/2022, 09/16/2022" />
+                 </div>
                 </div>
-               <div class="relative w-full md:w-44 pb-10 md:pb-0  border-b  border-[#757680] mt-3 md:mt-0 ">
-                  <p class="text-[20px] font-medium text-title ">Guests</p>
-                  <div class="absolute inset-y-0 top-8 right-0 flex items-center pl-3 pointer-events-none ">
-                     
-                     <svg aria-hidden="true" class="w-5 h-5 mt-3 text-[#399F6E] " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0.999999L6.5 6L1 1" stroke="#399F6E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        
-                   </div>
-                  <select class="bg-white pl-0 no-icon flex justify-between after:contents-['']  border-none w-full header-select text-[#7D7E87]  " name="" id="">
-                     Select Gest Member<i class="fa-solid block mr-3 fa-sort-down"></i>
-                     <option value="USD">Select Gest Member</option>
-                     <option value="dfdf">02</option>
-                  </select>
+               <div class="guest-select-btn relative w-full md:w-48 md:pb-0  border-b  border-[rgba(117,118,128,0.2)] mt-3 md:mt-0">
+                  <div class="guest-select-box">
+                     <p class="text-[20px] font-medium text-title ">Guests</p>
+                     <div class="absolute inset-y-0 top-8  right-0 flex items-center pl-3 pointer-events-none">
+                        <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M12 0.999999L6.5 6L1 1" stroke="#399F6E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                           </svg>
+                           
+                      </div>
+                     <div class="form-value">
+                        <p class="flex items-center bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none text-[#7D7E87] focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0 dark:focus:border-blue-500">
+                            <span class="guest-rooms">0</span>
+                            <span>&nbsp;Rooms&nbsp;</span>
+                            <span class="guest-adults">0</span>
+                            <span>&nbsp;Adult&nbsp;</span>
+                            <span class="guest-childs">0</span>
+                            <span>&nbsp;Child&nbsp;</span>
+                        </p>
+                    </div>
+                  </div>
+                  <div class="guest-select bg-white shadow-md rounded-lg p-6 absolute top-20 w-80">
+                     <div class="select-item flex items-center justify-between gap-4">
+                        <label for="adult">Rooms</label>
+                        <div class="select-actions flex gap-3 items-center">
+                            <button class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                                <img src="./images/icons/minus-icon.svg" alt="">
+                            </button>
+                            <input type="text" value="0" class="guest-room-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
+                            <button class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                                <img src="./images/icons/plus-icon.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="select-item flex items-center justify-between gap-4 mt-3">
+                        <label for="adult">Adults</label>
+                        <div class="select-actions flex gap-3 items-center">
+                           <button class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                              <img src="./images/icons/minus-icon.svg" alt="">
+                           </button>
+                           <input type="text" value="0" class="guest-adult-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
+                           <button class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                              <img src="./images/icons/plus-icon.svg" alt="">
+                           </button>
+                        </div>   
+                     </div>
+                     <div class="select-item flex items-center justify-between gap-4 mt-3">
+                        <label for="adult">Children</label>
+                        <div class="select-actions flex gap-3 items-center">
+                           <button class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                              <img src="./images/icons/minus-icon.svg" alt="">
+                           </button>
+                           <input type="text" value="0" class="guest-child-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
+                           <button class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                              <img src="./images/icons/plus-icon.svg" alt="">
+                           </button>
+                        </div>   
+                     </div>
+                    <div class="room-select-actions flex justify-between mt-6 border-t border-width-1 border-[#AEC1DB] pt-4">
+                     <button class="reset-button px-6 py-3 bg-slate-300 rounded-md" id="resetGuestNumber">
+                         Reset
+                     </button>   
+                     <button class="px-6 py-3 bg-green text-white rounded-md" id="getGuestNumber">Apply</button>
+                 </div>
+                  </div>
                 </div>
-                <button class="bg-green w-full md:w-[172px] h-[50px] md:h-[72px] mt-6 md:mt-0  rounded-[3px] flex justify-center gap-2 text-lg text-white font-medium items-center ">
+                <button class="bg-green w-full md:w-[172px] h-[50px] md:h-[72px] mt-6 md:mt-0  rounded-[10px] flex justify-center gap-2 text-lg text-white font-medium items-center ">
                     Search
                 </button>
-
             </div>
         </div>
       </section>
@@ -900,9 +964,14 @@
       <!-- jquary link -->
       <script src="./js/vendor/jquary.min.js"></script>
       <!--nice select link  -->
-      <script src="./js/vendor/select.min.js"></script>
+      <!-- <script src="./js/vendor/select.min.js"></script> -->
       <!-- swiper js link -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <!-- Date range -->
+      <script src="./js/vendor/moment.min.js"></script>
+      <script src="./js/vendor/daterangepicker.js"></script>
+      <!-- Select2 -->
+      <script src="./js/vendor/select2.min.js"></script>
       <!-- main js link -->
       <script src="./js/main.js"></script>
    </body>

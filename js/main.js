@@ -1,419 +1,419 @@
-(function($) {
-    "use strict";
-    var bostami = {
-        m: function(e) {
-            bostami.d();
-            bostami.methods();
-        },
+(function ($) {
+  "use strict";
+  var bostami = {
+    m: function (e) {
+      bostami.d();
+      bostami.methods();
+    },
 
-        d: function(e) {
-            (this._window = $(window)),
-            (this._document = $(document)),
-            (this._body = $("body")),
-            (this._html = $("html"));
-        },
-        methods: function(e) {
-//             bostami.darkToLight();
-//             bostami.darkToLightMobile();
-//             bostami.preloader_load();
-//             bostami.preloader_svg();
-            bostami.mobileMenu();
-//             bostami.setDark();
-//             bostami.setDark1();
-//             bostami.setLight();
-//             bostami.setLight1();
-//             bostami.preloader();
-//             bostami.slickActive();
-        },
+    d: function (e) {
+      (this._window = $(window)),
+        (this._document = $(document)),
+        (this._body = $("body")),
+        (this._html = $("html"));
+    },
+    methods: function (e) {
+      //             bostami.darkToLight();
+      //             bostami.darkToLightMobile();
+      //             bostami.preloader_load();
+      //             bostami.preloader_svg();
+      bostami.mobileMenu();
+      //             bostami.setDark();
+      //             bostami.setDark1();
+      //             bostami.setLight();
+      //             bostami.setLight1();
+      //             bostami.preloader();
+      //             bostami.slickActive();
+    },
 
-//         // mobile view dark to light function
+    //         // mobile view dark to light function
 
-//         darkToLight: function() {
-//             $(window).on("load", function() {
-//                 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-//                 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-//                 var themeToggleBtn = document.getElementById("theme-toggle");
-//                 // Change the icons inside the button based on previous settings
-//                 if (
-//                     localStorage.getItem("color-theme") === "dark" ||
-//                     (!("color-theme" in localStorage) &&
-//                         window.matchMedia("(prefers-color-scheme: dark)").matches)
-//                 ) {
-//                     themeToggleLightIcon ? .classList ? .remove("hidden");
-//                 } else {
-//                     themeToggleDarkIcon ? .classList ? .remove("hidden");
-//                 }
-//                 themeToggleBtn ? .addEventListener("click", function() {
+    //         darkToLight: function() {
+    //             $(window).on("load", function() {
+    //                 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+    //                 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+    //                 var themeToggleBtn = document.getElementById("theme-toggle");
+    //                 // Change the icons inside the button based on previous settings
+    //                 if (
+    //                     localStorage.getItem("color-theme") === "dark" ||
+    //                     (!("color-theme" in localStorage) &&
+    //                         window.matchMedia("(prefers-color-scheme: dark)").matches)
+    //                 ) {
+    //                     themeToggleLightIcon ? .classList ? .remove("hidden");
+    //                 } else {
+    //                     themeToggleDarkIcon ? .classList ? .remove("hidden");
+    //                 }
+    //                 themeToggleBtn ? .addEventListener("click", function() {
 
-//                     // toggle icons inside button
+    //                     // toggle icons inside button
 
-//                     themeToggleDarkIcon.classList.toggle("hidden");
-//                     themeToggleLightIcon.classList.toggle("hidden");
+    //                     themeToggleDarkIcon.classList.toggle("hidden");
+    //                     themeToggleLightIcon.classList.toggle("hidden");
 
-//                     // if set via local storage previously
+    //                     // if set via local storage previously
 
-//                     if (localStorage.getItem("color-theme")) {
-//                         if (localStorage.getItem("color-theme") === "light") {
-//                             document.documentElement.classList.add("dark");
-//                             localStorage.setItem("color-theme", "dark");
-//                         } else {
-//                             document.documentElement.classList.remove("dark");
-//                             localStorage.setItem("color-theme", "light");
-//                         }
+    //                     if (localStorage.getItem("color-theme")) {
+    //                         if (localStorage.getItem("color-theme") === "light") {
+    //                             document.documentElement.classList.add("dark");
+    //                             localStorage.setItem("color-theme", "dark");
+    //                         } else {
+    //                             document.documentElement.classList.remove("dark");
+    //                             localStorage.setItem("color-theme", "light");
+    //                         }
 
-//                         // if NOT set via local storage previously
+    //                         // if NOT set via local storage previously
 
-//                     } else {
-//                         if (document.documentElement.classList.contains("dark")) {
-//                             document.documentElement.classList.remove("dark");
-//                             localStorage.setItem("color-theme", "light");
-//                         } else {
-//                             document.documentElement.classList.add("dark");
-//                             localStorage.setItem("color-theme", "dark");
-//                         }
-//                     }
-//                 });
-//             });
-//         },
+    //                     } else {
+    //                         if (document.documentElement.classList.contains("dark")) {
+    //                             document.documentElement.classList.remove("dark");
+    //                             localStorage.setItem("color-theme", "light");
+    //                         } else {
+    //                             document.documentElement.classList.add("dark");
+    //                             localStorage.setItem("color-theme", "dark");
+    //                         }
+    //                     }
+    //                 });
+    //             });
+    //         },
 
-//         // preloader  function
+    //         // preloader  function
 
-//         preloader: function() {
-//             $(window).on("load", function() {
-//                 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
-//                         navigator.userAgent
-//                     ) ?
-//                     true :
-//                     false;
-//                 var preloader = $("#preloader");
+    //         preloader: function() {
+    //             $(window).on("load", function() {
+    //                 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
+    //                         navigator.userAgent
+    //                     ) ?
+    //                     true :
+    //                     false;
+    //                 var preloader = $("#preloader");
 
-//                 if (!isMobile) {
-//                     setTimeout(function() {
-//                         preloader.addClass("preloaded");
-//                     }, 800);
-//                     setTimeout(function() {
-//                         preloader.remove();
-//                     }, 2000);
-//                 } else {
-//                     preloader.remove();
-//                 }
-//             });
-//         },
+    //                 if (!isMobile) {
+    //                     setTimeout(function() {
+    //                         preloader.addClass("preloaded");
+    //                     }, 800);
+    //                     setTimeout(function() {
+    //                         preloader.remove();
+    //                     }, 2000);
+    //                 } else {
+    //                     preloader.remove();
+    //                 }
+    //             });
+    //         },
 
-//         preloader_load: function() {
-//             $(window).on("load", function() {
-//                 var speed = 500;
-//                 setTimeout(function() {
-//                     preloader();
-//                 }, speed);
-//             });
-//         },
-//         preloader_svg: function() {
-//             $(window).on("load", function() {
-//                 jQuery("img.svg").each(function() {
-//                     var jQueryimg = jQuery(this);
-//                     var imgClass = jQueryimg.attr("class");
-//                     var imgURL = jQueryimg.attr("src");
+    //         preloader_load: function() {
+    //             $(window).on("load", function() {
+    //                 var speed = 500;
+    //                 setTimeout(function() {
+    //                     preloader();
+    //                 }, speed);
+    //             });
+    //         },
+    //         preloader_svg: function() {
+    //             $(window).on("load", function() {
+    //                 jQuery("img.svg").each(function() {
+    //                     var jQueryimg = jQuery(this);
+    //                     var imgClass = jQueryimg.attr("class");
+    //                     var imgURL = jQueryimg.attr("src");
 
-//                     jQuery.get(
-//                         imgURL,
-//                         function(data) {
-//                             // Get the SVG tag, ignore the rest
-//                             var jQuerysvg = jQuery(data).find("svg");
+    //                     jQuery.get(
+    //                         imgURL,
+    //                         function(data) {
+    //                             // Get the SVG tag, ignore the rest
+    //                             var jQuerysvg = jQuery(data).find("svg");
 
-//                             // Add replaced image's classes to the new SVG
-//                             if (typeof imgClass !== "undefined") {
-//                                 jQuerysvg = jQuerysvg.attr("class", imgClass + " replaced-svg");
-//                             }
+    //                             // Add replaced image's classes to the new SVG
+    //                             if (typeof imgClass !== "undefined") {
+    //                                 jQuerysvg = jQuerysvg.attr("class", imgClass + " replaced-svg");
+    //                             }
 
-//                             // Remove any invalid XML tags as per http://validator.w3.org
-//                             jQuerysvg = jQuerysvg.removeAttr("xmlns:a");
+    //                             // Remove any invalid XML tags as per http://validator.w3.org
+    //                             jQuerysvg = jQuerysvg.removeAttr("xmlns:a");
 
-//                             // Replace image with new SVG
-//                             jQueryimg.replaceWith(jQuerysvg);
-//                         },
-//                         "xml"
-//                     );
-//                 });
-//             });
-//         },
+    //                             // Replace image with new SVG
+    //                             jQueryimg.replaceWith(jQuerysvg);
+    //                         },
+    //                         "xml"
+    //                     );
+    //                 });
+    //             });
+    //         },
 
-//         // moblie method toggle button function
+    //         // moblie method toggle button function
 
-        mobileMenu: function() {
-            $(window).on("load", function() {
-                // menu toggle button
-                const menuOpen = document.getElementById("menu-toggle-open-icon");
-                const menuClose = document.getElementById("menu-toggle-close-icon");
-                const navbar = document.getElementById("navbar");
-                // const menuToggleBtnTwo = document.getElementById("menu-toggle-two");
-                // const menuToggleBtn = document.getElementById("menu-toggle");
+    mobileMenu: function () {
+      $(window).on("load", function () {
+        // menu toggle button
+        const menuOpen = document.getElementById("menu-toggle-open-icon");
+        const menuClose = document.getElementById("menu-toggle-close-icon");
+        const navbar = document.getElementById("navbar");
+        // const menuToggleBtnTwo = document.getElementById("menu-toggle-two");
+        // const menuToggleBtn = document.getElementById("menu-toggle");
 
-                menuOpen?.addEventListener("click", () => {
-                    navbar.classList.add("scale-x-1","top-0");
-                    navbar.classList.remove("-top-[200%]", "scale-x-0");
-                });
-                menuClose?.addEventListener("click", () => {
-                    console.log("click");
-                    navbar.classList.remove("scale-x-1", "top-0");
-                    navbar.classList.add("scale-x-0", "-top-[200%]");
+        menuOpen?.addEventListener("click", () => {
+          navbar.classList.add("scale-x-1", "top-0");
+          navbar.classList.remove("-top-[200%]", "scale-x-0");
+        });
+        menuClose?.addEventListener("click", () => {
+          console.log("click");
+          navbar.classList.remove("scale-x-1", "top-0");
+          navbar.classList.add("scale-x-0", "-top-[200%]");
 
-                });
-            });
-        },
-
-
-
-//         // set dark theme for home one
-
-//         setDark: function() {
-//             $(window).on("load", function() {
-//                 const darkButton = document.getElementById("dark");
-//                 var themeToggleDarkIcon = document.getElementById(
-//                     "theme-toggle-dark-icon"
-//                 );
-//                 var themeToggleLightIcon = document.getElementById(
-//                     "theme-toggle-light-icon"
-//                 );
-//                 // set dark mode
-//                 darkButton ? .addEventListener("click", () => {
-//                     console.log("Dark clicked");
-//                     themeToggleLightIcon ? .classList.remove("hidden");
-//                     themeToggleDarkIcon ? .classList.add("hidden");
-//                     // if set via local storage previously
-//                     if (localStorage.getItem("color-theme")) {
-//                         document.documentElement.classList.add("dark");
-//                         localStorage.setItem("color-theme", "dark");
-
-//                         // if NOT set via local storage previously
-//                     } else {
-//                         document.documentElement.classList.add("dark");
-//                         localStorage.setItem("color-theme", "dark");
-//                     }
-//                 });
-//             });
-//         },
-
-//         // set light theme for home one
-
-//         setLight: function() {
-//             $(window).on("load", function() {
-//                 const lightButton = document.getElementById("light");
-//                 var themeToggleDarkIcon = document.getElementById(
-//                     "theme-toggle-dark-icon"
-//                 );
-//                 var themeToggleLightIcon = document.getElementById(
-//                     "theme-toggle-light-icon"
-//                 );
-//                 lightButton ? .addEventListener("click", () => {
-//                     console.log("light clicked");
-//                     themeToggleDarkIcon ? .classList.remove("hidden");
-//                     themeToggleLightIcon ? .classList.add("hidden");
-//                     // if set via local storage previously
-//                     if (localStorage.getItem("color-theme")) {
-//                         document.documentElement.classList.remove("dark");
-//                         localStorage.setItem("color-theme", "light");
-
-//                         // if NOT set via local storage previously
-//                     } else {
-//                         document.documentElement.classList.remove("dark");
-//                         localStorage.setItem("color-theme", "light");
-//                     }
-//                 });
-//             });
-//         },
-
-//         // set dark theme for home two
-
-//         setDark1: function() {
-//             $(window).on("load", function() {
-//                 const darkButton1 = document.getElementById("dark1");
-//                 var themeToggleDarkIcon = document.getElementById(
-//                     "theme-toggle-dark-icon"
-//                 );
-//                 var themeToggleLightIcon = document.getElementById(
-//                     "theme-toggle-light-icon"
-//                 );
-//                 darkButton1 ? .addEventListener("click", () => {
-//                     console.log("Dark clicked");
-//                     themeToggleLightIcon ? .classList.remove("hidden");
-//                     themeToggleDarkIcon ? .classList.add("hidden");
-//                     // if set via local storage previously
-//                     if (localStorage.getItem("color-theme")) {
-//                         document.documentElement.classList.add("dark");
-//                         localStorage.setItem("color-theme", "dark");
-
-//                         // if NOT set via local storage previously
-//                     } else {
-//                         document.documentElement.classList.add("dark");
-//                         localStorage.setItem("color-theme", "dark");
-//                     }
-//                 });
-//             });
-//         },
-
-//         // set light theme for home two
-
-//         setLight1: function() {
-//             $(window).on("load", function() {
-//                 const lightButton1 = document.getElementById("light1");
-//                 var themeToggleDarkIcon = document.getElementById(
-//                     "theme-toggle-dark-icon"
-//                 );
-//                 var themeToggleLightIcon = document.getElementById(
-//                     "theme-toggle-light-icon"
-//                 );
-//                 lightButton1 ? .addEventListener("click", () => {
-//                     console.log("light clicked");
-//                     themeToggleDarkIcon ? .classList.remove("hidden");
-//                     themeToggleLightIcon ? .classList.add("hidden");
-//                     // if set via local storage previously
-//                     if (localStorage.getItem("color-theme")) {
-//                         document.documentElement.classList.remove("dark");
-//                         localStorage.setItem("color-theme", "light");
-
-//                         // if NOT set via local storage previously
-//                     } else {
-//                         document.documentElement.classList.remove("dark");
-//                         localStorage.setItem("color-theme", "light");
-//                     }
-//                 });
-//             });
-//         },
-
-//         // dark to light function for mobile devices
-
-//         darkToLightMobile: function() {
-//             $(window).on("load", function() {
-//                 var themeToggleDarkIconMobile = document.getElementById(
-//                     "theme-toggle-dark-icon-mobile"
-//                 );
-//                 var themeToggleLightIconMobile = document.getElementById(
-//                     "theme-toggle-light-icon-mobile"
-//                 );
-//                 var themeToggleBtnMobile = document.getElementById(
-//                     "theme-toggle-mobile"
-//                 );
-//                 // Change the icons inside the button based on previous settings
-//                 if (
-//                     localStorage.getItem("color-theme") === "dark" ||
-//                     (!("color-theme" in localStorage) &&
-//                         window.matchMedia("(prefers-color-scheme: dark)").matches)
-//                 ) {
-//                     themeToggleLightIconMobile ? .classList ? .remove("hidden");
-//                 } else {
-//                     themeToggleDarkIconMobile ? .classList ? .remove("hidden");
-//                 }
-//                 themeToggleBtnMobile ? .addEventListener("click", function() {
-//                     // toggle icons inside button
-//                     themeToggleDarkIconMobile.classList.toggle("hidden");
-//                     themeToggleLightIconMobile.classList.toggle("hidden");
-
-//                     // if set via local storage previously
-//                     if (localStorage.getItem("color-theme")) {
-//                         if (localStorage.getItem("color-theme") === "light") {
-//                             document.documentElement.classList.add("dark");
-//                             localStorage.setItem("color-theme", "dark");
-//                         } else {
-//                             document.documentElement.classList.remove("dark");
-//                             localStorage.setItem("color-theme", "light");
-//                         }
-
-//                         // if NOT set via local storage previously
-//                     } else {
-//                         if (document.documentElement.classList.contains("dark")) {
-//                             document.documentElement.classList.remove("dark");
-//                             localStorage.setItem("color-theme", "light");
-//                         } else {
-//                             document.documentElement.classList.add("dark");
-//                             localStorage.setItem("color-theme", "dark");
-//                         }
-//                     }
-//                 });
-//             });
-//         },
-
-//         // slick slider active function 
-
-//         slickActive: function() {
-
-//             if ($(".slickOne").length !== 0) {
-//                 $(".slickOne").slick({
-//                     slidesToShow: 4,
-//                     slidesToScroll: 1,
-//                     autoplay: true,
-//                     autoplaySpeed: 2000,
-//                     dots: false,
-//                     arrows: false,
-//                     responsive: [{
-//                             breakpoint: 1024,
-//                             settings: {
-//                                 slidesToShow: 4,
-//                             },
-//                         },
-//                         {
-//                             breakpoint: 600,
-//                             settings: {
-//                                 slidesToShow: 2,
-//                             },
-//                         },
-//                         {
-//                             breakpoint: 480,
-//                             settings: {
-//                                 slidesToShow: 2,
-//                                 slidesToScroll: 1,
-//                             },
-//                         },
-//                         // You can unslick at a given breakpoint now by adding:
-//                         // settings: "unslick"
-//                         // instead of a settings object
-//                     ],
-//                 });
-//             }
-//             if ($(".slickTwo").length !== 0) {
-//                 $(".slickTwo").slick({
-//                     slidesToShow: 5,
-//                     slidesToScroll: 1,
-//                     autoplay: true,
-//                     autoplaySpeed: 2000,
-//                     dots: false,
-//                     arrows: false,
-
-//                     responsive: [{
-//                             breakpoint: 1024,
-//                             settings: {
-//                                 slidesToShow: 5,
-//                             },
-//                         },
-//                         {
-//                             breakpoint: 600,
-//                             settings: {
-//                                 slidesToShow: 3,
-//                                 slidesToScroll: 2,
-//                             },
-//                         },
-//                         {
-//                             breakpoint: 480,
-//                             settings: {
-//                                 slidesToShow: 2,
-//                                 slidesToScroll: 1,
-//                             },
-//                         },
-//                         // You can unslick at a given breakpoint now by adding:
-//                         // settings: "unslick"
-//                         // instead of a settings object
-//                     ],
-//                 });
-//             }
+        });
+      });
+    },
 
 
-//         },
 
-//         // slick slider active function
+    //         // set dark theme for home one
+
+    //         setDark: function() {
+    //             $(window).on("load", function() {
+    //                 const darkButton = document.getElementById("dark");
+    //                 var themeToggleDarkIcon = document.getElementById(
+    //                     "theme-toggle-dark-icon"
+    //                 );
+    //                 var themeToggleLightIcon = document.getElementById(
+    //                     "theme-toggle-light-icon"
+    //                 );
+    //                 // set dark mode
+    //                 darkButton ? .addEventListener("click", () => {
+    //                     console.log("Dark clicked");
+    //                     themeToggleLightIcon ? .classList.remove("hidden");
+    //                     themeToggleDarkIcon ? .classList.add("hidden");
+    //                     // if set via local storage previously
+    //                     if (localStorage.getItem("color-theme")) {
+    //                         document.documentElement.classList.add("dark");
+    //                         localStorage.setItem("color-theme", "dark");
+
+    //                         // if NOT set via local storage previously
+    //                     } else {
+    //                         document.documentElement.classList.add("dark");
+    //                         localStorage.setItem("color-theme", "dark");
+    //                     }
+    //                 });
+    //             });
+    //         },
+
+    //         // set light theme for home one
+
+    //         setLight: function() {
+    //             $(window).on("load", function() {
+    //                 const lightButton = document.getElementById("light");
+    //                 var themeToggleDarkIcon = document.getElementById(
+    //                     "theme-toggle-dark-icon"
+    //                 );
+    //                 var themeToggleLightIcon = document.getElementById(
+    //                     "theme-toggle-light-icon"
+    //                 );
+    //                 lightButton ? .addEventListener("click", () => {
+    //                     console.log("light clicked");
+    //                     themeToggleDarkIcon ? .classList.remove("hidden");
+    //                     themeToggleLightIcon ? .classList.add("hidden");
+    //                     // if set via local storage previously
+    //                     if (localStorage.getItem("color-theme")) {
+    //                         document.documentElement.classList.remove("dark");
+    //                         localStorage.setItem("color-theme", "light");
+
+    //                         // if NOT set via local storage previously
+    //                     } else {
+    //                         document.documentElement.classList.remove("dark");
+    //                         localStorage.setItem("color-theme", "light");
+    //                     }
+    //                 });
+    //             });
+    //         },
+
+    //         // set dark theme for home two
+
+    //         setDark1: function() {
+    //             $(window).on("load", function() {
+    //                 const darkButton1 = document.getElementById("dark1");
+    //                 var themeToggleDarkIcon = document.getElementById(
+    //                     "theme-toggle-dark-icon"
+    //                 );
+    //                 var themeToggleLightIcon = document.getElementById(
+    //                     "theme-toggle-light-icon"
+    //                 );
+    //                 darkButton1 ? .addEventListener("click", () => {
+    //                     console.log("Dark clicked");
+    //                     themeToggleLightIcon ? .classList.remove("hidden");
+    //                     themeToggleDarkIcon ? .classList.add("hidden");
+    //                     // if set via local storage previously
+    //                     if (localStorage.getItem("color-theme")) {
+    //                         document.documentElement.classList.add("dark");
+    //                         localStorage.setItem("color-theme", "dark");
+
+    //                         // if NOT set via local storage previously
+    //                     } else {
+    //                         document.documentElement.classList.add("dark");
+    //                         localStorage.setItem("color-theme", "dark");
+    //                     }
+    //                 });
+    //             });
+    //         },
+
+    //         // set light theme for home two
+
+    //         setLight1: function() {
+    //             $(window).on("load", function() {
+    //                 const lightButton1 = document.getElementById("light1");
+    //                 var themeToggleDarkIcon = document.getElementById(
+    //                     "theme-toggle-dark-icon"
+    //                 );
+    //                 var themeToggleLightIcon = document.getElementById(
+    //                     "theme-toggle-light-icon"
+    //                 );
+    //                 lightButton1 ? .addEventListener("click", () => {
+    //                     console.log("light clicked");
+    //                     themeToggleDarkIcon ? .classList.remove("hidden");
+    //                     themeToggleLightIcon ? .classList.add("hidden");
+    //                     // if set via local storage previously
+    //                     if (localStorage.getItem("color-theme")) {
+    //                         document.documentElement.classList.remove("dark");
+    //                         localStorage.setItem("color-theme", "light");
+
+    //                         // if NOT set via local storage previously
+    //                     } else {
+    //                         document.documentElement.classList.remove("dark");
+    //                         localStorage.setItem("color-theme", "light");
+    //                     }
+    //                 });
+    //             });
+    //         },
+
+    //         // dark to light function for mobile devices
+
+    //         darkToLightMobile: function() {
+    //             $(window).on("load", function() {
+    //                 var themeToggleDarkIconMobile = document.getElementById(
+    //                     "theme-toggle-dark-icon-mobile"
+    //                 );
+    //                 var themeToggleLightIconMobile = document.getElementById(
+    //                     "theme-toggle-light-icon-mobile"
+    //                 );
+    //                 var themeToggleBtnMobile = document.getElementById(
+    //                     "theme-toggle-mobile"
+    //                 );
+    //                 // Change the icons inside the button based on previous settings
+    //                 if (
+    //                     localStorage.getItem("color-theme") === "dark" ||
+    //                     (!("color-theme" in localStorage) &&
+    //                         window.matchMedia("(prefers-color-scheme: dark)").matches)
+    //                 ) {
+    //                     themeToggleLightIconMobile ? .classList ? .remove("hidden");
+    //                 } else {
+    //                     themeToggleDarkIconMobile ? .classList ? .remove("hidden");
+    //                 }
+    //                 themeToggleBtnMobile ? .addEventListener("click", function() {
+    //                     // toggle icons inside button
+    //                     themeToggleDarkIconMobile.classList.toggle("hidden");
+    //                     themeToggleLightIconMobile.classList.toggle("hidden");
+
+    //                     // if set via local storage previously
+    //                     if (localStorage.getItem("color-theme")) {
+    //                         if (localStorage.getItem("color-theme") === "light") {
+    //                             document.documentElement.classList.add("dark");
+    //                             localStorage.setItem("color-theme", "dark");
+    //                         } else {
+    //                             document.documentElement.classList.remove("dark");
+    //                             localStorage.setItem("color-theme", "light");
+    //                         }
+
+    //                         // if NOT set via local storage previously
+    //                     } else {
+    //                         if (document.documentElement.classList.contains("dark")) {
+    //                             document.documentElement.classList.remove("dark");
+    //                             localStorage.setItem("color-theme", "light");
+    //                         } else {
+    //                             document.documentElement.classList.add("dark");
+    //                             localStorage.setItem("color-theme", "dark");
+    //                         }
+    //                     }
+    //                 });
+    //             });
+    //         },
+
+    //         // slick slider active function 
+
+    //         slickActive: function() {
+
+    //             if ($(".slickOne").length !== 0) {
+    //                 $(".slickOne").slick({
+    //                     slidesToShow: 4,
+    //                     slidesToScroll: 1,
+    //                     autoplay: true,
+    //                     autoplaySpeed: 2000,
+    //                     dots: false,
+    //                     arrows: false,
+    //                     responsive: [{
+    //                             breakpoint: 1024,
+    //                             settings: {
+    //                                 slidesToShow: 4,
+    //                             },
+    //                         },
+    //                         {
+    //                             breakpoint: 600,
+    //                             settings: {
+    //                                 slidesToShow: 2,
+    //                             },
+    //                         },
+    //                         {
+    //                             breakpoint: 480,
+    //                             settings: {
+    //                                 slidesToShow: 2,
+    //                                 slidesToScroll: 1,
+    //                             },
+    //                         },
+    //                         // You can unslick at a given breakpoint now by adding:
+    //                         // settings: "unslick"
+    //                         // instead of a settings object
+    //                     ],
+    //                 });
+    //             }
+    //             if ($(".slickTwo").length !== 0) {
+    //                 $(".slickTwo").slick({
+    //                     slidesToShow: 5,
+    //                     slidesToScroll: 1,
+    //                     autoplay: true,
+    //                     autoplaySpeed: 2000,
+    //                     dots: false,
+    //                     arrows: false,
+
+    //                     responsive: [{
+    //                             breakpoint: 1024,
+    //                             settings: {
+    //                                 slidesToShow: 5,
+    //                             },
+    //                         },
+    //                         {
+    //                             breakpoint: 600,
+    //                             settings: {
+    //                                 slidesToShow: 3,
+    //                                 slidesToScroll: 2,
+    //                             },
+    //                         },
+    //                         {
+    //                             breakpoint: 480,
+    //                             settings: {
+    //                                 slidesToShow: 2,
+    //                                 slidesToScroll: 1,
+    //                             },
+    //                         },
+    //                         // You can unslick at a given breakpoint now by adding:
+    //                         // settings: "unslick"
+    //                         // instead of a settings object
+    //                     ],
+    //                 });
+    //             }
 
 
-    };
-    bostami.m();
+    //         },
+
+    //         // slick slider active function
+
+
+  };
+  bostami.m();
 })(jQuery, window);
 
 // import 'flowbite-datepicker';
@@ -424,271 +424,383 @@
 // });
 
 
-if ($("#accordion-example-heading-1")[0]){
+if ($("#accordion-example-heading-1")[0]) {
   // create an array of objects with the id, trigger element (eg. button), and the content element
-const accordionItems = [
+  const accordionItems = [
     {
-        id: 'accordion-example-heading-1',
-        triggerEl: document.querySelector('#accordion-example-heading-1'),
-        targetEl: document.querySelector('#accordion-example-body-1'),
-        active: true
+      id: 'accordion-example-heading-1',
+      triggerEl: document.querySelector('#accordion-example-heading-1'),
+      targetEl: document.querySelector('#accordion-example-body-1'),
+      active: true
     },
     {
-        id: 'accordion-example-heading-2',
-        triggerEl: document.querySelector('#accordion-example-heading-2'),
-        targetEl: document.querySelector('#accordion-example-body-2'),
-        active: false
+      id: 'accordion-example-heading-2',
+      triggerEl: document.querySelector('#accordion-example-heading-2'),
+      targetEl: document.querySelector('#accordion-example-body-2'),
+      active: false
     },
     {
-        id: 'accordion-example-heading-3',
-        triggerEl: document.querySelector('#accordion-example-heading-3'),
-        targetEl: document.querySelector('#accordion-example-body-3'),
-        active: false
+      id: 'accordion-example-heading-3',
+      triggerEl: document.querySelector('#accordion-example-heading-3'),
+      targetEl: document.querySelector('#accordion-example-body-3'),
+      active: false
     },
     {
-        id: 'accordion-example-heading-4',
-        triggerEl: document.querySelector('#accordion-example-heading-4'),
-        targetEl: document.querySelector('#accordion-example-body-4'),
-        active: false
+      id: 'accordion-example-heading-4',
+      triggerEl: document.querySelector('#accordion-example-heading-4'),
+      targetEl: document.querySelector('#accordion-example-body-4'),
+      active: false
     },
     {
-        id: 'accordion-example-heading-6',
-        triggerEl: document.querySelector('#accordion-example-heading-6'),
-        targetEl: document.querySelector('#accordion-example-body-6'),
-        active: false
+      id: 'accordion-example-heading-6',
+      triggerEl: document.querySelector('#accordion-example-heading-6'),
+      targetEl: document.querySelector('#accordion-example-body-6'),
+      active: false
     }
-];
-/*
-* accordionItems: array of accordion item objects
-* options: optional
-*/// options with default values
-const options = {
+  ];
+  /*
+  * accordionItems: array of accordion item objects
+  * options: optional
+  */// options with default values
+  const options = {
     // alwaysOpen: true,
     activeClasses: 'bg-green text-white',
     inactiveClasses: 'text-red-600',
     onOpen: (item) => {
-        console.log('accordion item has been shown');
-        console.log(item);
+      console.log('accordion item has been shown');
+      console.log(item);
     },
     onClose: (item) => {
-        console.log('accordion item has been hidden');
-        console.log(item);
+      console.log('accordion item has been hidden');
+      console.log(item);
     },
     onToggle: (item) => {
-        console.log('accordion item has been toggled');
-        console.log(item);
+      console.log('accordion item has been toggled');
+      console.log(item);
     },
-};
+  };
 
 
-const accordion = new Accordion(accordionItems, options);
-// open accordion item based on id
-accordion.open('accordion-example-heading-2');
+  const accordion = new Accordion(accordionItems, options);
+  // open accordion item based on id
+  accordion.open('accordion-example-heading-2');
 
-// close accordion item based on id
-accordion.close('accordion-example-heading-2');
+  // close accordion item based on id
+  accordion.close('accordion-example-heading-2');
 
-// toggle visibility of item based on id
-accordion.toggle('accordion-example-heading-3');
+  // toggle visibility of item based on id
+  accordion.toggle('accordion-example-heading-3');
 }
 
-$(document).ready(function() {
-    $('select').niceSelect('update');
+$(document).ready(function () {
+  $('.nice-select').niceSelect('update');
+});
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+var swiperForTour = new Swiper(".mySwiperForOffers",
+  {
+
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-ForOffers",
+      prevEl: ".swiper-button-prev-ForOffers",
+    },
   });
- 
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    var swiperForTour = new Swiper(".mySwiperForOffers",
-     {
+var mySwiperForEventDetails = new Swiper(".mySwiperForEventDetails",
+  {
 
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 25,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
       },
-      navigation: {
-        nextEl: ".swiper-button-next-ForOffers",
-        prevEl: ".swiper-button-prev-ForOffers",
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
       },
-    });
-    var mySwiperForEventDetails = new Swiper(".mySwiperForEventDetails",
-     {
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-event",
+      prevEl: ".swiper-button-prev-event",
+    },
+  });
+var mySwiperForTourEvent = new Swiper(".mySwiperForTourEvent",
+  {
 
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 25,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
       },
-      navigation: {
-        nextEl: ".swiper-button-next-event",
-        prevEl: ".swiper-button-prev-event",
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
       },
-    });
-    var mySwiperForTourEvent = new Swiper(".mySwiperForTourEvent",
-     {
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-TourEvent",
+      prevEl: ".swiper-button-prev-TourEvent",
+    },
+  });
+var mySwiperForNewTravel = new Swiper(".mySwiperForNewTravel",
+  {
 
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 25,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
       },
-      navigation: {
-        nextEl: ".swiper-button-next-TourEvent",
-        prevEl: ".swiper-button-prev-TourEvent",
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-NewTravel",
+      prevEl: ".swiper-button-prev-NewTravel",
+    },
+  });
+if ($("#example")[0]) {
+  $(document).ready(function () {
+    var table = $('#example').DataTable({
+      rowReorder: {
+        selector: 'td:nth-child(2)'
+      },
+      responsive: true
     });
-    var mySwiperForNewTravel = new Swiper(".mySwiperForNewTravel",
-     {
+    var table1 = $('#example1').DataTable({
+      rowReorder: {
+        selector: 'td:nth-child(2)'
+      },
+      responsive: true
+    });
+    var table2 = $('#example2').DataTable({
+      rowReorder: {
+        selector: 'td:nth-child(2)'
+      },
+      responsive: true
+    });
+  });
+}
 
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 25,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next-NewTravel",
-        prevEl: ".swiper-button-prev-NewTravel",
-      },
+
+
+
+
+$('.tab li button').click(function () {
+  $(this).parent().siblings().children().removeClass('border-[#0D2F3F] font-semibold');
+  $(this).addClass('border-[#0D2F3F] font-semibold');
+});
+
+
+if ($("#increment")[0]) {
+  $(document).ready(function () {
+    $('#increment').click(function () {
+      var value = parseInt($('#quantity').val());
+      if (value < 10) {
+        $('#quantity').val(value + 1);
+      }
     });
-    if ($("#example")[0]){
-        $(document).ready(function() {
-            var table = $('#example').DataTable( {
-                rowReorder: {
-                    selector: 'td:nth-child(2)'
-                },
-                responsive: true
-            } );
-            var table1 = $('#example1').DataTable( {
-                rowReorder: {
-                    selector: 'td:nth-child(2)'
-                },
-                responsive: true
-            } );
-            var table2 = $('#example2').DataTable( {
-                rowReorder: {
-                    selector: 'td:nth-child(2)'
-                },
-                responsive: true
-            } );
-        } );
+    $('#decrement').click(function () {
+      var value = parseInt($('#quantity').val());
+      if (value > 0) {
+        $('#quantity').val(value - 1);
+      }
+    });
+  });
+}
+
+if ($("#increment1")[0]) {
+  $(document).ready(function () {
+    $('#increment1').click(function () {
+      var value = parseInt($('#quantity1').val());
+      if (value < 10) {
+        $('#quantity1').val(value + 1);
+      }
+    });
+    $('#decrement1').click(function () {
+      var value = parseInt($('#quantity1').val());
+      if (value > 0) {
+        $('#quantity1').val(value - 1);
+      }
+    });
+  });
+}
+
+$(document).ready(function () {
+  // Attach an event listener to all OTP input fields except the last one
+  $('input[id^="otp-input"]').not(':last').on('input', function () {
+    var digit = $(this).val();
+    // If the input length is 1 and there is a next input field, move the focus to the next input field
+    if (digit.length == 1 && $(this).next().length > 0) {
+      $(this).next().focus();
     }
+  });
 
-
-   
-
-
-    $('.tab li button').click( function() {
-        $(this).parent().siblings().children().removeClass('border-[#0D2F3F] font-semibold');
-        $(this).addClass('border-[#0D2F3F] font-semibold');
-    });
-  
-
-    if ($("#increment")[0]){
-      $(document).ready(function(){
-        $('#increment').click(function(){
-          var value = parseInt($('#quantity').val());
-          if(value < 10){
-            $('#quantity').val(value + 1);
-          }
-        });
-        $('#decrement').click(function(){
-          var value = parseInt($('#quantity').val());
-          if(value > 0){
-            $('#quantity').val(value - 1);
-          }
-        });
-      });
+  // Attach an event listener to the last OTP input field
+  $('#otp-input-5').on('input', function () {
+    var digit = $(this).val();
+    // If the input length is greater than 1, restrict the input to one character
+    if (digit.length > 1) {
+      $(this).val(digit.slice(0, 1));
     }
+  });
 
-    if ($("#increment1")[0]){
-      $(document).ready(function(){
-        $('#increment1').click(function(){
-          var value = parseInt($('#quantity1').val());
-          if(value < 10){
-            $('#quantity1').val(value + 1);
-          }
-        });
-        $('#decrement1').click(function(){
-          var value = parseInt($('#quantity1').val());
-          if(value > 0){
-            $('#quantity1').val(value - 1);
-          }
-        });
-      });
+  // Select2
+  // location Select
+  // $('.location-select').prepend('<option selected></option>').select2({
+  //   dropdownParent: '.location-select-wrapper',
+  //   // minimumResultsForSearch: -1,
+  //   templateResult: addLocationIcon,
+  //   placeholder: "Where are you going?",
+  // });
+
+  // Date range
+  $('input[name="checkInOutRange"]').daterangepicker({
+    opens: 'center',
+    autoApply: true
+  });
+
+  // $('.guest-select-field').on('click', function () {
+  //   $('.guest-select').toggleClass('show');
+  // })
+
+  // Increment, decrement
+  var buttonPlus = $(".increment");
+  var buttonMinus = $(".decrement");
+  var buttonPlus = buttonPlus.click(function () {
+    var $n = $(this)
+      .parent(".select-actions")
+      .find(".room-value");
+    $n.val(Number($n.val()) + 1);
+  });
+  var buttonMinus = buttonMinus.click(function () {
+    var $n = $(this)
+      .parent(".select-actions")
+      .find(".room-value");
+    var amount = Number($n.val());
+    if (amount > 0) {
+      $n.val(amount - 1);
     }
-    
-    $(document).ready(function() {
-      // Attach an event listener to all OTP input fields except the last one
-      $('input[id^="otp-input"]').not(':last').on('input', function() {
-        var digit = $(this).val();
-        // If the input length is 1 and there is a next input field, move the focus to the next input field
-        if (digit.length == 1 && $(this).next().length > 0) {
-          $(this).next().focus();
-        }
-      });
-    
-      // Attach an event listener to the last OTP input field
-      $('#otp-input-5').on('input', function() {
-        var digit = $(this).val();
-        // If the input length is greater than 1, restrict the input to one character
-        if (digit.length > 1) {
-          $(this).val(digit.slice(0,1));
-        }
-      });
-    });
+  });
+
+  // Set guest Number
+  $('#getGuestNumber').on('click', function() {
+    let guestRooms = $('.guest-room-input').val();
+    let guestAdults = $('.guest-adult-input').val();
+    let guestChilds = $('.guest-child-input').val();
+
+    $('.guest-rooms').text(guestRooms);
+    $('.guest-adults').text(guestAdults);
+    $('.guest-childs').text(guestChilds);
+  });
+
+   // Reset guest number
+   $('#resetGuestNumber').on('click', function() {
+    $('.guest-room-input').val(0);
+    $('.guest-adult-input').val(0);
+    $('.guest-child-input').val(0);
+
+   $('.guest-rooms').text(0);
+   $('.guest-adults').text(0);
+   $('.guest-childs').text(0);
+ });
+
+  // Set room number
+  $('#setRoomNumber').on('click', function() {
+    let roomNumber = $('.room-number-input').val();
+    $('.room-number').text(roomNumber);
+  })
+
+  // Reset Room number
+  $('#resetRoomNumber').on('click', function() {
+    $('.room-number-input').val(0);
+    $('.room-number').text(0);
+ });
+
+  // Room select dropdown 
+  $('.guest-select-box').on('click', function () {
+    $('.guest-select').toggleClass('show');
+    $('.guest-select-box').toggleClass('toggle-icon');
+  })
+
+  $('.room-select-box').on('click', function () {
+    $('.room-select').toggleClass('show');
+    $('.room-select-box').toggleClass('toggle-icon')
+  })
+
+  // Location select
+  $('.location-select').prepend('<option selected></option>').select2({
+    dropdownParent: '.location-select-wrapper',
+    templateResult: addLocationIcon, 
+    placeholder: "Where are you going?",
+  });
+
+  $('.location-select-2').prepend('<option selected></option>').select2({
+    dropdownParent: '.location-select-wrapper',
+    templateResult: addLocationIcon, 
+    placeholder: "Where are you going?",
+  });
+
+  // Location icon
+  function addLocationIcon(icon) {
+    return $('<span class="location-icon"><img src="../images/icons/marker-icon.svg" /> ' + icon.text + '</span>');
+  };
+
+
+
+  // Hide on document click
+  $(document).on('click', function (e) { // Hides the div by clicking any where in the screen
+    if (!$(e.target).closest('.guest-select-btn').length) {
+      $('.guest-select').removeClass('show');
+      $('.guest-select-box').removeClass('toggle-icon')
+    }
+  });
+
+});
