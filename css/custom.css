@@ -872,3 +872,199 @@ top: -90px;
 
 
 }
+
+/* ========== Guest Select  ==========*/
+
+.guest-select {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all .3s ease;
+}
+
+.guest-select.show {
+    visibility: visible;
+    opacity: 1;   
+    transform: translateY(0);
+}
+
+/* ========== Date range picker  ==========*/
+.daterangepicker {
+    margin-top: 15px;
+}
+.daterangepicker td.active {
+    background-color: #FFC62D;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+}
+.daterangepicker td.active:hover {
+    background-color: #FFC62D;
+}
+.daterangepicker .drp-buttons .btn-primary {
+    background-color: #399F6E;
+}
+.daterangepicker th.month {
+    background-color: #399F6E;
+    color: white;
+}
+.daterangepicker .calendar-table .prev span, .daterangepicker .calendar-table .next span {
+    border-color: white;
+    color: white;
+}
+.daterangepicker .calendar-table .prev, .daterangepicker .calendar-table .next {
+    transition: all 0.3s ease;
+}
+.daterangepicker .calendar-table .prev:hover, .daterangepicker .calendar-table .next:hover {
+    background-color: #FFC62D;
+}
+.daterangepicker .calendar-table th {
+    border-radius: 0;
+}
+.daterangepicker .table-condensed thead tr:first-child {
+    background-color: #399F6E;
+    margin-bottom: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.daterangepicker .table-condensed thead tr:nth-child(2) th {
+    padding-top: 15px;
+}
+.daterangepicker .calendar-table th, .daterangepicker .daterangepicker .calendar-table td {
+    height: 35px;
+    border: none;
+}
+.daterangepicker .calendar-table td, .daterangepicker td.active {
+    height: 35px !important;
+    width: 35px !important;
+}
+.daterangepicker.opensright::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #399F6E transparent;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+.daterangepicker.opensright::after {
+    display: none;
+}
+.daterangepicker.opensleft {
+    margin-top: 10px;
+}
+.daterangepicker.opensleft::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #399F6E transparent;
+    position: absolute;
+    top: -10px;
+    right: 30px;
+}
+.daterangepicker.opensleft::after {
+    display: none;
+}
+span.clockpicker-span-hours.text-primary, span.clockpicker-span-minutes.text-primary {
+    color: #399F6E !important;
+}
+
+/* ========== Location Select  ========== */
+.select2-container--default .select2-selection--single {
+    border: none;
+    background-color: transparent;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.c-select .select2-dropdown {
+    max-width: 240px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 5px solid #399F6E;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-top: 20px;
+    padding: 0px 0px 10px 0px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.07);
+}
+
+.c-select .select2-dropdown.select2-dropdown--above {
+    top: -30px;
+}
+
+.c-select .select2-dropdown.select2-dropdown--above::after {
+    top: 105%;
+    transform: rotate(180deg);
+}
+
+.c-select .select2-dropdown::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #399F6E transparent;
+    position: absolute;
+    top: -10px;
+    left: 25px;
+}
+
+.c-select .select2-dropdown .select2-results__option {
+    padding: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: #000;
+}
+.c-select .select2-dropdown .location-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.c-select .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #7D7E87;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #ebebeb !important;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+    border: none !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    display: none;
+}
+
+.c-select .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: transparent;
+    color: #000;
+}
+
+.c-select ::-webkit-scrollbar {
+    width: 3px;
+    height: 90%;
+    margin-left: -3px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+.c-select ::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    border-radius: 7px;
+}
+
+.c-select ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background: #999;
+}
+
+
