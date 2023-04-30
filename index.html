@@ -12,10 +12,9 @@
       <link rel="stylesheet" href="./css/custom.css">
       <!-- tailwind css link -->
       <link href="./css/tailwind.css" rel="stylesheet" />
-      <!--nice-select css link  -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="./css/vendor/select2.min.css" rel="stylesheet" />
         <!-- Link Swiper's CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="./css/vendor/swiper.min.css" />
       <!-- title -->
       <title>Traveli- Travel booking HTML Template</title>
       <!--flowbite js link  -->
@@ -25,12 +24,6 @@
 
    </head>
    <body>
-      <!-- PRELOADER -->
-      <!-- <div id="preloader">
-         <div class="loader_line"></div>
-         </div> -->
-      <!-- /PRELOADER -->
-      <!--01. Header section start -->
       <header class="">
          <div class="bg-title hidden md:block">
             <div class="container">
@@ -41,12 +34,12 @@
                      
                   </div>
                   <div class="flxc">
-                     <select class="bg-white border-0   header-select text-white " name="" id="">
+                     <select class="bg-white border-0 selectInput   header-select text-white " name="" id="">
                         USD<i class="fa-solid block mr-3 fa-sort-down"></i>
                         <option value="USD">USD</option>
                         <option value="dfdf">USD</option>
                      </select>
-                     <select class="bg-white border-0  header-select text-white">
+                     <select class="bg-transparent border-0 selectInput  header-select text-white">
                         <option data-display="ENGLISH">ENGLISH</option>
                         <option value="Bangla">Bangla</option>
                       </select>
@@ -98,10 +91,10 @@
       <section class="">
          <div class="container grid grid-cols-12 gap-[30px] py-10 md:pt-[70px] ">
             <div class="col-span-12 md:col-span-5 lg:col-span-4 relative">
-               <img class="absolute -top-[15%]   -right-[40%]" src="./images/icons/Shapes.png" alt="">
+               <img class="absolute -top-[15%] -right-[40%]" src="./images/icons/Shapes.png" alt="Shapes">
                <div class="relative ">
                 
-                  <img class="w-full h-auto md:h-[450px] " src="./images/common/Rectangle 5.jpg" alt="">
+                  <img class="w-full h-auto md:h-[450px] " src="./images/home/heroboat.jpg" alt="boat">
                   <button class="absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
                      <span class="relative inline-block okkk">
                          <i class="fa-solid animate-custom  bg-title   text-[95px] rounded-full  text-yello fa-circle-play"></i>
@@ -112,17 +105,17 @@
             </div>
             <div class="col-span-12 hidden lg:block md:col-span-3 ">
                <div class="w-[110px] relative mx-auto mt-6  mb-8 flex flex-col justify-center items-center h-[110px] bg-yello rounded-full ">
-                  <img class="absolute bottom-1/2 left-1/2 z-[-1]" src="./images/icons/Vector 785.png" alt="">
+                  <img class="absolute bottom-1/2 left-1/2 z-[-1]" src="./images/icons/plane.png" alt="plane">
                   <span class="block text-2xl text-title font-semibold ">500+</span>
                   <span class="text-title font-medium">Pacages</span>
                </div>
-               <img class="rounded-lg" src="./images/common/Rectangle 6.jpg" alt="">
+               <img class="rounded-lg" src="./images/home/hero.jpg" alt="hero">
 
             </div>
             <div class="col-span-12  md:col-span-6 lg:col-span-5 md:mt-20">
                <h2 class="text-[28px] lg:text-[48px] font-bold text-title lg:leading-[64px] ">Welcome to Find Flights, Hotels & Tour Packages <span class="text-green">Cheap rate</span>
                </h2>
-               <img class="w-[135px] md:w-auto" src="./images/icons/Vector 2.png" alt="">
+               <img class="w-[135px] md:w-auto" src="./images/icons/linegreen.png" alt="line">
                <p class="text-lg text-[#665F73] pt-[25px] leading-[30px]  ">Rebuilt for simplicity and speed, so you can spend more time discovering and listening to great podcasts.</p>
             </div>
 
@@ -133,10 +126,10 @@
                <div class="col-span-12  md:col-span-6 lg:col-span-4">
                   <div class="flex items-center gap-6">
                      <div class="flex">
-                        <img class="rounded-full" src="./images/icons/Ellipse 643.svg" alt="">
-                        <img class="rounded-full -ml-3" src="./images/icons/Ellipse 644.svg" alt="">
-                        <img class="rounded-full -ml-3" src="./images/icons/Ellipse 645.svg" alt="">
-                        <img class="rounded-full -ml-3" src="./images/icons/Ellipse 646.svg" alt="">
+                        <img class="rounded-full" src="./images/icons/userone.svg"       alt="user">
+                        <img class="rounded-full -ml-3" src="./images/icons/usertwo.svg" alt="user">
+                        <img class="rounded-full -ml-3" src="./images/icons/userthree.svg" alt="user">
+                        <img class="rounded-full -ml-3" src="./images/icons/userfour.svg" alt="user">
                      </div>
                      <div>
                         <h4 class="text-white font-medium">Our Happy Customers</h4>
@@ -151,7 +144,7 @@
                   <div class="flex ">
                      <div class="w-1/2 flex items-center gap-3 md:gap-5 ">
                         <span class="w-[58px] h-[58px] bg-white rounded-lg flex justify-center items-center ">
-                           <img src="./images/common/Group 1000005786.svg" alt="">
+                           <img src="./images/common/user.svg" alt="user group">
                         </span>
                         <div>
                            <h4 class="text-white font-bold text-lg md:text-[30px] md:pb-2 leading-[30px] ">12</h4>
@@ -160,7 +153,7 @@
                      </div>
                      <div class="w-1/2 flex items-center gap-3 md:gap-5 ">
                         <span class="w-[58px] h-[58px] bg-white rounded-lg flex justify-center items-center ">
-                           <img src="./images/common/Group (1).svg" alt="">
+                           <img src="./images/common/award.svg" alt="award">
                         </span>
                         <div>
                            <h4 class="text-white font-bold text-lg md:text-[30px]  md:pb-2 leading-[30px] ">29</h4>
@@ -276,7 +269,7 @@
          <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
              <div class="col-span-1">
                  <div class="flex gap-[30px] items-center ">
-                     <img src="./images/icons/planen.svg" alt="">
+                     <img src="./images/icons/planen.svg" alt="planen">
                      <div>
                          <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
                          <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id expedita.</p>
@@ -285,7 +278,7 @@
              </div>
              <div class="col-span-1">
                  <div class="flex gap-[30px] items-center ">
-                     <img src="./images/icons/circle.svg" alt="">
+                     <img src="./images/icons/circle.svg" alt="circle">
                      <div>
                          <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
                          <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id expedita.</p>
@@ -294,7 +287,7 @@
              </div>
              <div class="col-span-1">
                  <div class="flex gap-[30px] items-center ">
-                     <img src="./images/icons/car.svg" alt="">
+                     <img src="./images/icons/car.svg" alt="car">
                      <div>
                          <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
                          <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id expedita.</p>
@@ -310,7 +303,7 @@
          <div class="container mx-auto items-center ">
             <div class="mb-8">
                <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Top Destination & Cities</h2>
-               <img class="" src="./images/icons/Line-1.png" alt="">
+               <img class="" src="./images/icons/Line-1.png" alt="line">
             </div>
             <div class="grid  grid-cols-9 w-full md:gap-[30px]">
                <div class="col-span-2 hidden lg:block  ">
@@ -318,7 +311,7 @@
                      <div class="row-span-1">
                         <div class="cities-before">
                            <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                           <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shape.png" alt="">
+                           <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shape.png" alt="shape">
                            <div class="absolute z-10 bottom-6 w-[100%]">
                               <div class="px-6">
                                  <h3 class="cities-title">Goa, India</h3>
@@ -331,7 +324,7 @@
                      <div class="row-span-1">
                         <div class="cities-before">
                            <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                           <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shape (1).png" alt="">
+                           <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shapetwo.png" alt="Shape">
                            <div class="absolute z-10 bottom-6 w-[100%]">
                               <div class="px-6">
                                  <h3 class="cities-title">Mexico, Sea Beach</h3>
@@ -346,7 +339,7 @@
                <div class="col-span-3 hidden md:block  ">
                   <div class="cities-before">
                      <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                     <img class="w-full object-cover  h-[530px]" src="./images/fatures/Shape (2).png" alt="">
+                     <img class="w-full object-cover  h-[530px]" src="./images/fatures/Shapethree.png" alt="Shape">
                      <div class="absolute z-10 rounded-[12px] bottom-6 w-[100%]">
                         <div class="px-6">
                            <h3 class="cities-title">Kudadoo, Maldives</h3>
@@ -361,7 +354,7 @@
                      <div class="row-span-1 col-span-12">
                         <div class="cities-before">
                            <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                           <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shape (3).png" alt="">
+                           <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shapefour.png" alt="Shape">
                            <div class="absolute z-10 bottom-6 w-[100%]">
                               <div class="px-6">
                                  <h3 class="cities-title">Bali, Indonesia</h3>
@@ -376,7 +369,7 @@
                            <div class="col-span-6 md:col-span-5">
                               <div class="cities-before">
                                  <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                                 <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shape (4).png" alt="">
+                                 <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shapefive.png" alt="Shape">
                                  <div class="absolute z-10 bottom-6 w-[100%]">
                                     <div class="px-3 md:px-6">
                                        <h3 class="text-lg md:cities-title">Nepal</h3>
@@ -389,7 +382,7 @@
                            <div class="col-span-6 md:col-span-7">
                               <div class="cities-before">
                                  <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                                 <img class="w-full rounded-[12px]  h-[250px] object-cover" src="./images/fatures/Shape (5).png" alt="">
+                                 <img class="w-full rounded-[12px]  h-[250px] object-cover" src="./images/fatures/Shapesix.png" alt="Shape">
                                  <div class="absolute z-10 bottom-6 w-[100%]">
                                     <div class="px-3 md:px-6">
                                        <h3 class="text-lg md:cities-title">Thailand</h3>
@@ -412,7 +405,7 @@
             <div class="flex justify-between items-center mb-8">
                <div>
                   <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Tour Events for you</h2>
-                  <img class="w-5/6" src="./images/icons/Line-1.png" alt="">
+                  <img class="w-5/6" src="./images/icons/Line-1.png" alt="line">
                </div>
                <div><a class="text-green font-semibold whitespace-nowrap " href="">See All Blog <i class="fa-solid fa-arrow-right-long"></i></a></div>
             </div>
@@ -422,7 +415,7 @@
                   <div class="swiper-slide">
                      <div class="bg-white shadow-icon  rounded-lg">
                         <div class="relative ">
-                           <img class="w-full" src="./images/home/Images.jpg" alt="">
+                           <img class="w-full" src="./images/home/Images.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/Path 99.png" alt="">
                            <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/Vector (2).png" alt="">
                            <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
@@ -456,7 +449,7 @@
                   <div class="swiper-slide">
                      <div class="bg-white shadow-icon  rounded-lg">
                         <div class="relative ">
-                           <img class="w-full" src="./images/home/Images (1).jpg" alt="">
+                           <img class="w-full" src="./images/home/Imagesone.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/Path 99.png" alt="">
                            <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/Vector (2).png" alt="">
                            <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
@@ -490,7 +483,7 @@
                   <div class="swiper-slide">
                      <div class="bg-white shadow-icon  rounded-lg">
                         <div class="relative ">
-                           <img class="w-full" src="./images/home/Images (2).jpg" alt="">
+                           <img class="w-full" src="./images/home/Imagestwo.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/Path 99.png" alt="">
                            <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/Vector (2).png" alt="">
                            <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
@@ -642,6 +635,28 @@
                          </div>
                       </div>
                    </div>
+                   <div class="swiper-slide">
+                      <div class="flex justify-between effect  bg-offerBg3 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
+                         <div class="z-10">
+                            <div class="relative inline-block">
+                               <img src="./images/Specialoffers/Subtract.png" alt="">
+                               <span class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 " >SHADHINH</span>
+                            </div>
+                            <div>
+                               <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
+                               <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
+                               <p class="text-sm font-normal text-white pt-1">12 Places</p>
+                            </div>
+                         </div>
+                         <div class="absolute z-10 -right-[2px] -bottom-[2px]">
+                            <div class="relative">
+                               <img src="./images/Specialoffers/Group 1000004687.png" alt="">
+                            <span class="absolute bottom-4 right-6 text-center "><span class="block text-title text-3xl font-bold"> 50% </span>
+                               <span class="block text-sm text-title"> Discount</span></span>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
                   </div>
                   
                  
@@ -662,7 +677,7 @@
             </div>
          <div class="container relative">
                <div class="swiper mySwiperForNewTravel ">
-                  <div class="swiper-wrapper pb-[50px] md:pb-[100px]">
+                  <div class="swiper-wrapper pb-[100px]">
                <div class="swiper-slide ">
                   <div class="text-center">
                      <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type.jpg" alt="">
@@ -792,7 +807,7 @@
       <section class="relative  ">
          <div class="relative  md:absolute left-0 top-0 block w-full md:w-6/12 lg:w-5/12 ">
             <div class="relative px-4">
-               <img class="w-full h-auto md:h-[450px] " src="./images/common/Rectangle 3553.png" alt="">
+               <img class="w-full h-auto md:h-[450px] " src="./images/home/newsletter.jpg" alt="">
                <button class="absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
                   <span class="relative inline-block okkkk">
                       <i class="fa-solid animate-custom  bg-title   text-[95px] rounded-full  text-white fa-circle-play"></i>
@@ -963,15 +978,12 @@
       <!-- 09. Footer Section End -->
       <!-- jquary link -->
       <script src="./js/vendor/jquary.min.js"></script>
-      <!--nice select link  -->
-      <!-- <script src="./js/vendor/select.min.js"></script> -->
-      <!-- swiper js link -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-      <!-- Date range -->
-      <script src="./js/vendor/moment.min.js"></script>
-      <script src="./js/vendor/daterangepicker.js"></script>
-      <!-- Select2 -->
+      <!-- select2 js link -->
       <script src="./js/vendor/select2.min.js"></script>
+      <!-- swiper js link -->
+      <script src="./js/vendor/swiper.min.js"></script>
+      <!-- date picker -->
+      <script src="./js/vendor/datepicker.js"></script>
       <!-- main js link -->
       <script src="./js/main.js"></script>
    </body>

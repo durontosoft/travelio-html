@@ -1,103 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
-        <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
-        <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
-        <!-- custom css link -->
-        <link rel="stylesheet" href="./css/custom.css">
-        <!-- tailwind css link -->
-        <link href="./css/tailwind.css" rel="stylesheet" />
-        <!--nice-select css link  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-          <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-        <!-- title -->
-        <title>Traveli- Travel booking HTML Template</title>
-        <!--flowbite js link  -->
-        <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
-        <!-- datepicker js link -->
-        <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
-     </head>
-    <body>
-        <!-- PRELOADER -->
-        <!-- <div id="preloader">
-         <div class="loader_line"></div>
-         </div> -->
-        <!-- /PRELOADER -->
-        <!--01. Header section start -->
-        <header class="">
-            <div class="bg-title hidden md:block">
-               <div class="container">
-                  <div class="flex justify-between items-center">
-                     <div>
-                        <a class="font-medium text-sm text-white mr-7" href="tel:+880 171 4588 484"><i class="fa-solid mr-1 fa-phone"></i>+880 171 4588 484</a>
-                        <a class="font-medium text-sm text-white border-r pr-6 " href="mailto:hillviewhotel@gmail.com"><i class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
-                        
-                     </div>
-                     <div class="flxc">
-                        <select class="bg-white border-none header-select text-white " name="" id="">
-                           USD<i class="fa-solid block mr-3 fa-sort-down"></i>
-                           <option value="USD">USD</option>
-                           <option value="dfdf">USD</option>
-                        </select>
-                        <select class="bg-white border-none header-select text-white">
-                           <option data-display="Select">ENGLISH</option>
-                           <option value="Bangla">Bangla</option>
-                         </select>
-                         <div>
-                           <a class="text-white text-sm px-6" href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a class="text-white text-sm " href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="text-white text-sm px-6" href=""><i class="fa-brands fa-twitter"></i></a>
-                         </div>
-                         <button class="w-[178px] bg-yello text-title h-[58px] font-semibold ">Sign In</button>
-                     </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
+      <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+      <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+      <!-- custom css link -->
+      <link rel="stylesheet" href="./css/custom.css">
+      <!-- tailwind css link -->
+      <link href="./css/tailwind.css" rel="stylesheet" />
+      <link href="./css/vendor/select2.min.css" rel="stylesheet" />
+        <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="./css/vendor/swiper.min.css" />
+      <!-- title -->
+      <title>Traveli- Travel booking HTML Template</title>
+      <!--flowbite js link  -->
+      <!-- <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script> -->
+   </head>
+   <body>
+      <header class="">
+         <div class="bg-title hidden md:block">
+            <div class="container">
+               <div class="flex justify-between items-center">
+                  <div>
+                     <a class="font-medium text-sm text-white mr-7" href="tel:+880 171 4588 484"><i class="fa-solid mr-1 fa-phone"></i>+880 171 4588 484</a>
+                     <a class="font-medium text-sm text-white  pr-6 " href="mailto:hillviewhotel@gmail.com"><i class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
+                     
+                  </div>
+                  <div class="flxc">
+                     <select class="bg-white border-0 selectInput   header-select text-white " name="" id="">
+                        USD<i class="fa-solid block mr-3 fa-sort-down"></i>
+                        <option value="USD">USD</option>
+                        <option value="dfdf">USD</option>
+                     </select>
+                     <select class="bg-transparent border-0 selectInput  header-select text-white">
+                        <option data-display="ENGLISH">ENGLISH</option>
+                        <option value="Bangla">Bangla</option>
+                      </select>
+                      <div class="hidden lg:block">
+                        <a class="text-white text-sm px-6" href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a class="text-white text-sm " href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                     <a class="text-white text-sm px-6" href=""><i class="fa-brands fa-twitter"></i></a>
+                      </div>
+                      <button class="w-[178px] bg-yello text-title h-[58px] font-semibold ">Sign In</button>
                   </div>
                </div>
             </div>
-            <div class="shadow-icon pt-[22px] pb-[25px]">
-               <div class="container flex justify-between items-center">
-                  <h2 class="text-[30px] font-semibold"><span class="text-green">Bhalo</span><span class="text-yello">Hotels</span></h2>
-                  <ul id="navbar" class="  h-full bg-title md:bg-transparent fixed w-full  pl-[90px] md:pl-0 pt-20 md:pt-0 space-y-[15px] md:space-y-0  -top-[200%] transform scale-x-0 md:scale-x-100 left-0 z-50 md:relative md:flex justify-end items-center gap-5  ">
-                     <li class="relative group duration-300 ease-in-out transition-all "><span class="font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title">
-                        <span>Home </span>  <i class="fa-solid -mt-2 fa-sort-down"></i></span>
-                        <ul class="absolute z-50 w-[200px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 time ">
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2 time " href="">Home One</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="">Home Two</a></li>
-                        </ul>
-                     
-                     </li>
-                     <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="">Rooms</a></li>
-                     <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="">Events</a></li>
-                     <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="./blog.html">Blog</a></li>
-                     <li class="relative group duration-300 ease-in-out transition-all "><span class="font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title" ><span>Pages </span>  <i class="fa-solid -mt-2  fa-sort-down"></i></span>
-                        <ul class="absolute z-50 w-[250px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 ">
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2 " href="./termsConditions.html">Terms & Conditions</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./privacyPolicy.html">Privacy Policy</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./OTP.html">OPT</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./noPageFound.html">404</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./myAccount.html">Profile</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./blogDetails.html">Blog Details</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./signIn.html">Sign In</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./OTP.html">OTP</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./aboutUs.html">About</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./bookingInfo.html">Booking info</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./costumerInfo.html">Customer info</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./eventListing.html">Event Listing</a></li>
-                           <li><a class="text-white transition-all hover:text-yello relative before:absolute before:w-4 pl-6 hover:before:w-6 hover:pl-8 hover:before:bg-yello before:rounded-full before:h-[2px] before:bg-white before:left-0 before:top-1/2 transform before: translate-y-1/2" href="./faq.html">FAQ</a></li>
-                        </ul>
-                     </li>
-                     <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href="./contactUs.html">Contact</a></li>
-                     <li><a class="font-medium text-lg flex items-center gap-1 text-white md:hover:text-green hover:text-yello md:text-title" href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                     <span  id="menu-toggle-close-icon" class="block md:hidden absolute top-4 right-4 "><i class="fa-solid text-white text-xl fa-xmark"></i></span>
-                  </ul>
-                  <span id="menu-toggle-open-icon" class="block md:hidden"><i class="fa-solid text-2xl fa-bars"></i></span>
-               </div>
+         </div>
+         <div class="shadow-icon pt-[22px] pb-[25px]">
+            <div class="container flex justify-between items-center">
+               <h2 class="text-[30px] font-semibold"><span class="text-green">Bhalo</span><span class="text-yello">Hotels</span></h2>
+               <ul id="navbar" class="  h-full bg-title md:bg-transparent fixed w-full  pl-[90px] md:pl-0 pt-20 md:pt-0 space-y-[15px] md:space-y-0  -top-[200%] transform scale-x-0 md:scale-x-100 left-0 z-50 md:relative md:flex justify-end items-center gap-[46px]  ">
+                  <li><a class="menu-link" href="">Home</a></li>
+                  <li><a class="menu-link" href="">Rooms</a></li>
+                  <li><a class="menu-link" href="">Events</a></li>
+                  <li><a class="menu-link" href="./blog.html">Blog</a></li>
+                  <li class="relative group duration-300 ease-in-out transition-all "><span class="Barlow cursor-pointer font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title" ><span>Pages </span>  <i class="fa-solid -mt-2  fa-sort-down"></i></span>
+                     <ul class="absolute z-50 w-[250px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 ">
+                        <li><a class="nested-menu " href="./termsConditions.html">Terms & Conditions</a></li>
+                        <li><a class="nested-menu" href="./privacyPolicy.html">Privacy Policy</a></li>
+                        <li><a class="nested-menu" href="./OTP.html">OPT</a></li>
+                        <li><a class="nested-menu" href="./noPageFound.html">404</a></li>
+                        <li><a class="nested-menu" href="./myAccount.html">Profile</a></li>
+                        <li><a class="nested-menu" href="./blogDetails.html">Blog Details</a></li>
+                        <li><a class="nested-menu" href="./signIn.html">Sign In</a></li>
+                        <li><a class="nested-menu" href="./OTP.html">OTP</a></li>
+                        <li><a class="nested-menu" href="./aboutUs.html">About</a></li>
+                        <li><a class="nested-menu" href="./bookingInfo.html">Booking info</a></li>
+                        <li><a class="nested-menu" href="./costumerInfo.html">Customer info</a></li>
+                        <li><a class="nested-menu" href="./eventListing.html">Event Listing</a></li>
+                        <li><a class="nested-menu" href="./faq.html">FAQ</a></li>
+                     </ul>
+                  </li>
+                  <li><a class="menu-link" href="./contactUs.html">Contact</a></li>
+                  <li class="pl-6"><a class="menu-link " href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                  <span  id="menu-toggle-close-icon" class="block md:hidden absolute top-4 right-4 "><i class="fa-solid text-white text-xl fa-xmark"></i></span>
+               </ul>
+               <span id="menu-toggle-open-icon" class="block md:hidden"><i class="fa-solid text-2xl fa-bars"></i></span>
             </div>
-         </header>
-        <!-- Header section start -->
+         </div>
+      </header>
+      <!-- Header section start -->
         <section class="pb-[100px]">
             <div class="container">
                 <div class="grid grid-cols-12 gap-[30px] ">
@@ -180,15 +164,15 @@
 
                                     <div class="flex w-full px-[10px] py-[8px]
                                         bg-[#FBFBFB] border-[#DBDBDB] rounded-lg
-                                        border text-center bg-transparent">
-                                        <div>
+                                        border text-center bg-transparent Number">
+                                        <div class="border-r ">
                                             <label for="states" class="sr-only">Choose
                                                 a state</label>
                                             <select id="states"
                                                 class="bg-gray-50 text-title
                                                 border-r border-title rounded-none
                                                 focus:outline-none focus:ring-0
-                                                block w-28 focus:border-0 ">
+                                                block w-28 focus:border-0 selectInputNumber">
                                                 <option selected>Bangladesh</option>
                                                 <option value="CA">California</option>
                                                 <option value="TX">Texas</option>
@@ -254,16 +238,15 @@
                                     <h3 class=" font-semibold leading-6 mb-1.5
                                         ">Country*</h3>
 
-                                    <div class="flex w-full px-[10px] py-[8px]
+                                    <div class="flex w-full px-[20px] py-[14px]
                                         bg-[#FBFBFB] border-[#DBDBDB] rounded-lg
-                                        border text-center bg-transparent">
+                                        border text-center bg-transparent Country">
                                       
-                                            <label for="states" class="sr-only">Choose
-                                                a state</label>
+                                            <!-- <label for="states" class="whitespace-nowrap"  >Choose a state</label> -->
                                             <select id="states"
                                                 class="bg-gray-50 rounded-none text-title border-none  focus:border-none focus:outline-none focus:ring-0 focus:ring-offset-0 outline-none ring-0
-                                                block w-full focus:border-0 ">
-                                                <option selected>Select country</option>
+                                                block w-full focus:border-0 selectInputCountry ">
+                                                <option  value="kl" >Select country</option>
                                                 <option value="CA">California</option>
                                                 <option value="TX">Texas</option>
                                                 <option value="WH">Washinghton</option>
@@ -272,21 +255,13 @@
                                                 <option value="GE">Georgia</option>
                                                 <option value="MI">Michigan</option>
                                             </select>
-                                        
-                                     
-
-
                                     </div>
-
                                 </div>
-
-
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px] p-6 shadow-icon rounded-lg md:px-[30px]
                             md:py-10 ">
                             <h3 class="text-lg md:text-[23px] col-span-1 md:col-span-2 border-b border-[#DDDDDD]
                             pb-[14px] font-semibold ">Customer Information</h3>
-                            
                                 <div class="col-span-1 ">
                                     <div class="flex justify-between items-center w-full px-[10px] py-[16px]
                                     bg-[#FBFBFB] border-[#DBDBDB] rounded-lg
@@ -529,10 +504,12 @@
       <!-- 09. Footer Section End -->
       <!-- jquary link -->
       <script src="./js/vendor/jquary.min.js"></script>
-      <!--nice select link  -->
-      <script src="./js/vendor/select.min.js"></script>
+      <!-- select2 js link -->
+      <script src="./js/vendor/select2.min.js"></script>
       <!-- swiper js link -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src="./js/vendor/swiper.min.js"></script>
+      <!-- date picker -->
+      <script src="./js/vendor/datepicker.js"></script>
       <!-- main js link -->
       <script src="./js/main.js"></script>
    </body>
