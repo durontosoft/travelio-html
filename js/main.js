@@ -321,10 +321,6 @@ if ($("#accordion-example-heading-1")[0]) {
   accordion.toggle('accordion-example-heading-3');
 }
 
-$(document).ready(function () {
-  $('.nice-select').niceSelect('update');
-});
-
 var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
