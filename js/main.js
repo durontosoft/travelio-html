@@ -613,6 +613,11 @@ $(document).ready(function () {
     placeholder: "Where are you going?",
   });
 
+  $('.select-without-search').select2({
+    dropdownParent: '.location-select-wrapper',
+    minimumResultsForSearch: -1,
+  });
+
   // Location icon
   function addLocationIcon(icon) {
     return $('<span class="location-icon"><img src="../images/icons/marker-icon.svg" /> ' + icon.text + '</span>');
