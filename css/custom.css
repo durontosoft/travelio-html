@@ -115,9 +115,7 @@ span.datepicker-cell{
     border-right: 1px solid white !important;
     background: none !important ;
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: white !important;
-}
+
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: yellow transparent transparent transparent !important;
 
@@ -655,8 +653,10 @@ span.clockpicker-span-hours.text-primary, span.clockpicker-span-minutes.text-pri
     background-color: transparent;
 }
 
+
+
 .select2-container {
-    width: 100% !important;
+    width: auto !important;
 }
 
 .c-select .select2-dropdown {
