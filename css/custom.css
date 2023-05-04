@@ -450,6 +450,17 @@ right: 70px;
 top: -90px;
 }
 
+
+.swiper-pagination-bullet {
+    opacity: 1 !important;
+    background: white !important;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffc73d !important;
+    transform: scale(2);
+}
+
 /* range bg color change */
 .range-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
