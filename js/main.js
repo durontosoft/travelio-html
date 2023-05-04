@@ -14,9 +14,6 @@
     },
     methods: function (e) {
       Traveli.mobileMenu();
-      Traveli.accordion();
-      Traveli.tabOne();
-      Traveli.OTP();
     },
     // moblie method toggle button function
     mobileMenu: function () {
@@ -40,110 +37,37 @@
         });
       });
     },
-    accordion: function () {
-      $(window).on("load", function () {
-        if ($("#accordion-example-heading-1")[0]) {
-          // create an array of objects with the id, trigger element (eg. button), and the content element
-          const accordionItems = [
-            {
-              id: 'accordion-example-heading-1',
-              triggerEl: document.querySelector('#accordion-example-heading-1'),
-              targetEl: document.querySelector('#accordion-example-body-1'),
-              active: true
-            },
-            {
-              id: 'accordion-example-heading-2',
-              triggerEl: document.querySelector('#accordion-example-heading-2'),
-              targetEl: document.querySelector('#accordion-example-body-2'),
-              active: false
-            },
-            {
-              id: 'accordion-example-heading-3',
-              triggerEl: document.querySelector('#accordion-example-heading-3'),
-              targetEl: document.querySelector('#accordion-example-body-3'),
-              active: false
-            },
-            {
-              id: 'accordion-example-heading-4',
-              triggerEl: document.querySelector('#accordion-example-heading-4'),
-              targetEl: document.querySelector('#accordion-example-body-4'),
-              active: false
-            },
-            {
-              id: 'accordion-example-heading-6',
-              triggerEl: document.querySelector('#accordion-example-heading-6'),
-              targetEl: document.querySelector('#accordion-example-body-6'),
-              active: false
-            }
-          ];
-          /*
-          * accordionItems: array of accordion item objects
-          * options: optional
-          */// options with default values
-          const options = {
-            // alwaysOpen: true,
-            activeClasses: 'bg-green text-white',
-            inactiveClasses: 'text-red-600',
-            onOpen: (item) => {
-              console.log('accordion item has been shown');
-              console.log(item);
-            },
-            onClose: (item) => {
-              console.log('accordion item has been hidden');
-              console.log(item);
-            },
-            onToggle: (item) => {
-              console.log('accordion item has been toggled');
-              console.log(item);
-            },
-          };
-
-          const accordion = new Accordion(accordionItems, options);
-          // open accordion item based on id
-          accordion.open('accordion-example-heading-2');
-          // close accordion item based on id
-          accordion.close('accordion-example-heading-2');
-          // toggle visibility of item based on id
-          accordion.toggle('accordion-example-heading-3');
-        }
-      })
-    },
- 
-    tabOne: function () {
-      $(window).on("load", function () {
-        $('.tab li button').click(function () {
-          $(this).parent().siblings().children().removeClass('border-[#0D2F3F] font-semibold');
-          $(this).addClass('border-[#0D2F3F] font-semibold');
-        });
-      })
-    },
-    OTP: function () {
-      $(window).on("load", function () {
-        // Attach an event listener to all OTP input fields except the last one
-        $('input[id^="otp-input"]').not(':last').on('input', function () {
-          var digit = $(this).val();
-          // If the input length is 1 and there is a next input field, move the focus to the next input field
-          if (digit.length == 1 && $(this).next().length > 0) {
-            $(this).next().focus();
-          }
-        });
-
-        // Attach an event listener to the last OTP input field
-        $('#otp-input-5').on('input', function () {
-          var digit = $(this).val();
-          // If the input length is greater than 1, restrict the input to one character
-          if (digit.length > 1) {
-            $(this).val(digit.slice(0, 1));
-          }
-        });
-      })
-    }
+   
 
 
 
   };
   Traveli.m();
 })(jQuery, window);
+
+
+ // Attach an event listener to all OTP input fields except the last one
+ $('input[id^="otp-input"]').not(':last').on('input', function () {
+  var digit = $(this).val();
+  // If the input length is 1 and there is a next input field, move the focus to the next input field
+  if (digit.length == 1 && $(this).next().length > 0) {
+    $(this).next().focus();
+  }
+});
+
+// Attach an event listener to the last OTP input field
+$('#otp-input-5').on('input', function () {
+  var digit = $(this).val();
+  // If the input length is greater than 1, restrict the input to one character
+  if (digit.length > 1) {
+    $(this).val(digit.slice(0, 1));
+  }
+});
+
+$('.tab li button').click(function () {
+  $(this).parent().siblings().children().removeClass('border-[#0D2F3F] font-semibold');
+  $(this).addClass('border-[#0D2F3F] font-semibold');
+});
 
 var swiperForTour = new Swiper(".mySwiperForOffers",
 {
@@ -640,6 +564,15 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+var swiper = new Swiper(".mySwiperforeventlisting", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
 
@@ -702,14 +635,122 @@ $(document).ready(function() {
   
   });
   
-$('.selectInput').select2({
-  placeholder: 'Select an option'
-});
+
 $('.selectInputCountry').select2({
   placeholder: 'Select an option'
 });
-$('.selectInputNumber').select2({
+$('.selectInputP').select2({
+  placeholder: 'Select an option'
+});
+$('.selectInputPhone').select2({
+  placeholder: 'Select an option'
+});
+$('.selectInput').select2({
   placeholder: 'Select an option'
 });
 
+if ($("#accordion-example-heading-1")[0]) {
+  // create an array of objects with the id, trigger element (eg. button), and the content element
+  const accordionItems = [
+    {
+      id: 'accordion-example-heading-1',
+      triggerEl: document.querySelector('#accordion-example-heading-1'),
+      targetEl: document.querySelector('#accordion-example-body-1'),
+      active: true
+    },
+    {
+      id: 'accordion-example-heading-2',
+      triggerEl: document.querySelector('#accordion-example-heading-2'),
+      targetEl: document.querySelector('#accordion-example-body-2'),
+      active: false
+    },
+    {
+      id: 'accordion-example-heading-3',
+      triggerEl: document.querySelector('#accordion-example-heading-3'),
+      targetEl: document.querySelector('#accordion-example-body-3'),
+      active: false
+    },
+    {
+      id: 'accordion-example-heading-4',
+      triggerEl: document.querySelector('#accordion-example-heading-4'),
+      targetEl: document.querySelector('#accordion-example-body-4'),
+      active: false
+    },
+    {
+      id: 'accordion-example-heading-6',
+      triggerEl: document.querySelector('#accordion-example-heading-6'),
+      targetEl: document.querySelector('#accordion-example-body-6'),
+      active: false
+    }
+  ];
+  /*
+  * accordionItems: array of accordion item objects
+  * options: optional
+  */// options with default values
+  const options = {
+    // alwaysOpen: true,
+    activeClasses: 'bg-green text-white',
+    inactiveClasses: 'text-red-600',
+    onOpen: (item) => {
+    },
+    onClose: (item) => {
+    },
+    onToggle: (item) => {
+    },
+  };
+
+  const accordion = new Accordion(accordionItems, options);
+  // open accordion item based on id
+  accordion.open('accordion-example-heading-2');
+  // close accordion item based on id
+  accordion.close('accordion-example-heading-2');
+  // toggle visibility of item based on id
+  accordion.toggle('accordion-example-heading-3');
+}
+
+
+// checked items
+    // Add an event listener to all spans with the 'time' class
+    $('.time').click(function() {
+      // Change the background color of the clicked span
+      $(this).css('background-color', '#FFC62D');
+      $(this).css('color', '#0D2F3F');
+    
+      // Remove the background color from the previously clicked span
+      $('.time').not(this).css('background-color', '#E2E2E2');
+      $('.time').not(this).css('color', '#767676');
+    
+      // Prevent the default click behavior
+      return false;
+    });
+// // video modal 
+// $(".js-video-button").modalVideo({
+//     channel:'youtube',
+//     youtube: {
+//       autoplay: 1,
+//       cc_load_policy: 1,
+//       color:null,
+//       controls: 1,
+//       disablekb: 0,
+//       enablejsapi: 0,
+//       end:null,
+//       fs: 1,
+//       h1:null,
+//       iv_load_policy: 1,
+//       list:null,
+//       listType:null,
+//       loop: 0,
+//       modestbranding:null,
+//       origin:null,
+//       playlist:null,
+//       playsinline:null,
+//       rel: 0,
+//       showinfo: 1,
+//       start: 0,
+//       wmode:'transparent',
+//       theme:'dark'
+//     },
+//     ratio:'16:9',
+//   });
+  
 

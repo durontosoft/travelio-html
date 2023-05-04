@@ -93,6 +93,12 @@
 .cities-before{
   @apply relative rounded-lg overflow-hidden  after:z-[0] after:absolute after:w-full after:h-[130px] after:bg-gradient-to-t from-[#112437CC] via-[#112437C8] to-[#11243700] after:bottom-0 after:left-0 rounded-[12px]
 }
+.profile-cover{
+  @apply w-full h-[375px] object-cover rounded-2xl text-center block mx-auto
+}
+.form-checkbox{
+  @apply rounded focus:ring-[#1f7f7b]
+}
 
 
 }

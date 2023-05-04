@@ -1280,6 +1280,15 @@ input[type="range"]::-ms-fill-lower {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.form-checkbox {
+  border-radius: 0.25rem;
+}
+
+.form-checkbox:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(31 127 123 / var(--tw-ring-opacity));
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1548,7 +1557,6 @@ input[type="range"]::-ms-fill-lower {
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
-
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -2089,8 +2097,8 @@ input[type="range"]::-ms-fill-lower {
   width: 125px;
 }
 
-.w-\[100px\] {
-  width: 100px;
+.w-\[110px\] {
+  width: 110px;
 }
 
 .w-\[150px\] {
@@ -2163,10 +2171,6 @@ input[type="range"]::-ms-fill-lower {
 
 .w-5\/6 {
   width: 83.333333%;
-}
-
-.w-\[110px\] {
-  width: 110px;
 }
 
 .w-\[135px\] {
@@ -2700,6 +2704,11 @@ input[type="range"]::-ms-fill-lower {
   border-color: rgb(220 220 220 / var(--tw-border-opacity));
 }
 
+.border-\[\#1F7F7B\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 127 123 / var(--tw-border-opacity));
+}
+
 .border-\[\#D9D9D9\] {
   --tw-border-opacity: 1;
   border-color: rgb(217 217 217 / var(--tw-border-opacity));
@@ -2820,11 +2829,6 @@ input[type="range"]::-ms-fill-lower {
 .bg-\[\#f3f5f7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(243 245 247 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#FCFCFD\] {
@@ -3695,6 +3699,16 @@ input[type="range"]::-ms-fill-lower {
   color: rgb(102 95 115 / var(--tw-text-opacity));
 }
 
+.text-\[\#399F6E\] {
+  --tw-text-opacity: 1;
+  color: rgb(57 159 110 / var(--tw-text-opacity));
+}
+
+.text-\[\#7D7E87\] {
+  --tw-text-opacity: 1;
+  color: rgb(125 126 135 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -4133,6 +4147,11 @@ input[type="range"]::-ms-fill-lower {
   background-color: rgb(13 47 63 / var(--tw-bg-opacity));
 }
 
+.checked\:text-title:checked {
+  --tw-text-opacity: 1;
+  color: rgb(13 47 63 / var(--tw-text-opacity));
+}
+
 .hover\:rounded-lg:hover {
   border-radius: 0.5rem;
 }
@@ -4217,6 +4236,11 @@ input[type="range"]::-ms-fill-lower {
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(63 131 248 / var(--tw-border-opacity));
+}
+
+.focus\:bg-title:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 47 63 / var(--tw-bg-opacity));
 }
 
 .focus\:shadow-lg:focus {
