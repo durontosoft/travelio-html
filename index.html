@@ -36,12 +36,12 @@
                      
                   </div>
                   <div class="flxc">
-                     <select class="bg-white  c-select border-0 select-without-search header-select text-white " name="" id="">
+                     <select class="bg-white  c-select border-0 select-without-search header-select text-white select2 without-search">
                         USD<i class="fa-solid block mr-3 fa-sort-down"></i>
                         <option value="USD">USD</option>
                         <option value="dfdf">USD</option>
                      </select>
-                     <select class="bg-transparent border-0 select-without-search header-select text-white">
+                     <select class="bg-transparent border-0 header-select text-white select2 without-search">
                         <option data-display="ENGLISH">ENGLISH</option>
                         <option value="Bangla">Bangla</option>
                       </select>
@@ -63,7 +63,7 @@
                   <li><a class="menu-link" href="/">Rooms</a></li>
                   <li><a class="menu-link" href="eventListing.html">Events</a></li>
                   <li><a class="menu-link" href="./blog.html">Blog</a></li>
-                  <li class="relative group duration-300 ease-in-out transition-all "><span class="Barlow cursor-pointer font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title" ><span>Pages </span>  <i class="fa-solid -mt-2  fa-sort-down"></i></span>
+                  <li class="relative group duration-300 ease-in-out transition-all "><span class="Barlow cursor-pointer font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title" ><span>Pages </span>  <i class="fa-solid fa-chevron-down"></i></span>
                      <ul class="absolute z-50 w-[250px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 ">
                         <li><a class="nested-menu " href="./termsConditions.html">Terms & Conditions</a></li>
                         <li><a class="nested-menu" href="./privacyPolicy.html">Privacy Policy</a></li>
@@ -266,7 +266,7 @@
                     Search
                 </button>
             </div>
-        </div> -->
+        </div>
       </section>
       <section class="mt-[50px] lg:pt-[100px]">
          <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
@@ -979,7 +979,13 @@
          </div>
       </footer>
       <!-- 09. Footer Section End -->
-      <!-- jquary link -->
+     
+      <script>
+         $(".js-modal").modalVideo();
+      </script>
+   </body>
+</html>
+ <!-- jquary link -->
       <script src="./js/vendor/jquary.min.js"></script>
       <!-- select2 js link -->
       <script src="./js/vendor/select2.min.js"></script>
@@ -994,8 +1000,3 @@
       <script src="./js/vendor/moment.min.js"></script>
       <script src="./js/vendor/daterangepicker.js"></script>      <!-- main js link -->
       <script src="./js/main.js"></script>
-      <script>
-         $(".js-modal").modalVideo();
-      </script>
-   </body>
-</html>

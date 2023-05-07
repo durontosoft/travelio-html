@@ -441,15 +441,6 @@ $(document).ready(function () {
     }
   });
 
-  // Select2
-  // location Select
-  // $('.location-select').prepend('<option selected></option>').select2({
-  //   dropdownParent: '.location-select-wrapper',
-  //   // minimumResultsForSearch: -1,
-  //   templateResult: addLocationIcon,
-  //   placeholder: "Where are you going?",
-  // });
-
   // Date range
   $('input[name="checkInOutRange"]').daterangepicker({
     opens: 'center',
@@ -531,16 +522,26 @@ $(document).ready(function () {
     placeholder: "Where are you going?",
   });
 
-  $('.location-select-2').prepend('<option selected></option>').select2({
-    dropdownParent: '.location-select-wrapper',
-    templateResult: addLocationIcon, 
-    placeholder: "Where are you going?",
-  });
-
-  $('.select-without-search').select2({
+  $('.select2.without-search').select2({
     dropdownParent: '.location-select-wrapper',
     minimumResultsForSearch: -1,
   });
+
+
+  // $('.filter-select').select2({
+  //   dropdownParent: '.location-select-wrapper',
+  //   minimumResultsForSearch: -1,
+  // });
+
+  // $('.filter-select').select2({
+  //   dropdownParent: '.location-select-wrapper',
+  //   minimumResultsForSearch: -1,
+  // });
+
+  // $('.filter-select').select2({
+  //   dropdownParent: '.location-select-wrapper',
+  //   minimumResultsForSearch: -1,
+  // });
 
   // Location icon
   function addLocationIcon(icon) {
@@ -635,19 +636,6 @@ $(document).ready(function() {
   
   });
   
-
-$('.selectInputCountry').select2({
-  placeholder: 'Select an option'
-});
-$('.selectInputP').select2({
-  placeholder: 'Select an option'
-});
-$('.selectInputPhone').select2({
-  placeholder: 'Select an option'
-});
-$('.selectInput').select2({
-  placeholder: 'Select an option'
-});
 
 if ($("#accordion-example-heading-1")[0]) {
   // create an array of objects with the id, trigger element (eg. button), and the content element

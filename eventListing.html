@@ -4,19 +4,25 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
-      <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
-      <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css">
+      <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css">
+      <link rel="stylesheet" href="./css/vendor/daterangepicker.css">
+      <link rel="stylesheet" href="./css/vendor/select2.min.css">
+      <link href="./css/vendor/select2.min.css" rel="stylesheet">
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="./css/vendor/swiper.min.css">
+      <!-- video modal css -->
+      <link rel="stylesheet" href="./css/vendor/modal-video.min.css">
+      <!-- tailwind css link -->
+      <link href="./css/tailwind.css" rel="stylesheet">
       <!-- custom css link -->
       <link rel="stylesheet" href="./css/custom.css">
-      <!-- tailwind css link -->
-      <link href="./css/tailwind.css" rel="stylesheet" />
-      <link href="./css/vendor/select2.min.css" rel="stylesheet" />
-        <!-- Link Swiper's CSS -->
-      <link rel="stylesheet" href="./css/vendor/swiper.min.css" />
       <!-- title -->
       <title>Traveli- Travel booking HTML Template</title>
       <!--flowbite js link  -->
-      <!-- <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script> -->
+      <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
+      <!-- datepicker js link -->
+      <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
    </head>
    <body>
       <header class="">
@@ -124,37 +130,39 @@
     </section>
     <!-- Sign In section start -->
     <section class="lg:pb-[100px] mt-32 mb-[50px] lg:mb-[130px] relative">
-        <div class="container  ">
-            <div class="md:flex justify-between items-center border-b pb-4  border-[#DDDDDD] ">
+        <div class="container">
+            <div class="md:flex justify-between items-center border-b pb-4 border-[#DDDDDD] ">
                 <div class="mb-4 md:mb-0" >
                     <h3 class="text-[22px] font-semibold text-title ">36 Tour Event in Search</h3>
                     <p class="text-black-lite">See how we pick our recommended properties</p>
                 </div>
-                <div class="flex flex-wrap gap-3 ">
-                  
-           
+                <div class="flex flex-wrap gap-3 filter-top">
+                    <!-- <select id="countries" class="w-[120px] bg-gray-50 border border-gray-lite text-title text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 select2">
+                    <option selected>Price</option>
+                    <option value="US">$100</option>
+                    <option value="CA">$200</option>
+                    <option value="FR">$300</option>
+                    <option value="DE">$400</option>
+                    </select> -->
+                    <div>
+                        <select class="w-[140px]  bg-gray-50 border border-gray-lite text-title text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 select2 without-search">
+                            <option selected>Star Rating</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </div>
 
-                        <select id="countries" class="w-[120px] bg-gray-50 border border-gray-lite text-title text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 select-without-search">
-                        <option selected>Price</option>
-                        <option value="US">$100</option>
-                        <option value="CA">$200</option>
-                        <option value="FR">$300</option>
-                        <option value="DE">$400</option>
-                        </select>
-                        <select id="countries" class="w-[140px]  bg-gray-50 border border-gray-lite text-title text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 select-without-search">
-                        <option selected>Star Rating</option>
-                        <option value="US">United States</option>
-                        <option value="CA">Canada</option>
-                        <option value="FR">France</option>
-                        <option value="DE">Germany</option>
-                        </select>
-                        <select id="countries" class="w-[140px] bg-gray-50 border border-gray-lite text-title text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  ">
-                        <option selected>Room Type</option>
-                        <option value="US">United States</option>
-                        <option value="CA">Canada</option>
-                        <option value="FR">France</option>
-                        <option value="DE">Germany</option>
-                        </select>
+                    <div>
+                        <select class="w-[140px] bg-gray-50 border border-gray-lite text-title text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 select2 without-search">
+                            <option selected>Room Type</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                            </select>
+                    </div>
 
                         <button class="py-[9px] px-4 bg-yello rounded flxc gap-2 ">Top picks for your search <img src="./images/icons/up-down 1.svg" alt=""></button>
                     </div>
@@ -534,16 +542,20 @@
          </div>
       </footer>
       <!-- 09. Footer Section End -->
-      <!-- jquary link -->
-      <script src="./js/vendor/jquary.min.js"></script>
-      <!-- select2 js link -->
-      <script src="./js/vendor/select2.min.js"></script>
-      <!-- swiper js link -->
-      <script src="./js/vendor/swiper.min.js"></script>
-      <!-- date picker -->
-      <script src="./js/vendor/moment.min.js"></script>
-      <script src="./js/vendor/daterangepicker.js"></script>
-      <!-- main js link -->
-      <script src="./js/main.js"></script>
+       <!-- jquary link -->
+       <script src="./js/vendor/jquary.min.js"></script>
+       <!-- select2 js link -->
+       <script src="./js/vendor/select2.min.js"></script>
+       <!-- swiper js link -->
+       <script src="./js/vendor/swiper.min.js"></script>
+       <!-- date picker -->
+       <script src="./js/vendor/datepicker.js"></script>
+       <!-- video modal js link -->
+       <script src="./js/vendor/jquery-modal-video.min.js"></script>
+ 
+       <!-- date picker -->
+       <script src="./js/vendor/moment.min.js"></script>
+       <script src="./js/vendor/daterangepicker.js"></script>      <!-- main js link -->
+       <script src="./js/main.js"></script>
    </body>
 </html>

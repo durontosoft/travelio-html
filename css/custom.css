@@ -121,11 +121,11 @@ span.datepicker-cell{
 
 }
 
-.Country .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #0D2F3F !important;
+ .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff;
     text-align: left;
 }
-.Country .select2-container--default .select2-selection--single .select2-selection__arrow b {
+ .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: black transparent transparent transparent !important;
 }
 .Number .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -672,6 +672,7 @@ span.clockpicker-span-hours.text-primary, span.clockpicker-span-minutes.text-pri
 
 .c-select .select2-dropdown {
     max-width: 240px;
+    min-width: 200px;
     background-color: #fff;
     border: none;
     border-bottom: 5px solid #399F6E;
@@ -753,5 +754,16 @@ span.clockpicker-span-hours.text-primary, span.clockpicker-span-minutes.text-pri
     border-radius: 7px;
     background: #999;
 }
+
+.filter-top .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #0D2F3F;
+}
+
+.filter-top .select2-container{
+    border: 1px solid rgba(117,118,128,0.2);;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 
 
