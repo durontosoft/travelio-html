@@ -55,6 +55,32 @@
   }
 });
 
+// Modal video
+$(".js-modal").modalVideo();
+
+// Currency select
+$('.currency-select-wrapper').on('click', function () {
+  $('.currency-select-wrapper ul').toggleClass('show');
+})
+
+//  Language select
+$('.lang-select-items .single-item').on('click', function () {
+  $('.lang-select-items .single-item').removeClass('selected');
+  $(this).toggleClass('selected');
+})
+
+ // Country select
+ $('.lang-select-btn').on('click', function (e) {
+  $('.lang-select-box').toggleClass('show');
+  $('.lang-select-btn').toggleClass('arrow-down');
+})
+
+$('.lang-select-close-btn').on('click', function () {
+  $('.lang-select-box').removeClass('show');
+  $('.lang-select-btn').removeClass('arrow-down');
+})
+
+
 // Attach an event listener to the last OTP input field
 $('#otp-input-5').on('input', function () {
   var digit = $(this).val();

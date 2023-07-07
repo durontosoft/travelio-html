@@ -45,8 +45,10 @@ module.exports = {
         'previewBg': "url('/images/background/previewbg.png')",
         'preview': "url('/images/background/download 1.png')",
         'close-light': "url('/images/icons/closelight.jpg')",
-        'close-dark': "url('/images/icons/closeDark.png')",
-       
+        'close-dark': "url('/images/icons/closeDark.png')",       
+      },
+      zIndex: {
+        '999': '999',
       },
       colors: {
         'title': '#0D2F3F',

@@ -1,450 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
-      <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css">
-      <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css">
-      <link rel="stylesheet" href="./css/vendor/daterangepicker.css">
-      <link rel="stylesheet" href="./css/vendor/select2.min.css">
-      <link href="./css/vendor/select2.min.css" rel="stylesheet">
-      <!-- Link Swiper's CSS -->
-      <link rel="stylesheet" href="./css/vendor/swiper.min.css">
-      <!-- video modal css -->
-      <link rel="stylesheet" href="./css/vendor/modal-video.min.css">
-      <!-- tailwind css link -->
-      <link href="./css/tailwind.css" rel="stylesheet">
-      <!-- custom css link -->
-      <link rel="stylesheet" href="./css/custom.css">
-      <!-- title -->
-      <title>Traveli- Travel booking HTML Template</title>
-      <!--flowbite js link  -->
-      <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
-      <!-- datepicker js link -->
-      <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
 
-   </head>
-   <body>
-      <header class="">
-         <div class="bg-title hidden md:block">
-            <div class="container">
-               <div class="flex justify-between items-center">
-                  <div>
-                     <a class="font-medium text-sm text-white mr-7" href="tel:+8801714588484"><i class="fa-solid mr-1 fa-phone"></i>+8801714588484</a>
-                     <a class="font-medium text-sm text-white  pr-6 " href="mailto:hillviewhotel@gmail.com"><i class="fa-solid mr-1 fa-envelope"></i>hillviewhotel@gmail.com</a>
-                     
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="./images/logo/faveicon.jpg" type="image/x-icon">
+   <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css">
+   <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css">
+   <link rel="stylesheet" href="./css/vendor/daterangepicker.css">
+   <link rel="stylesheet" href="./css/vendor/select2.min.css">
+   <link href="./css/vendor/select2.min.css" rel="stylesheet">
+   <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="./css/vendor/swiper.min.css">
+   <!-- video modal css -->
+   <link rel="stylesheet" href="./css/vendor/modal-video.min.css">
+   <!-- tailwind css link -->
+   <link href="./css/tailwind.css" rel="stylesheet">
+   <!-- custom css link -->
+   <link rel="stylesheet" href="./css/custom.css">
+   <!-- title -->
+   <title>Traveli- Travel booking HTML Template</title>
+   <!--flowbite js link  -->
+   <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
+   <!-- datepicker js link -->
+   <script src="https://unpkg.com/flowbite@1.4.3/dist/datepicker.js"></script>
+
+</head>
+
+<body>
+   <header class="">
+      <div class="bg-title hidden md:block">
+         <div class="container">
+            <div class="flex justify-between items-center">
+               <div class="flex">
+                  <a class="flex gap-2 font-medium text-sm text-white mr-7" href="tel:+8801714588484">
+                     <img src="./images/icons/phone-light.svg" alt="">
+                     +8801714588484</a>
+                  <a class="flex gap-2 font-medium text-sm text-white  pr-6 " href="mailto:hillviewhotel@gmail.com">
+                     <img src="./images/icons/envelope-light.svg" alt="">
+                     hillviewhotel@gmail.com</a>
+
+               </div>
+               <div class="flex items-center">
+                  <div class="flex items-center gap-4">
+                     <div class="currency-select-wrapper">
+                        <a href="#" class="selected-currency-wrapper flex items-center gap-2">
+                           <span class="selected-currency text-white">USD</span>
+                           <span class="icon text-white text-md">
+                              <i class="fa fa-caret-down"></i>
+                           </span>
+                        </a>
+                        <ul class="absolute invisible opacity-0 mt-[20px] z-50 bg-white rounded-[4px] transition-all">
+                           <li>
+                              <a href="#" class="flex px-3 py-2">BDT</a>
+                           </li>
+                           <li>
+                              <a href="#" class="flex px-3 py-2">INR</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="lang-select-wrapper">
+                        <button class="lang-select-btn flex items-center gap-2">
+                           <span class="icon">
+                              <img src="./images/icons/uk-flag.svg" alt="">
+                           </span>
+                           <span class="label text-white">UK
+                              <i class="fa fa-caret-down"></i>
+                           </span>
+                        </button>
+                        <!-- Language select box -->
+                        <div class="lang-select-box p-[30px] w-[900px] z-50 bg-white rounded-md absolute left-1/2 -translate-x-1/2 mt-[20px] invisible opacity-0 transition-all">
+                           <div class="lang-select-header">
+                              <h3 class="text-3xl font-medium">Select your prefered language</h3>
+                              <button class="lang-select-close-btn w-[32px] h-[32px] flex items-center justify-center rounded-[50%] bg-[hsla(0,100%,77%,.2)] absolute right-[20px] top-[20px]">
+                                 <i class="fa fa-times"></i>
+                              </button>
+                           </div>
+                           <ul class="lang-select-items flex flex-wrap gap-[10px] mt-4">
+                              <li>
+                                 <a href="#" class="single-item flex items-center gap-6 py-[20px] px-[10px] w-[195px] max-w-screen rounded-[5px] leading-[1]">
+                                    <div class="item-content flex items-center gap-2">
+                                       <span class="flag-icon">
+                                          <img class="inline-block w-[35px]" src="./images/icons/uk-flag.svg" alt="">
+                                       </span>
+                                       <div class="item-text">
+                                          <h5 class="text-[14px] font-[500] mb-1">English</h5>
+                                          <span class="text-[12px] text-[#697488]">United Kingdom</span>
+                                       </div>
+                                    </div>
+                                    <span class="lang-select-checked opacity-0">
+                                       <i class="fa fa-check-circle"></i>
+                                    </span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
                   </div>
-                  <div class="flxc">
-                     <select class="bg-white  c-select border-0 select-without-search header-select text-white " name="" id="">
-                        USD<i class="fa-solid block mr-3 fa-sort-down"></i>
-                        <option value="USD">USD</option>
-                        <option value="dfdf">USD</option>
-                     </select>
-                     <select class="bg-transparent border-0 select-without-search header-select text-white">
-                        <option data-display="ENGLISH">ENGLISH</option>
-                        <option value="Bangla">Bangla</option>
-                      </select>
-                      <div class="hidden lg:block">
-                        <a class="text-white text-sm px-6" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-                     <a class="text-white text-sm " href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                  <div class="hidden lg:block">
+                     <a class="text-white text-sm px-6" href="#" target="_blank" rel="noopener noreferrer"><i
+                           class="fa-brands fa-facebook-f"></i></a>
+                     <a class="text-white text-sm " href="#" target="_blank" rel="noopener noreferrer"><i
+                           class="fa-brands fa-instagram"></i></a>
                      <a class="text-white text-sm px-6" href=""><i class="fa-brands fa-twitter"></i></a>
-                      </div>
-                      <button class="w-[178px] bg-yello text-title h-[58px] font-semibold ">Sign In</button>
                   </div>
+                  <button class="w-[178px] bg-yello text-title h-[58px] font-semibold ">Sign In</button>
                </div>
             </div>
          </div>
-         <div class="shadow-icon pt-[22px] pb-[25px]">
-            <div class="container flex justify-between items-center">
-               <h2 class="text-[30px] font-semibold"><span class="text-green">Bhalo</span><span class="text-yello">Hotels</span></h2>
-               <ul id="navbar" class="  h-full bg-title md:bg-transparent fixed w-full  pl-[90px] md:pl-0 pt-20 md:pt-0 space-y-[15px] md:space-y-0  -top-[200%] transform scale-x-0 md:scale-x-100 left-0 z-50 md:relative md:flex justify-end items-center gap-[46px]  ">
-                  <li><a class="menu-link" href="/">Home</a></li>
-                  <li><a class="menu-link" href="/">Rooms</a></li>
-                  <li><a class="menu-link" href="eventListing.html">Events</a></li>
-                  <li><a class="menu-link" href="./blog.html">Blog</a></li>
-                  <li class="relative group duration-300 ease-in-out transition-all "><span class="Barlow cursor-pointer font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title" ><span>Pages </span>  <i class="fa-solid -mt-2  fa-sort-down"></i></span>
-                     <ul class="absolute z-50 w-[250px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 ">
-                        <li><a class="nested-menu " href="./termsConditions.html">Terms & Conditions</a></li>
-                        <li><a class="nested-menu" href="./privacyPolicy.html">Privacy Policy</a></li>
-                        <li><a class="nested-menu" href="./OTP.html">OPT</a></li>
-                        <li><a class="nested-menu" href="./noPageFound.html">404</a></li>
-                        <li><a class="nested-menu" href="./myAccount.html">Profile</a></li>
-                        <li><a class="nested-menu" href="./blogDetails.html">Blog Details</a></li>
-                        <li><a class="nested-menu" href="./signIn.html">Sign In</a></li>
-                        <li><a class="nested-menu" href="./OTP.html">OTP</a></li>
-                        <li><a class="nested-menu" href="./aboutUs.html">About</a></li>
-                        <li><a class="nested-menu" href="./bookingInfo.html">Booking info</a></li>
-                        <li><a class="nested-menu" href="./costumerInfo.html">Customer info</a></li>
-                        <li><a class="nested-menu" href="./eventListing.html">Event Listing</a></li>
-                        <li><a class="nested-menu" href="./faq.html">FAQ</a></li>
-                     </ul>
-                  </li>
-                  <li><a class="menu-link" href="./contactUs.html">Contact</a></li>
-                  <li class="pl-6"><a class="menu-link " href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                  <li  id="menu-toggle-close-icon" class="block md:hidden absolute top-4 right-4 "><i class="fa-solid text-white text-xl fa-xmark"></i></li>
-               </ul>
-               <span id="menu-toggle-open-icon" class="block md:hidden"><i class="fa-solid text-2xl fa-bars"></i></span>
+      </div>
+      <div class="shadow-icon pt-[22px] pb-[25px]">
+         <div class="container flex justify-between items-center">
+            <h2 class="text-[30px] font-semibold"><span class="text-green">Bhalo</span><span
+                  class="text-yello">Hotels</span></h2>
+            <ul id="navbar"
+               class="  h-full bg-title md:bg-transparent fixed w-full  pl-[90px] md:pl-0 pt-20 md:pt-0 space-y-[15px] md:space-y-0 top-[200%] transform scale-x-0 md:scale-x-100 left-0 md:relative md:flex justify-end items-center gap-[46px]  ">
+               <li><a class="menu-link" href="/">Home</a></li>
+               <li><a class="menu-link" href="/">Rooms</a></li>
+               <li><a class="menu-link" href="eventListing.html">Events</a></li>
+               <li><a class="menu-link" href="./blog.html">Blog</a></li>
+               <li class="relative group duration-300 ease-in-out transition-all "><span
+                     class="Barlow cursor-pointer font-medium text-lg flex items-center gap-1 md:hover:text-green hover:text-yello active:text-yello text-white md:text-title"><span>Pages
+                     </span> <i class="fa-solid -mt-2  fa-sort-down"></i></span>
+                  <ul
+                     class="absolute z-50 w-[250px] transform invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-in-out transition-all origin-top translate-y-6 group-hover:translate-y-0 group-hover:scale-y-100 rounded-md px-6 py-2 md:p-6 top-[35px] left-0 bg-title space-y-2 ">
+                     <li><a class="nested-menu " href="./termsConditions.html">Terms & Conditions</a></li>
+                     <li><a class="nested-menu" href="./privacyPolicy.html">Privacy Policy</a></li>
+                     <li><a class="nested-menu" href="./OTP.html">OPT</a></li>
+                     <li><a class="nested-menu" href="./noPageFound.html">404</a></li>
+                     <li><a class="nested-menu" href="./myAccount.html">Profile</a></li>
+                     <li><a class="nested-menu" href="./blogDetails.html">Blog Details</a></li>
+                     <li><a class="nested-menu" href="./signIn.html">Sign In</a></li>
+                     <li><a class="nested-menu" href="./OTP.html">OTP</a></li>
+                     <li><a class="nested-menu" href="./aboutUs.html">About</a></li>
+                     <li><a class="nested-menu" href="./bookingInfo.html">Booking info</a></li>
+                     <li><a class="nested-menu" href="./costumerInfo.html">Customer info</a></li>
+                     <li><a class="nested-menu" href="./eventListing.html">Event Listing</a></li>
+                     <li><a class="nested-menu" href="./faq.html">FAQ</a></li>
+                  </ul>
+               </li>
+               <li><a class="menu-link" href="./contactUs.html">Contact</a></li>
+               <li class="pl-6"><a class="menu-link " href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+               <li id="menu-toggle-close-icon" class="block md:hidden absolute top-4 right-4 "><i
+                     class="fa-solid text-white text-xl fa-xmark"></i></li>
+            </ul>
+            <span id="menu-toggle-open-icon" class="block md:hidden"><i class="fa-solid text-2xl fa-bars"></i></span>
+         </div>
+      </div>
+   </header>
+   <!-- Header section start -->
+   <!-- hero section start -->
+   <section class="">
+      <div class="container grid grid-cols-12 gap-[30px] py-10 md:pt-[70px] ">
+         <div class="col-span-12 md:col-span-5 lg:col-span-4 relative">
+            <img class="absolute -top-[15%] -right-[40%]" src="./images/icons/Shapes.png" alt="Shapes">
+            <div class="relative ">
+
+               <img class="w-full h-auto md:h-[450px] " src="./images/home/heroboat.jpg" alt="boat">
+               <button data-video-id="Uz73LAnMA0I"
+                  class="js-modal absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
+                  <span class="relative inline-block okkk">
+                     <i
+                        class="fa-solid animate-custom  bg-title   text-[95px] rounded-full  text-yello fa-circle-play"></i>
+                  </span>
+
+               </button>
+
             </div>
          </div>
-      </header>
-      <!-- Header section start -->
-      <!-- hero section start -->
-      <section class="">
-         <div class="container grid grid-cols-12 gap-[30px] py-10 md:pt-[70px] ">
-            <div class="col-span-12 md:col-span-5 lg:col-span-4 relative">
-               <img class="absolute -top-[15%] -right-[40%]" src="./images/icons/Shapes.png" alt="Shapes">
-               <div class="relative ">
-                
-                  <img class="w-full h-auto md:h-[450px] " src="./images/home/heroboat.jpg" alt="boat">
-                  <button data-video-id="Uz73LAnMA0I" class="js-modal absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
-                     <span class="relative inline-block okkk">
-                         <i class="fa-solid animate-custom  bg-title   text-[95px] rounded-full  text-yello fa-circle-play"></i>
+         <div class="col-span-12 hidden lg:block md:col-span-3 ">
+            <div
+               class="w-[110px] relative mx-auto mt-6  mb-8 flex flex-col justify-center items-center h-[110px] bg-yello rounded-full ">
+               <img class="absolute bottom-1/2 left-1/2 z-[-1]" src="./images/icons/plane.png" alt="plane">
+               <span class="block text-2xl text-title font-semibold ">500+</span>
+               <span class="text-title font-medium">Pacages</span>
+            </div>
+            <img class="rounded-lg" src="./images/home/hero.jpg" alt="hero">
+
+         </div>
+         <div class="col-span-12  md:col-span-6 lg:col-span-5 md:mt-20">
+            <h2 class="text-[28px] lg:text-[48px] font-bold text-title lg:leading-[64px] ">Welcome to Find Flights,
+               Hotels & Tour Packages <span class="text-green">Cheap rate</span>
+            </h2>
+            <img class="w-[135px] md:w-auto" src="./images/icons/linegreen.png" alt="line">
+            <p class="text-lg text-[#665F73] pt-[25px] leading-[30px]  ">Rebuilt for simplicity and speed, so you can
+               spend more time discovering and listening to great podcasts.</p>
+         </div>
+
+      </div>
+      <div class="pt-[42px] pb-10 md:pb-[125px] bg-green md:-mt-10 lg:-mt-[138px]">
+         <div class="container grid grid-cols-12 gap-4 md:gap-[30px] ">
+
+            <div class="col-span-12  md:col-span-6 lg:col-span-4">
+               <div class="flex items-center gap-6">
+                  <div class="flex">
+                     <img class="rounded-full" src="./images/icons/userone.svg" alt="user">
+                     <img class="rounded-full -ml-3" src="./images/icons/usertwo.svg" alt="user">
+                     <img class="rounded-full -ml-3" src="./images/icons/userthree.svg" alt="user">
+                     <img class="rounded-full -ml-3" src="./images/icons/userfour.svg" alt="user">
+                  </div>
+                  <div>
+                     <h4 class="text-white font-medium">Our Happy Customers</h4>
+                     <p class="text-white text-sm mt-[2px] "><i class="fa-solid text-yello fa-star"></i> 4.9 (1.5k
+                        Reviews)</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-span-12 hidden lg:block  lg:col-span-3">
+
+            </div>
+            <div class="col-span-12  md:col-span-6 lg:col-span-5">
+               <div class="flex ">
+                  <div class="w-1/2 flex items-center gap-3 md:gap-5 ">
+                     <span class="w-[58px] h-[58px] bg-white rounded-lg flex justify-center items-center ">
+                        <img src="./images/common/user.svg" alt="user group">
                      </span>
-                    
-                 </button>
-
-               </div>
-            </div>
-            <div class="col-span-12 hidden lg:block md:col-span-3 ">
-               <div class="w-[110px] relative mx-auto mt-6  mb-8 flex flex-col justify-center items-center h-[110px] bg-yello rounded-full ">
-                  <img class="absolute bottom-1/2 left-1/2 z-[-1]" src="./images/icons/plane.png" alt="plane">
-                  <span class="block text-2xl text-title font-semibold ">500+</span>
-                  <span class="text-title font-medium">Pacages</span>
-               </div>
-               <img class="rounded-lg" src="./images/home/hero.jpg" alt="hero">
-
-            </div>
-            <div class="col-span-12  md:col-span-6 lg:col-span-5 md:mt-20">
-               <h2 class="text-[28px] lg:text-[48px] font-bold text-title lg:leading-[64px] ">Welcome to Find Flights, Hotels & Tour Packages <span class="text-green">Cheap rate</span>
-               </h2>
-               <img class="w-[135px] md:w-auto" src="./images/icons/linegreen.png" alt="line">
-               <p class="text-lg text-[#665F73] pt-[25px] leading-[30px]  ">Rebuilt for simplicity and speed, so you can spend more time discovering and listening to great podcasts.</p>
-            </div>
-
-         </div>
-         <div class="pt-[42px] pb-10 md:pb-[125px] bg-green md:-mt-10 lg:-mt-[138px]">
-            <div class="container grid grid-cols-12 gap-4 md:gap-[30px] ">
-               
-               <div class="col-span-12  md:col-span-6 lg:col-span-4">
-                  <div class="flex items-center gap-6">
-                     <div class="flex">
-                        <img class="rounded-full" src="./images/icons/userone.svg"       alt="user">
-                        <img class="rounded-full -ml-3" src="./images/icons/usertwo.svg" alt="user">
-                        <img class="rounded-full -ml-3" src="./images/icons/userthree.svg" alt="user">
-                        <img class="rounded-full -ml-3" src="./images/icons/userfour.svg" alt="user">
-                     </div>
                      <div>
-                        <h4 class="text-white font-medium">Our Happy Customers</h4>
-                        <p class="text-white text-sm mt-[2px] "><i class="fa-solid text-yello fa-star"></i> 4.9 (1.5k Reviews)</p>
+                        <h4 class="text-white font-bold text-lg md:text-[30px] md:pb-2 leading-[30px] ">12</h4>
+                        <p class="text-white text-sm">Years Experiences</p>
                      </div>
                   </div>
-               </div>
-               <div class="col-span-12 hidden lg:block  lg:col-span-3">
-
-               </div>
-               <div class="col-span-12  md:col-span-6 lg:col-span-5">
-                  <div class="flex ">
-                     <div class="w-1/2 flex items-center gap-3 md:gap-5 ">
-                        <span class="w-[58px] h-[58px] bg-white rounded-lg flex justify-center items-center ">
-                           <img src="./images/common/user.svg" alt="user group">
-                        </span>
-                        <div>
-                           <h4 class="text-white font-bold text-lg md:text-[30px] md:pb-2 leading-[30px] ">12</h4>
-                           <p class="text-white text-sm">Years Experiences</p>
-                        </div>
-                     </div>
-                     <div class="w-1/2 flex items-center gap-3 md:gap-5 ">
-                        <span class="w-[58px] h-[58px] bg-white rounded-lg flex justify-center items-center ">
-                           <img src="./images/common/award.svg" alt="award">
-                        </span>
-                        <div>
-                           <h4 class="text-white font-bold text-lg md:text-[30px]  md:pb-2 leading-[30px] ">29</h4>
-                           <p class="text-white text-sm">Awards Gained</p>
-                        </div>
+                  <div class="w-1/2 flex items-center gap-3 md:gap-5 ">
+                     <span class="w-[58px] h-[58px] bg-white rounded-lg flex justify-center items-center ">
+                        <img src="./images/common/award.svg" alt="award">
+                     </span>
+                     <div>
+                        <h4 class="text-white font-bold text-lg md:text-[30px]  md:pb-2 leading-[30px] ">29</h4>
+                        <p class="text-white text-sm">Awards Gained</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="container z-50  w-full mt-10 md:-mt-[70px] ">
-            <div class="p-[30px] md:flex  items-center justify-between rounded-lg bg-white shadow-icon">
-               <div class="relative max-w-sm">
-                  <p class="text-[20px] font-medium text-title ">Where</p>
-                  <div class="absolute inset-y-0 right-0 top-8 flex items-center pl-3 pointer-events-none">
-                     <svg aria-hidden="true" class="w-5 h-5 text-[#399F6E] " fill="currentColor" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 7C14 6.08075 13.8189 5.1705 13.4672 4.32122C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67878 0.532843C8.8295 0.18106 7.91925 0 7 0C6.08075 0 5.17049 0.18106 4.32122 0.532843C3.47194 0.884626 2.70026 1.40024 2.05025 2.05025C1.40024 2.70026 0.884626 3.47194 0.532843 4.32122C0.18106 5.1705 -1.36979e-08 6.08075 0 7C0 8.38557 0.409154 9.67434 1.10285 10.7616C1.10378 10.7631 1.10273 10.765 1.101 10.765C1.09927 10.765 1.09819 10.7669 1.09912 10.7683C2.74527 13.3456 4.96594 16.819 6.15876 18.6845C6.55206 19.2995 7.44916 19.2973 7.84236 18.6822L12.9011 10.7679C12.9019 10.7667 12.901 10.765 12.8995 10.765C12.898 10.765 12.8971 10.7633 12.8979 10.762C13.6171 9.63908 13.9995 8.33357 14 7ZM7 10C6.20435 10 5.44129 9.68393 4.87868 9.12132C4.31607 8.55871 4 7.79565 4 7C4 6.20435 4.31607 5.44129 4.87868 4.87868C5.44129 4.31607 6.20435 4 7 4C7.79565 4 8.55871 4.31607 9.12132 4.87868C9.68393 5.44129 10 6.20435 10 7C10 7.79565 9.68393 8.55871 9.12132 9.12132C8.55871 9.68393 7.79565 10 7 10Z" fill="#399F6E"/>
-                        </svg>
-                  </div>
-                  <div class="location-select-wrapper c-select bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[rgba(117,118,128,0.2)] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0">
-                     <select class="location-select" id="hotelLocation" name="state">
-                         <option value="NW">Norway</option>
-                         <option value="SW">Swedeen</option>
-                         <option value="US">United States</option>
-                         <option value="Uk">United Kingdom</option>
-                         <option value="SW">Swedeen</option>
-                         <option value="US">United States</option>
-                         <option value="Uk">United Kingdom</option>
-                     </select>
-                 </div>
-                </div>
-               <div class="relative max-w-sm mt-3 md:mt-0 ">
-                  <p class="text-[20px] font-medium text-title ">From - To</p>
+      </div>
+      <div class="container z-50  w-full mt-10 md:-mt-[70px] ">
+         <div class="p-[30px] md:flex  items-center justify-between rounded-lg bg-white shadow-icon">
+            <div class="relative max-w-sm">
+               <p class="text-[20px] font-medium text-title ">Where</p>
+               <div class="absolute inset-y-0 right-0 top-8 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-[#399F6E] " fill="currentColor" viewBox="0 0 20 20"
+                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M14 7C14 6.08075 13.8189 5.1705 13.4672 4.32122C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67878 0.532843C8.8295 0.18106 7.91925 0 7 0C6.08075 0 5.17049 0.18106 4.32122 0.532843C3.47194 0.884626 2.70026 1.40024 2.05025 2.05025C1.40024 2.70026 0.884626 3.47194 0.532843 4.32122C0.18106 5.1705 -1.36979e-08 6.08075 0 7C0 8.38557 0.409154 9.67434 1.10285 10.7616C1.10378 10.7631 1.10273 10.765 1.101 10.765C1.09927 10.765 1.09819 10.7669 1.09912 10.7683C2.74527 13.3456 4.96594 16.819 6.15876 18.6845C6.55206 19.2995 7.44916 19.2973 7.84236 18.6822L12.9011 10.7679C12.9019 10.7667 12.901 10.765 12.8995 10.765C12.898 10.765 12.8971 10.7633 12.8979 10.762C13.6171 9.63908 13.9995 8.33357 14 7ZM7 10C6.20435 10 5.44129 9.68393 4.87868 9.12132C4.31607 8.55871 4 7.79565 4 7C4 6.20435 4.31607 5.44129 4.87868 4.87868C5.44129 4.31607 6.20435 4 7 4C7.79565 4 8.55871 4.31607 9.12132 4.87868C9.68393 5.44129 10 6.20435 10 7C10 7.79565 9.68393 8.55871 9.12132 9.12132C8.55871 9.68393 7.79565 10 7 10Z"
+                        fill="#399F6E" />
+                  </svg>
+               </div>
+               <div
+                  class="location-select-wrapper c-select bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[rgba(117,118,128,0.2)] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0">
+                  <select class="location-select" id="hotelLocation" name="state">
+                     <option value="NW">Norway</option>
+                     <option value="SW">Swedeen</option>
+                     <option value="US">United States</option>
+                     <option value="Uk">United Kingdom</option>
+                     <option value="SW">Swedeen</option>
+                     <option value="US">United States</option>
+                     <option value="Uk">United Kingdom</option>
+                  </select>
+               </div>
+            </div>
+            <div class="relative max-w-sm mt-3 md:mt-0 ">
+               <p class="text-[20px] font-medium text-title ">From - To</p>
+               <div class="absolute inset-y-0 top-8  right-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-[#399F6E] " fill="currentColor" viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"></path>
+                  </svg>
+               </div>
+               <div class="input-group date-range">
+                  <input type="text"
+                     class="bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[rgba(117,118,128,0.2)] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0"
+                     id="hotelCheckIn" name="checkInOutRange" value="09/16/2022, 09/16/2022" />
+               </div>
+            </div>
+            <div
+               class="guest-select-btn relative w-full md:w-48 md:pb-0  border-b  border-[rgba(117,118,128,0.2)] mt-3 md:mt-0">
+               <div class="guest-select-box">
+                  <p class="text-[20px] font-medium text-title ">Guests</p>
                   <div class="absolute inset-y-0 top-8  right-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-[#399F6E] " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                  </div>
-                  <div class="input-group date-range">
-                     <input type="text" class="bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none border-b border-[rgba(117,118,128,0.2)] text-[#7D7E87]   focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0" id="hotelCheckIn" name="checkInOutRange" value="09/16/2022, 09/16/2022" />
-                 </div>
-                </div>
-               <div class="guest-select-btn relative w-full md:w-48 md:pb-0  border-b  border-[rgba(117,118,128,0.2)] mt-3 md:mt-0">
-                  <div class="guest-select-box">
-                     <p class="text-[20px] font-medium text-title ">Guests</p>
-                     <div class="absolute inset-y-0 top-8  right-0 flex items-center pl-3 pointer-events-none">
-                        <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M12 0.999999L6.5 6L1 1" stroke="#399F6E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                           </svg>
+                     <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.999999L6.5 6L1 1" stroke="#399F6E" stroke-width="1.2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
 
-                      </div>
-                     <div class="form-value">
-                        <p class="flex items-center bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none text-[#7D7E87] focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0 dark:focus:border-blue-500">
-                            <span class="guest-rooms">0</span>
-                            <span>&nbsp;Rooms&nbsp;</span>
-                            <span class="guest-adults">0</span>
-                            <span>&nbsp;Adult&nbsp;</span>
-                            <span class="guest-childs">0</span>
-                            <span>&nbsp;Child&nbsp;</span>
-                        </p>
-                    </div>
                   </div>
-                  <div class="guest-select bg-white shadow-md rounded-lg p-6 absolute top-20 w-80">
-                     <div class="select-item flex items-center justify-between gap-4">
-                        <label for="adult">Rooms</label>
-                        <div class="select-actions flex gap-3 items-center">
-                            <button class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
-                                <img src="./images/icons/minus-icon.svg" alt="">
-                            </button>
-                            <input type="text" value="0" class="guest-room-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
-                            <button class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
-                                <img src="./images/icons/plus-icon.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="select-item flex items-center justify-between gap-4 mt-3">
-                        <label for="adult">Adults</label>
-                        <div class="select-actions flex gap-3 items-center">
-                           <button class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
-                              <img src="./images/icons/minus-icon.svg" alt="">
-                           </button>
-                           <input type="text" value="0" class="guest-adult-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
-                           <button class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
-                              <img src="./images/icons/plus-icon.svg" alt="">
-                           </button>
-                        </div>
+                  <div class="form-value">
+                     <p
+                        class="flex items-center bg-gray-50 border-l-0 border-r-0 border-t-0 rounded-none text-[#7D7E87] focus:ring-0 focus:ring-offset-0 block w-full  p-2.5 pl-0 dark:focus:border-blue-500">
+                        <span class="guest-rooms">0</span>
+                        <span>&nbsp;Rooms&nbsp;</span>
+                        <span class="guest-adults">0</span>
+                        <span>&nbsp;Adult&nbsp;</span>
+                        <span class="guest-childs">0</span>
+                        <span>&nbsp;Child&nbsp;</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="guest-select bg-white shadow-md rounded-lg p-6 absolute top-20 w-80">
+                  <div class="select-item flex items-center justify-between gap-4">
+                     <label for="adult">Rooms</label>
+                     <div class="select-actions flex gap-3 items-center">
+                        <button
+                           class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                           <img src="./images/icons/minus-icon.svg" alt="">
+                        </button>
+                        <input type="text" value="0"
+                           class="guest-room-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
+                        <button
+                           class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                           <img src="./images/icons/plus-icon.svg" alt="">
+                        </button>
                      </div>
-                     <div class="select-item flex items-center justify-between gap-4 mt-3">
-                        <label for="adult">Children</label>
-                        <div class="select-actions flex gap-3 items-center">
-                           <button class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
-                              <img src="./images/icons/minus-icon.svg" alt="">
-                           </button>
-                           <input type="text" value="0" class="guest-child-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
-                           <button class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
-                              <img src="./images/icons/plus-icon.svg" alt="">
-                           </button>
-                        </div>
+                  </div>
+                  <div class="select-item flex items-center justify-between gap-4 mt-3">
+                     <label for="adult">Adults</label>
+                     <div class="select-actions flex gap-3 items-center">
+                        <button
+                           class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                           <img src="./images/icons/minus-icon.svg" alt="">
+                        </button>
+                        <input type="text" value="0"
+                           class="guest-adult-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
+                        <button
+                           class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                           <img src="./images/icons/plus-icon.svg" alt="">
+                        </button>
                      </div>
-                    <div class="room-select-actions flex justify-between mt-6 border-t border-width-1 border-[#AEC1DB] pt-4">
+                  </div>
+                  <div class="select-item flex items-center justify-between gap-4 mt-3">
+                     <label for="adult">Children</label>
+                     <div class="select-actions flex gap-3 items-center">
+                        <button
+                           class="decrement w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                           <img src="./images/icons/minus-icon.svg" alt="">
+                        </button>
+                        <input type="text" value="0"
+                           class="guest-child-input room-value w-12 h-9 rounded-md text-center border border-width-1 border-[#AEC1DB]">
+                        <button
+                           class="increment w-9 h-9 rounded-full border border-width-1 border-[#AEC1DB] flex justify-center items-center">
+                           <img src="./images/icons/plus-icon.svg" alt="">
+                        </button>
+                     </div>
+                  </div>
+                  <div
+                     class="room-select-actions flex justify-between mt-6 border-t border-width-1 border-[#AEC1DB] pt-4">
                      <button class="reset-button px-6 py-3 bg-slate-300 rounded-md" id="resetGuestNumber">
-                         Reset
+                        Reset
                      </button>
                      <button class="px-6 py-3 bg-green text-white rounded-md" id="getGuestNumber">Apply</button>
-                 </div>
                   </div>
-                </div>
-                <button class="bg-green w-full md:w-[172px] h-[50px] md:h-[72px] mt-6 md:mt-0  rounded-[10px] flex justify-center gap-2 text-lg text-white font-medium items-center ">
-                    Search
-                </button>
+               </div>
             </div>
-        </div> -->
-      </section>
-      <section class="mt-[50px] lg:pt-[100px]">
-         <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
-             <div class="col-span-1">
-                 <div class="flex gap-[30px] items-center ">
-                     <img src="./images/icons/planen.svg" alt="planen">
-                     <div>
-                         <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
-                         <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id expedita.</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-span-1">
-                 <div class="flex gap-[30px] items-center ">
-                     <img src="./images/icons/circle.svg" alt="circle">
-                     <div>
-                         <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
-                         <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id expedita.</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-span-1">
-                 <div class="flex gap-[30px] items-center ">
-                     <img src="./images/icons/car.svg" alt="car">
-                     <div>
-                         <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
-                         <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id expedita.</p>
-                     </div>
-                 </div>
-             </div>
- 
+            <button
+               class="bg-green w-full md:w-[172px] h-[50px] md:h-[72px] mt-6 md:mt-0  rounded-[10px] flex justify-center gap-2 text-lg text-white font-medium items-center ">
+               Search
+            </button>
          </div>
-      </section>
-      <!-- hero section end -->
-      <!-- Top Destination & Cities section start -->
-      <section class="py-[50px] md:py-[100px]">
-         <div class="container mx-auto items-center ">
-            <div class="mb-8">
-               <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Top Destination & Cities</h2>
-               <img class="" src="./images/icons/title-line.png" alt="line">
-            </div>
-            <div class="grid  grid-cols-9 w-full md:gap-[30px]">
-               <div class="col-span-2 hidden lg:block  ">
-                  <div class="grid grid-rows-2 gap-[30px] ">
-                     <div class="row-span-1">
-                        <div class="cities-before">
-                           <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                           <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shape.png" alt="shape">
-                           <div class="absolute z-10 bottom-6 w-[100%]">
-                              <div class="px-6">
-                                 <h3 class="cities-title">Goa, India</h3>
-                                 <hr class="text-white pt-1">
-                                 <h6 class="text-sm font-medium text-white">Sea Beach</h6>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="row-span-1">
-                        <div class="cities-before">
-                           <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                           <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shapetwo.png" alt="Shape">
-                           <div class="absolute z-10 bottom-6 w-[100%]">
-                              <div class="px-6">
-                                 <h3 class="cities-title">Mexico, Sea Beach</h3>
-                                 <hr class="text-white pt-1">
-                                 <h6 class="text-sm font-medium text-white">Sea Beach</h6>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-3 hidden md:block  ">
-                  <div class="cities-before">
-                     <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                     <img class="w-full object-cover  h-[530px]" src="./images/fatures/Shapethree.png" alt="Shape">
-                     <div class="absolute z-10 rounded-[12px] bottom-6 w-[100%]">
-                        <div class="px-6">
-                           <h3 class="cities-title">Kudadoo, Maldives</h3>
-                           <hr class="text-white pt-1">
-                           <h6 class="text-sm font-medium text-white">Sea Beach</h6>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-9 md:col-span-6 lg:col-span-4">
-                  <div class="grid grid-rows-2 grid-cols-12 gap-[30px] ">
-                     <div class="row-span-1 col-span-12">
-                        <div class="cities-before">
-                           <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                           <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shapefour.png" alt="Shape">
-                           <div class="absolute z-10 bottom-6 w-[100%]">
-                              <div class="px-6">
-                                 <h3 class="cities-title">Bali, Indonesia</h3>
-                                 <hr class="text-white pt-1">
-                                 <h6 class="text-sm font-medium text-white">Sea Beach</h6>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class=" row-span-1 col-span-12">
-                        <div class="grid grid-cols-12 gap-[30px]">
-                           <div class="col-span-6 md:col-span-5">
-                              <div class="cities-before">
-                                 <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                                 <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shapefive.png" alt="Shape">
-                                 <div class="absolute z-10 bottom-6 w-[100%]">
-                                    <div class="px-3 md:px-6">
-                                       <h3 class="text-lg md:cities-title">Nepal</h3>
-                                       <hr class="text-white pt-1">
-                                       <h6 class="text-sm font-medium text-white">Sea Beach</h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-span-6 md:col-span-7">
-                              <div class="cities-before">
-                                 <span class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
-                                 <img class="w-full rounded-[12px]  h-[250px] object-cover" src="./images/fatures/Shapesix.png" alt="Shape">
-                                 <div class="absolute z-10 bottom-6 w-[100%]">
-                                    <div class="px-3 md:px-6">
-                                       <h3 class="text-lg md:cities-title">Thailand</h3>
-                                       <hr class="text-white pt-1">
-                                       <h6 class="text-sm font-medium text-white">Sea Beach</h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- Top Destination & Cities section end -->
-      <section class="bg-body-bg py-[50px] md:py-[100px]">
-         <div class="container  ">
-            <div class="flex justify-between items-center mb-8">
+      </div>
+   </section>
+   <section class="mt-[50px] lg:pt-[100px]">
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+         <div class="col-span-1">
+            <div class="flex gap-[30px] items-center ">
+               <img src="./images/icons/planen.svg" alt="planen">
                <div>
-                  <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Tour Events for you</h2>
-                  <img class="w-5/6" src="./images/icons/title-line.png" alt="line">
+                  <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
+                  <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id
+                     expedita.</p>
                </div>
-               <div><a class="text-green font-semibold whitespace-nowrap " href="">See All Blog <i class="fa-solid fa-arrow-right-long"></i></a></div>
             </div>
-            <div class="relative">
-               <div class="swiper mySwiperForTourEvent  ">
-                  <div class="swiper-wrapper ">
+         </div>
+         <div class="col-span-1">
+            <div class="flex gap-[30px] items-center ">
+               <img src="./images/icons/circle.svg" alt="circle">
+               <div>
+                  <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
+                  <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id
+                     expedita.</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-span-1">
+            <div class="flex gap-[30px] items-center ">
+               <img src="./images/icons/car.svg" alt="car">
+               <div>
+                  <h4 class="text-[20px] font-semibold mb-[10px] text-title  ">Best Policy</h4>
+                  <p class="text-black-lite leading-[26px] ">Fully layered dolor adipisicing elit facere, nobis, id
+                     expedita.</p>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <!-- hero section end -->
+   <!-- Top Destination & Cities section start -->
+   <section class="py-[50px] md:py-[100px]">
+      <div class="container mx-auto items-center ">
+         <div class="mb-8">
+            <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Top Destination & Cities</h2>
+            <img class="" src="./images/icons/title-line.png" alt="line">
+         </div>
+         <div class="grid  grid-cols-9 w-full md:gap-[30px]">
+            <div class="col-span-2 hidden lg:block  ">
+               <div class="grid grid-rows-2 gap-[30px] ">
+                  <div class="row-span-1">
+                     <div class="cities-before">
+                        <span
+                           class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i
+                              class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
+                        <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shape.png"
+                           alt="shape">
+                        <div class="absolute z-10 bottom-6 w-[100%]">
+                           <div class="px-6">
+                              <h3 class="cities-title">Goa, India</h3>
+                              <hr class="text-white pt-1">
+                              <h6 class="text-sm font-medium text-white">Sea Beach</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row-span-1">
+                     <div class="cities-before">
+                        <span
+                           class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i
+                              class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
+                        <img class="w-full rounded-[12px] object-cover h-[250px]" src="./images/fatures/Shapetwo.png"
+                           alt="Shape">
+                        <div class="absolute z-10 bottom-6 w-[100%]">
+                           <div class="px-6">
+                              <h3 class="cities-title">Mexico, Sea Beach</h3>
+                              <hr class="text-white pt-1">
+                              <h6 class="text-sm font-medium text-white">Sea Beach</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-span-3 hidden md:block  ">
+               <div class="cities-before">
+                  <span
+                     class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i
+                        class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
+                  <img class="w-full object-cover  h-[530px]" src="./images/fatures/Shapethree.png" alt="Shape">
+                  <div class="absolute z-10 rounded-[12px] bottom-6 w-[100%]">
+                     <div class="px-6">
+                        <h3 class="cities-title">Kudadoo, Maldives</h3>
+                        <hr class="text-white pt-1">
+                        <h6 class="text-sm font-medium text-white">Sea Beach</h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-span-9 md:col-span-6 lg:col-span-4">
+               <div class="grid grid-rows-2 grid-cols-12 gap-[30px] ">
+                  <div class="row-span-1 col-span-12">
+                     <div class="cities-before">
+                        <span
+                           class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i
+                              class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
+                        <img class="w-full object-cover rounded-[12px]  h-[250px]" src="./images/fatures/Shapefour.png"
+                           alt="Shape">
+                        <div class="absolute z-10 bottom-6 w-[100%]">
+                           <div class="px-6">
+                              <h3 class="cities-title">Bali, Indonesia</h3>
+                              <hr class="text-white pt-1">
+                              <h6 class="text-sm font-medium text-white">Sea Beach</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" row-span-1 col-span-12">
+                     <div class="grid grid-cols-12 gap-[30px]">
+                        <div class="col-span-6 md:col-span-5">
+                           <div class="cities-before">
+                              <span
+                                 class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i
+                                    class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
+                              <img class="w-full object-cover rounded-[12px]  h-[250px]"
+                                 src="./images/fatures/Shapefive.png" alt="Shape">
+                              <div class="absolute z-10 bottom-6 w-[100%]">
+                                 <div class="px-3 md:px-6">
+                                    <h3 class="text-lg md:cities-title">Nepal</h3>
+                                    <hr class="text-white pt-1">
+                                    <h6 class="text-sm font-medium text-white">Sea Beach</h6>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-span-6 md:col-span-7">
+                           <div class="cities-before">
+                              <span
+                                 class="text-sm z-10 font-semibold text-title bg-white px-3 py-1 rounded-[14px] absolute top-6 left-6 flex justify-center items-center "><i
+                                    class="fa-solid text-xs text-yello fa-star mr-1"></i> 4.6</span>
+                              <img class="w-full rounded-[12px]  h-[250px] object-cover"
+                                 src="./images/fatures/Shapesix.png" alt="Shape">
+                              <div class="absolute z-10 bottom-6 w-[100%]">
+                                 <div class="px-3 md:px-6">
+                                    <h3 class="text-lg md:cities-title">Thailand</h3>
+                                    <hr class="text-white pt-1">
+                                    <h6 class="text-sm font-medium text-white">Sea Beach</h6>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Top Destination & Cities section end -->
+   <section class="bg-body-bg py-[50px] md:py-[100px]">
+      <div class="container  ">
+         <div class="flex justify-between items-center mb-8">
+            <div>
+               <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Tour Events for you</h2>
+               <img class="w-5/6" src="./images/icons/title-line.png" alt="line">
+            </div>
+            <div><a class="text-green font-semibold whitespace-nowrap " href="">See All Blog <i
+                     class="fa-solid fa-arrow-right-long"></i></a></div>
+         </div>
+         <div class="relative">
+            <div class="swiper mySwiperForTourEvent  ">
+               <div class="swiper-wrapper ">
                   <div class="swiper-slide">
                      <div class="bg-white shadow-icon  rounded-lg">
                         <div class="relative ">
                            <img class="w-full" src="./images/home/Imagesone.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/dotleft.png" alt="icon">
-                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png" alt="line icon">
-                           <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Feature
+                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png"
+                              alt="line icon">
+                           <span
+                              class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Feature
                            </span>
-                           <span class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Trending
+                           <span
+                              class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Trending
                            </span>
                         </div>
                         <div class="px-5 pt-[18px] pb-[30px] ">
                            <div class="flex justify-between items-start">
                               <div>
                                  <a href="" class="text-2xl block text-title font-semibold ">Kerala River View Tour</a>
-                                 <span class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12 Places</span>
+                                 <span
+                                    class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12
+                                    Places</span>
                                  <span class="py-1 inline-block text-sm text-gray pl-3">3 Activites</span>
                               </div>
                               <span><i class="fa-regular text-xl fa-bookmark"></i></span>
                            </div>
                            <hr class="my-2  text-[#DEDEDE]">
                            <div class="mb-7">
-                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4 Nights</span>
+                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4
+                                 Nights</span>
                               <span class="text-title"><i class="fa-regular mr-2 fa-circle-user"></i>Capcity 20</span>
                            </div>
                            <div class="flex justify-between items-center">
-                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span> <del class="text-red text-[15px] pl-2">$4500</del></span> 
-                             <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
+                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span>
+                                 <del class="text-red text-[15px] pl-2">$4500</del></span>
+                              <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
                            </div>
                         </div>
                      </div>
@@ -454,31 +573,38 @@
                         <div class="relative ">
                            <img class="w-full" src="./images/home/Imagesone.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/dotleft.png" alt="icon">
-                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png" alt="line icon">
-                           <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Feature
+                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png"
+                              alt="line icon">
+                           <span
+                              class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Feature
                            </span>
-                           <span class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Trending
+                           <span
+                              class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Trending
                            </span>
                         </div>
                         <div class="px-5 pt-[18px] pb-[30px] ">
                            <div class="flex justify-between items-start">
                               <div>
                                  <a href="" class="text-2xl block text-title font-semibold ">Mountain Hiking Tour</a>
-                                 <span class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12 Places</span>
+                                 <span
+                                    class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12
+                                    Places</span>
                                  <span class="py-1 inline-block text-sm text-gray pl-3">3 Activites</span>
                               </div>
                               <span><i class="fa-regular text-xl fa-bookmark"></i></span>
                            </div>
                            <hr class="my-2  text-[#DEDEDE]">
                            <div class="mb-7">
-                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4 Nights</span>
+                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4
+                                 Nights</span>
                               <span class="text-title"><i class="fa-regular mr-2 fa-circle-user"></i>Capcity 20</span>
                            </div>
                            <div class="flex justify-between items-center">
-                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span> <del class="text-red text-[15px] pl-2">$4500</del></span> 
-                             <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
+                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span>
+                                 <del class="text-red text-[15px] pl-2">$4500</del></span>
+                              <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
                            </div>
                         </div>
                      </div>
@@ -488,12 +614,15 @@
                         <div class="relative ">
                            <img class="w-full" src="./images/home/Imagesone.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/dotleft.png" alt="icon">
-                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png" alt="line icon">
-                           <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Feature
+                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png"
+                              alt="line icon">
+                           <span
+                              class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Feature
                            </span>
-                           <span class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Trending
+                           <span
+                              class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Trending
                            </span>
 
                         </div>
@@ -501,18 +630,22 @@
                            <div class="flex justify-between items-start">
                               <div>
                                  <a href="" class="text-2xl block text-title font-semibold ">Sundorbonads Tour 2022</a>
-                                 <span class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12 Places</span>
+                                 <span
+                                    class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12
+                                    Places</span>
                                  <span class="py-1 inline-block text-sm text-gray pl-3">3 Activites</span>
                               </div>
                               <span><i class="fa-regular text-xl fa-bookmark"></i></span>
                            </div>
                            <hr class="my-2  text-[#DEDEDE]">
                            <div class="mb-7">
-                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4 Nights</span>
+                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4
+                                 Nights</span>
                               <span class="text-title"><i class="fa-regular mr-2 fa-circle-user"></i>Capcity 20</span>
                            </div>
                            <div class="flex justify-between items-center">
-                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span> <del class="text-red text-[15px] pl-2">$4500</del></span> 
+                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span>
+                                 <del class="text-red text-[15px] pl-2">$4500</del></span>
                               <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
                            </div>
                         </div>
@@ -523,479 +656,546 @@
                         <div class="relative ">
                            <img class="w-full" src="./images/home/Imagesone.jpg" alt="Images">
                            <img class="absolute -left-[5px] top-[57px]" src="./images/icons/dotleft.png" alt="icon">
-                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png" alt="line icon">
-                           <span class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Feature
+                           <img class="absolute -left-[5px] w-[6px] top-[12px]" src="./images/icons/line.png"
+                              alt="line icon">
+                           <span
+                              class="bg-touricon1 bg-no-repeat w-[125px] h-8 bg-contain absolute top-[0px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Feature
                            </span>
-                           <span class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
-                           Trending
+                           <span
+                              class="bg-touricon bg-no-repeat w-[125px] h-8 bg-contain absolute top-[60px] text-white flex justify-center items-center text-sm -left-[5px]">
+                              Trending
                            </span>
                         </div>
                         <div class="px-5 pt-[18px] pb-[30px] ">
                            <div class="flex justify-between items-start">
                               <div>
                                  <a href="" class="text-2xl block text-title font-semibold ">Kerala River View Tour</a>
-                                 <span class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12 Places</span>
+                                 <span
+                                    class="py-1 inline-block text-sm text-gray pr-3 relative after:absolute after:w-[1px] after:h-3 after:bg-gray after:top-1/2 after:right-0 transform after:-translate-y-1/2 ">12
+                                    Places</span>
                                  <span class="py-1 inline-block text-sm text-gray pl-3">3 Activites</span>
                               </div>
                               <span><i class="fa-regular text-xl fa-bookmark"></i></span>
                            </div>
                            <hr class="my-2  text-[#DEDEDE]">
                            <div class="mb-7">
-                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4 Nights</span>
+                              <span class="pr-8 text-title "><i class="fa-regular mr-2 fa-clock"></i>3 Days 4
+                                 Nights</span>
                               <span class="text-title"><i class="fa-regular mr-2 fa-circle-user"></i>Capcity 20</span>
                            </div>
                            <div class="flex justify-between items-center">
-                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span> <del class="text-red text-[15px] pl-2">$4500</del></span> 
-                             <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
+                              <span class="text-2xl text-title font-semibold flex items-center "> <span>$895.50</span>
+                                 <del class="text-red text-[15px] pl-2">$4500</del></span>
+                              <a href="" class="bg-green px-5 py-3 text-white text-sm rounded-[4px]  ">Book Now</a>
                            </div>
                         </div>
                      </div>
                   </div>
-                
+
                </div>
-               </div>
-               <div class="swiper-button-next-TourEvent text-right"><i class="fa-solid fa-chevron-right"></i></div>
-               <div class="swiper-button-prev-TourEvent text-left"><i class="fa-solid fa-chevron-left"></i></div>
             </div>
-         
-         </div>
-      </section>
-      <!--05. Tour Events for you section End -->
-      <!-- 06. Special offers section start -->
-      <section class="py-[50px] md:py-[100px]">
-         <div class="container ">
-            <div class="mb-8">
-               <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Special offers</h2>
-               <img class="" src="./images/icons/title-line.png" alt="line image">
-            </div>
-            <div class="relative">
-               <div class="swiper mySwiperForOffers  ">
-                  <div class="swiper-wrapper ">
-                   <div class="swiper-slide">
-                      <div class="flex justify-between effect  bg-offerBg1 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
-                         <div class="z-10">
-                            <div class="relative inline-block">
-                               <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
-                               <span class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 " >SHADHINH</span>
-                            </div>
-                            <div>
-                               <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
-                               <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
-                               <p class="text-sm font-normal text-white pt-1">12 Places</p>
-                            </div>
-                         </div>
-                         <div class="absolute z-10 -right-[2px] -bottom-[2px]">
-                            <div class="relative">
-                               <img src="./images/Specialoffers/yello-shape.png" alt="shape">
-                               <span class="absolute bottom-4 right-6 text-center "><span class="block text-title text-3xl font-bold"> 50% </span>
-                               <span class="block text-sm text-title"> Discount</span></span>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="swiper-slide">
-                      <div class="flex justify-between effect  bg-offerBg2 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
-                         <div class="z-10">
-                            <div class="relative inline-block">
-                               <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
-                               <span class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 " >SHADHINH</span>
-                            </div>
-                            <div>
-                               <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
-                               <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
-                               <p class="text-sm font-normal text-white pt-1">12 Places</p>
-                            </div>
-                         </div>
-                         <div class="absolute z-10 -right-[2px] -bottom-[2px]">
-                            <div class="relative">
-                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
-                            <span class="absolute bottom-4 right-6 text-center "><span class="block text-title text-3xl font-bold"> 50% </span>
-                               <span class="block text-sm text-title"> Discount</span></span>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="swiper-slide">
-                      <div class="flex justify-between effect  bg-offerBg3 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
-                         <div class="z-10">
-                            <div class="relative inline-block">
-                               <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
-                               <span class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 " >SHADHINH</span>
-                            </div>
-                            <div>
-                               <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
-                               <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
-                               <p class="text-sm font-normal text-white pt-1">12 Places</p>
-                            </div>
-                         </div>
-                         <div class="absolute z-10 -right-[2px] -bottom-[2px]">
-                            <div class="relative">
-                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
-                            <span class="absolute bottom-4 right-6 text-center "><span class="block text-title text-3xl font-bold"> 50% </span>
-                               <span class="block text-sm text-title"> Discount</span></span>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="swiper-slide">
-                      <div class="flex justify-between effect  bg-offerBg3 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
-                         <div class="z-10">
-                            <div class="relative inline-block">
-                               <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
-                               <span class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 " >SHADHINH</span>
-                            </div>
-                            <div>
-                               <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
-                               <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
-                               <p class="text-sm font-normal text-white pt-1">12 Places</p>
-                            </div>
-                         </div>
-                         <div class="absolute z-10 -right-[2px] -bottom-[2px]">
-                            <div class="relative">
-                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
-                            <span class="absolute bottom-4 right-6 text-center "><span class="block text-title text-3xl font-bold"> 50% </span>
-                               <span class="block text-sm text-title"> Discount</span></span>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                  </div>
-                  
-                 
-                </div>
-                <div class="swiper-button-next-ForOffers text-right"><i class="fa-solid fa-chevron-right"></i></div>
-                <div class="swiper-button-prev-ForOffers text-left"><i class="fa-solid fa-chevron-left"></i></div>
-            </div>
-           
-         </div>
-      </section>
-      <!-- 06. Special offers section end -->
-      <!--07 New Travel Type section Start -->
-      <section class="bg-body-bg pt-[50px] md:pt-[100px]">
-         <div class="container">
-            <div class="mb-8">
-               <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">New Travel Type</h2>
-               <img class="" src="./images/icons/title-line.png" alt="line">
-            </div>
-         <div class="container relative">
-               <div class="swiper mySwiperForNewTravel ">
-                  <div class="swiper-wrapper pb-[100px]">
-               <div class="swiper-slide ">
-                  <div class="text-center">
-                     <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type.jpg" alt="type">
-                     <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
-                        <a href="" class="text-2xl font-bold text-black  ">Zip Lines</a>
-                        <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
-                           senses by zipline travel
-                        </p>
-                        <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
-                     </div>
-                  </div>
-               </div>
-               <div class="swiper-slide ">
-                  <div class="text-center">
-                     <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type1.jpg" alt="type">
-                     <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
-                        <a href="" class="text-2xl font-bold text-black  ">Kayaking</a>
-                        <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
-                           senses by zipline travel
-                        </p>
-                        <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
-                     </div>
-                  </div>
-               </div>
-               <div class="swiper-slide">
-                  <div class="text-center">
-                     <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type2.jpg" alt="type">
-                     <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
-                        <a href="" class="text-2xl font-bold text-black  ">Bungee Jump</a>
-                        <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
-                           senses by zipline travel
-                        </p>
-                        <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
-                     </div>
-                  </div>
-               </div>
-               <div class=" swiper-slide">
-                  <div class="text-center">
-                     <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type3.jpg" alt="type">
-                     <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
-                        <a href="" class="text-2xl font-bold text-black  ">Canoeing</a>
-                        <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
-                           senses by zipline travel
-                        </p>
-                        <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
-                     </div>
-                  </div>
-               </div>
-               <div class="swiper-slide">
-                  <div class="text-center">
-                     <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type.jpg" alt="type">
-                     <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
-                        <a href="" class="text-2xl font-bold text-black  ">Zip Lines</a>
-                        <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
-                           senses by zipline travel
-                        </p>
-                        <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
-                     </div>
-                  </div>
-               </div>
-                  </div>
-              
-               </div>
-               <div class="swiper-button-next-NewTravel group text-right"><i class="fa-solid text-[#399F6E] group-hover:text-white time  fa-arrow-right"></i></div>
-               <div class="swiper-button-prev-NewTravel group text-left"><i class="fa-solid text-[#399F6E] group-hover:text-white time fa-arrow-left"></i></div>
-             
+            <div class="swiper-button-next-TourEvent text-right"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="swiper-button-prev-TourEvent text-left"><i class="fa-solid fa-chevron-left"></i></div>
          </div>
 
+      </div>
+   </section>
+   <!--05. Tour Events for you section End -->
+   <!-- 06. Special offers section start -->
+   <section class="py-[50px] md:py-[100px]">
+      <div class="container ">
+         <div class="mb-8">
+            <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Special offers</h2>
+            <img class="" src="./images/icons/title-line.png" alt="line image">
          </div>
-      </section>
-      <!--07 New Travel Type section end -->
-      <!-- 08. Client Testimonial section start -->
-      <section class="py-[50px] md:py-[100px]">
-         <div class="container relative">
-            <span class="w-7 h-7 block rounded-full absolute bg-green left-[10%] top-[25%]  "></span>
-            <span class="w-5 h-5 block rounded-full absolute bg-green right-[10%] top-[25%] "></span>
-            <span class="w-5 h-5 block rounded-full absolute bg-green left-0 top-[70%]  "></span>
-            <span class="w-4 h-4 block rounded-full absolute bg-green right-0 top-[80%]  "></span>
-            <span class="w-2 h-2 block rounded-full absolute bg-green left-[10%] bottom-[4%]  "></span>
-            <span class="w-2 h-2 block rounded-full absolute bg-green left-[15%] bottom-[5%]  "></span>
-            <span class="w-3 h-3 block rounded-full absolute bg-green right-[15%] bottom-[10%] "></span>
-            <div class="mb-8">
-               <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Client Testimonial</h2>
-               <img  src="./images/icons/title-line.png" alt="line">
-            </div>
-            <div class="swiper mySwiper relative ">
-               <div class="swiper-wrapper  ">
-                  <div class="text-center swiper-slide  mx-auto relative pb-28">
-                     <img class="w-[168px] h-[168px]  mx-auto " src="./images/testimonal/userone.png" alt="user">
-                     <h3 class="text-2xl text-title font-semibold mt-7 ">Jhone Walker Hussy</h3>
-                     <img class="w-[211px]  -mt-1  mx-auto " src="./images/icons/shapetest.png" alt="shape">
-                     <span class="space-x-2 pt-3 pb-9 inline-block"><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-gray fa-star"></i></span>
-                     <p class="md:w-7/12 mx-auto font-medium text-lg text-body leading-7 ">Quote testimonials are ads or artwork that display positive statements about your company from a brand evangelist or a delighted customer. The quote is usually accompanied by an image.</p>
-                  </div>
-                  <div class="text-center swiper-slide mx-auto relative pb-28">
-                     <img class="w-[168px] h-[168px]  mx-auto " src="./images/testimonal/usertwo.png" alt="user">
-                     <h3 class="text-2xl text-title font-semibold mt-7 ">Jhone Walker Hussy</h3>
-                     <img class="w-[211px]  -mt-1  mx-auto " src="./images/icons/shapetest.png" alt="shape">
-                     <span class="space-x-2 pt-3 pb-9 inline-block"><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-gray fa-star"></i></span>
-                     <p class="md:w-7/12 mx-auto font-medium text-lg text-body leading-7 ">Quote testimonials are ads or artwork that display positive statements about your company from a brand evangelist or a delighted customer. The quote is usually accompanied by an image.</p>
-                  </div>
-                  <div class="text-center swiper-slide mx-auto relative pb-28">
-                     <img class="w-[168px] h-[168px]  mx-auto " src="./images/testimonal/userthree.png" alt="user">
-                     <h3 class="text-2xl text-title font-semibold mt-7 ">Jhone Walker Hussy</h3>
-                     <img class="w-[211px]  -mt-1  mx-auto " src="./images/icons/shapetest.png" alt="shape">
-                     <span class="space-x-2 pt-3 pb-9 inline-block"><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i class="fa-solid text-gray fa-star"></i></span>
-                     <p class="md:w-7/12 mx-auto font-medium text-lg text-body leading-7 ">Quote testimonials are ads or artwork that display positive statements about your company from a brand evangelist or a delighted customer. The quote is usually accompanied by an image.</p>
-                  </div>
-               
-               </div>
-         
-               <div class="swiper-button-next text-right"><i class="fa-solid fa-arrow-right"></i></div>
-               <div class="swiper-button-prev text-left"><i class="fa-solid fa-arrow-left"></i></div>
-               
-          
-            </div>
-        
-            
-         </div>
-    
-      </section>
-      <!-- 08. Client Testimonial section end -->
-      <!-- 09. Client Testimonial section start -->
-   
-      <!-- 09. Client Testimonial section end -->
-      <!-- 09. Newsletter section Start -->
-      <section class="relative  ">
-         <div class="relative  md:absolute left-0 top-0 block w-full md:w-6/12 lg:w-5/12 ">
-            <div class="relative px-4">
-               <img class="w-full h-auto md:h-[450px] " src="./images/home/newsletter.jpg" alt="newsletter">
-               <button class="absolute left-1/2 top-1/2 transform -translate-x-1/2    -translate-y-1/2 ">
-                  <span class="relative inline-block okkkk">
-                      <i class="fa-solid animate-custom  bg-title   text-[95px] rounded-full  text-white fa-circle-play"></i>
-                  </span>
-                 
-              </button>
-            </div>
-         </div>
-         <div class="container">
-            <div class="grid grid-cols-12 items-center  md:h-[440px] gap-10 lg:gap-0 bg-body-bg ">
-               <div class="col-span-12 md:col-span-6">
-               </div>
-               <div class="col-span-12 md:col-span-6">
-                  <div class="lg:w-9/12 mt-10 md:mt-0">
-                     <h2 class="text-[26px] md:text-[40px] text-title font-medium">Get Every Monthly <br> <span class="font-semibold">Newsletter</span> </h2>
-                     <img src="./images/icons/linegreen.png" alt="line">
-                     <p class="pt-4 text-sm text-title">Select a category that best suites your interest. Use filters to coustomize
-                        your search and to find exactly what you want
-                     </p>
-                     <form class="shadow-icon mt-8">
-                        <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                        <div class="relative">
-                           <input type="search" id="search" class="block border-none w-full p-[20px] pl-4 md:pl-6 text-sm text-gray-900 focus:outline-none focus:ring-0 focus:ring-offset-0  bg-white  " placeholder="Enter your email address" required>
-                           <button type="submit" class="text-white absolute right-0 h-full bottom-0 bg-green  focus:outline-none focus:border-none focus:ring-0 focus:ring-offset-0 rounded-l-[4px]  px-8"><i class="fa-regular mr-1 fa-envelope"></i> Subscribe</button>
+         <div class="relative">
+            <div class="swiper mySwiperForOffers  ">
+               <div class="swiper-wrapper ">
+                  <div class="swiper-slide">
+                     <div
+                        class="flex justify-between effect  bg-offerBg1 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
+                        <div class="z-10">
+                           <div class="relative inline-block">
+                              <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
+                              <span
+                                 class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">SHADHINH</span>
+                           </div>
+                           <div>
+                              <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
+                              <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
+                              <p class="text-sm font-normal text-white pt-1">12 Places</p>
+                           </div>
                         </div>
-                     </form>
+                        <div class="absolute z-10 -right-[2px] -bottom-[2px]">
+                           <div class="relative">
+                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
+                              <span class="absolute bottom-4 right-6 text-center "><span
+                                    class="block text-title text-3xl font-bold"> 50% </span>
+                                 <span class="block text-sm text-title"> Discount</span></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div
+                        class="flex justify-between effect  bg-offerBg2 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
+                        <div class="z-10">
+                           <div class="relative inline-block">
+                              <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
+                              <span
+                                 class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">SHADHINH</span>
+                           </div>
+                           <div>
+                              <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
+                              <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
+                              <p class="text-sm font-normal text-white pt-1">12 Places</p>
+                           </div>
+                        </div>
+                        <div class="absolute z-10 -right-[2px] -bottom-[2px]">
+                           <div class="relative">
+                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
+                              <span class="absolute bottom-4 right-6 text-center "><span
+                                    class="block text-title text-3xl font-bold"> 50% </span>
+                                 <span class="block text-sm text-title"> Discount</span></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div
+                        class="flex justify-between effect  bg-offerBg3 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
+                        <div class="z-10">
+                           <div class="relative inline-block">
+                              <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
+                              <span
+                                 class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">SHADHINH</span>
+                           </div>
+                           <div>
+                              <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
+                              <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
+                              <p class="text-sm font-normal text-white pt-1">12 Places</p>
+                           </div>
+                        </div>
+                        <div class="absolute z-10 -right-[2px] -bottom-[2px]">
+                           <div class="relative">
+                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
+                              <span class="absolute bottom-4 right-6 text-center "><span
+                                    class="block text-title text-3xl font-bold"> 50% </span>
+                                 <span class="block text-sm text-title"> Discount</span></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div
+                        class="flex justify-between effect  bg-offerBg3 bg-no-repeat bg-cover relative h-[220px] overflow-hidden rounded-xl pt-6 pl-9">
+                        <div class="z-10">
+                           <div class="relative inline-block">
+                              <img src="./images/Specialoffers/Subtract.png" alt="Subtract">
+                              <span
+                                 class="absolute left-1/2 text-xs top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">SHADHINH</span>
+                           </div>
+                           <div>
+                              <h4 class="text-xl text-white font-medium pt-6 ">Kerala River View Tour</h4>
+                              <p class="text-sm font-light text-white pt-1">3 Days 4 Nights, Capcity 20</p>
+                              <p class="text-sm font-normal text-white pt-1">12 Places</p>
+                           </div>
+                        </div>
+                        <div class="absolute z-10 -right-[2px] -bottom-[2px]">
+                           <div class="relative">
+                              <img src="./images/Specialoffers/yello-shape.png" alt="shape">
+                              <span class="absolute bottom-4 right-6 text-center "><span
+                                    class="block text-title text-3xl font-bold"> 50% </span>
+                                 <span class="block text-sm text-title"> Discount</span></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+            </div>
+            <div class="swiper-button-next-ForOffers text-right"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="swiper-button-prev-ForOffers text-left"><i class="fa-solid fa-chevron-left"></i></div>
+         </div>
+
+      </div>
+   </section>
+   <!-- 06. Special offers section end -->
+   <!--07 New Travel Type section Start -->
+   <section class="bg-body-bg pt-[50px] md:pt-[100px]">
+      <div class="container">
+         <div class="mb-8">
+            <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">New Travel Type</h2>
+            <img class="" src="./images/icons/title-line.png" alt="line">
+         </div>
+         <div class="container relative">
+            <div class="swiper mySwiperForNewTravel ">
+               <div class="swiper-wrapper pb-[100px]">
+                  <div class="swiper-slide ">
+                     <div class="text-center">
+                        <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type.jpg"
+                           alt="type">
+                        <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
+                           <a href="" class="text-2xl font-bold text-black  ">Zip Lines</a>
+                           <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
+                              senses by zipline travel
+                           </p>
+                           <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i
+                                 class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide ">
+                     <div class="text-center">
+                        <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] "
+                           src="./images/home/Type1.jpg" alt="type">
+                        <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
+                           <a href="" class="text-2xl font-bold text-black  ">Kayaking</a>
+                           <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
+                              senses by zipline travel
+                           </p>
+                           <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i
+                                 class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="text-center">
+                        <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] "
+                           src="./images/home/Type2.jpg" alt="type">
+                        <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
+                           <a href="" class="text-2xl font-bold text-black  ">Bungee Jump</a>
+                           <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
+                              senses by zipline travel
+                           </p>
+                           <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i
+                                 class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" swiper-slide">
+                     <div class="text-center">
+                        <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] "
+                           src="./images/home/Type3.jpg" alt="type">
+                        <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
+                           <a href="" class="text-2xl font-bold text-black  ">Canoeing</a>
+                           <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
+                              senses by zipline travel
+                           </p>
+                           <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i
+                                 class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="text-center">
+                        <img class="md:w-[180px] mx-auto h-[140px] w-[140px] md:h-[180px] " src="./images/home/Type.jpg"
+                           alt="type">
+                        <div class="bg-white shadow-icon pt-[114px] -mt-[70px] md:-mt-[90px] px-4 pb-8 ">
+                           <a href="" class="text-2xl font-bold text-black  ">Zip Lines</a>
+                           <p class=" font-medium leading-6 pt-4 pb-10 ">Add some adrenalin to your travel
+                              senses by zipline travel
+                           </p>
+                           <a href="" class="bg-green px-6 py-3 text-white text-lg rounded-[4px] ">Explore <i
+                                 class="fa-solid ml-1 text-xl transform rotate-45 fa-arrow-up"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+            <div class="swiper-button-next-NewTravel group text-right"><i
+                  class="fa-solid text-[#399F6E] group-hover:text-white time  fa-arrow-right"></i></div>
+            <div class="swiper-button-prev-NewTravel group text-left"><i
+                  class="fa-solid text-[#399F6E] group-hover:text-white time fa-arrow-left"></i></div>
+
+         </div>
+
+      </div>
+   </section>
+   <!--07 New Travel Type section end -->
+   <!-- 08. Client Testimonial section start -->
+   <section class="py-[50px] md:py-[100px]">
+      <div class="container relative">
+         <span class="w-7 h-7 block rounded-full absolute bg-green left-[10%] top-[25%]  "></span>
+         <span class="w-5 h-5 block rounded-full absolute bg-green right-[10%] top-[25%] "></span>
+         <span class="w-5 h-5 block rounded-full absolute bg-green left-0 top-[70%]  "></span>
+         <span class="w-4 h-4 block rounded-full absolute bg-green right-0 top-[80%]  "></span>
+         <span class="w-2 h-2 block rounded-full absolute bg-green left-[10%] bottom-[4%]  "></span>
+         <span class="w-2 h-2 block rounded-full absolute bg-green left-[15%] bottom-[5%]  "></span>
+         <span class="w-3 h-3 block rounded-full absolute bg-green right-[15%] bottom-[10%] "></span>
+         <div class="mb-8">
+            <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Client Testimonial</h2>
+            <img src="./images/icons/title-line.png" alt="line">
+         </div>
+         <div class="swiper mySwiper relative ">
+            <div class="swiper-wrapper  ">
+               <div class="text-center swiper-slide  mx-auto relative pb-28">
+                  <img class="w-[168px] h-[168px]  mx-auto " src="./images/testimonal/userone.png" alt="user">
+                  <h3 class="text-2xl text-title font-semibold mt-7 ">Jhone Walker Hussy</h3>
+                  <img class="w-[211px]  -mt-1  mx-auto " src="./images/icons/shapetest.png" alt="shape">
+                  <span class="space-x-2 pt-3 pb-9 inline-block"><i class="fa-solid text-yello fa-star"></i><i
+                        class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i
+                        class="fa-solid text-yello fa-star"></i><i class="fa-solid text-gray fa-star"></i></span>
+                  <p class="md:w-7/12 mx-auto font-medium text-lg text-body leading-7 ">Quote testimonials are ads or
+                     artwork that display positive statements about your company from a brand evangelist or a delighted
+                     customer. The quote is usually accompanied by an image.</p>
+               </div>
+               <div class="text-center swiper-slide mx-auto relative pb-28">
+                  <img class="w-[168px] h-[168px]  mx-auto " src="./images/testimonal/usertwo.png" alt="user">
+                  <h3 class="text-2xl text-title font-semibold mt-7 ">Jhone Walker Hussy</h3>
+                  <img class="w-[211px]  -mt-1  mx-auto " src="./images/icons/shapetest.png" alt="shape">
+                  <span class="space-x-2 pt-3 pb-9 inline-block"><i class="fa-solid text-yello fa-star"></i><i
+                        class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i
+                        class="fa-solid text-yello fa-star"></i><i class="fa-solid text-gray fa-star"></i></span>
+                  <p class="md:w-7/12 mx-auto font-medium text-lg text-body leading-7 ">Quote testimonials are ads or
+                     artwork that display positive statements about your company from a brand evangelist or a delighted
+                     customer. The quote is usually accompanied by an image.</p>
+               </div>
+               <div class="text-center swiper-slide mx-auto relative pb-28">
+                  <img class="w-[168px] h-[168px]  mx-auto " src="./images/testimonal/userthree.png" alt="user">
+                  <h3 class="text-2xl text-title font-semibold mt-7 ">Jhone Walker Hussy</h3>
+                  <img class="w-[211px]  -mt-1  mx-auto " src="./images/icons/shapetest.png" alt="shape">
+                  <span class="space-x-2 pt-3 pb-9 inline-block"><i class="fa-solid text-yello fa-star"></i><i
+                        class="fa-solid text-yello fa-star"></i><i class="fa-solid text-yello fa-star"></i><i
+                        class="fa-solid text-yello fa-star"></i><i class="fa-solid text-gray fa-star"></i></span>
+                  <p class="md:w-7/12 mx-auto font-medium text-lg text-body leading-7 ">Quote testimonials are ads or
+                     artwork that display positive statements about your company from a brand evangelist or a delighted
+                     customer. The quote is usually accompanied by an image.</p>
+               </div>
+
+            </div>
+
+            <div class="swiper-button-next text-right"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="swiper-button-prev text-left"><i class="fa-solid fa-arrow-left"></i></div>
+
+
+         </div>
+
+
+      </div>
+
+   </section>
+   <!-- 08. Client Testimonial section end -->
+   <!-- 09. Client Testimonial section start -->
+
+   <!-- 09. Client Testimonial section end -->
+   <!-- 09. Newsletter section Start -->
+   <section class="relative  ">
+      <div class="relative  md:absolute left-0 top-0 block w-full md:w-6/12 lg:w-5/12 ">
+         <div class="relative px-4">
+            <img class="w-full h-auto md:h-[450px] " src="./images/home/newsletter.jpg" alt="newsletter">
+            <button class="js-modal absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 "
+               id="Uz73LAnMA0I">
+               <span class="relative inline-block okkkk">
+                  <i
+                     class="fa-solid animate-custom  bg-title   text-[95px] rounded-full  text-white fa-circle-play"></i>
+               </span>
+
+            </button>
+         </div>
+      </div>
+      <div class="container">
+         <div class="grid grid-cols-12 items-center  md:h-[440px] gap-10 lg:gap-0 bg-body-bg ">
+            <div class="col-span-12 md:col-span-6">
+            </div>
+            <div class="col-span-12 md:col-span-6">
+               <div class="lg:w-9/12 mt-10 md:mt-0">
+                  <h2 class="text-[26px] md:text-[40px] text-title font-medium">Get Every Monthly <br> <span
+                        class="font-semibold">Newsletter</span> </h2>
+                  <img src="./images/icons/linegreen.png" alt="line">
+                  <p class="pt-4 text-sm text-title">Select a category that best suites your interest. Use filters to
+                     coustomize
+                     your search and to find exactly what you want
+                  </p>
+                  <form class="shadow-icon mt-8">
+                     <label for="search"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                     <div class="relative">
+                        <input type="search" id="search"
+                           class="block border-none w-full p-[20px] pl-4 md:pl-6 text-sm text-gray-900 focus:outline-none focus:ring-0 focus:ring-offset-0  bg-white  "
+                           placeholder="Enter your email address" required>
+                        <button type="submit"
+                           class="text-white absolute right-0 h-full bottom-0 bg-green  focus:outline-none focus:border-none focus:ring-0 focus:ring-offset-0 rounded-l-[4px]  px-8"><i
+                              class="fa-regular mr-1 fa-envelope"></i> Subscribe</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 09. Newsletter section End -->
+   <!-- 08. Client Testimonial section start -->
+   <section class="py-[100px]">
+      <div class="container relative">
+         <div class="flex justify-between items-center mb-8">
+            <div>
+               <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Our Latest Blog</h2>
+               <img class="w-5/6" src="./images/icons/title-line.png" alt="line">
+            </div>
+            <div><a class="text-green font-semibold whitespace-nowrap " href="./blog.html">See All Blog <i
+                     class="fa-solid fa-arrow-right-long"></i></a></div>
+         </div>
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] ">
+            <div class="col-span-1">
+               <div class="rounded-xl shadow-icon">
+                  <div>
+                     <img class="w-full" src="./images/home/blog.jpg" alt="blog image">
+                  </div>
+                  <div class="px-6 pt-6  bg-white  ">
+                     <span class="flex text-title text-sm mb-4"><img class="pr-1" src="./images/icons/Icon.svg"
+                           alt="icon">SEPTEMBER 19, 2022</span>
+                     <a href="" class="pb-4 block  text-[22px] text-title font-semibold ">The Bottom Line on Dietary
+                        Supplements</a>
+                     <p class="leading-6 text-black-lite">One may not need charts and graphs at this point to know that
+                        in the past couple of years expecially, the buying and selling on....</p>
+                  </div>
+                  <div class="flex justify-between items-center pb-8 px-6 pt-6  ">
+                     <div class="flex items-center gap-3">
+                        <img class="h-10 w-10" src="./images/blog_images/blogone.png" alt="blog image">
+                        <div>
+                           <h5 class="font-semibold text-title ">John Singleton</h5>
+                           <p class="text-xs text-black-lite ">Nutritionist</p>
+                        </div>
+                     </div>
+                     <a class="text-[17px] text-green-lite font-semibold " href="">Read More <img class="inline-block"
+                           src="./images/icons/Send.png" alt="send icon"></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-span-1">
+               <div class="rounded-xl shadow-icon">
+                  <div>
+                     <img class="w-full" src="./images/home/blog1.jpg" alt="blog image">
+                  </div>
+                  <div class="px-6 pt-6  bg-white  ">
+                     <span class="flex text-title text-sm mb-4"><img class="pr-1" src="./images/icons/Icon.svg"
+                           alt="icon">SEPTEMBER 19, 2022</span>
+                     <a href="" class="pb-4 block  text-[22px] text-title font-semibold ">The Bottom Line on Dietary
+                        Supplements</a>
+                     <p class="leading-6 text-black-lite ">One may not need charts and graphs at this point to know that
+                        in the past couple of years expecially, the buying and selling on....</p>
+                  </div>
+                  <div class="flex justify-between items-center pb-8 px-6 pt-6  ">
+                     <div class="flex items-center gap-3">
+                        <img class="h-10 w-10" src="./images/blog_images/blogone.png" alt="blog image">
+                        <div>
+                           <h5 class="font-semibold text-title ">John Singleton</h5>
+                           <p class="text-xs text-black-lite ">Nutritionist</p>
+                        </div>
+                     </div>
+                     <a class="text-[17px] text-green-lite font-semibold " href="">Read More <img class="inline-block"
+                           src="./images/icons/Send.png" alt="send icon"></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-span-1">
+               <div class="rounded-xl shadow-icon">
+                  <div>
+                     <img class="w-full" src="./images/home/blog2.jpg" alt="blog image">
+                  </div>
+                  <div class="px-6 pt-6  bg-white  ">
+                     <span class="flex text-title text-sm mb-4"><img class="pr-1" src="./images/icons/Icon.svg"
+                           alt="Icon">SEPTEMBER 19, 2022</span>
+                     <a href="" class="pb-4 block text-[22px] text-title font-semibold ">The Bottom Line on Dietary
+                        Supplements</a>
+                     <p class="leading-6 text-black-lite">One may not need charts and graphs at this point to know that
+                        in the past couple of years expecially, the buying and selling on....</p>
+                  </div>
+                  <div class="flex justify-between items-center pb-8 px-6 pt-6  ">
+                     <div class="flex items-center gap-3">
+                        <img class="h-10 w-10" src="./images/blog_images/blogone.png" alt="blog image">
+                        <div>
+                           <h5 class="font-semibold text-title ">John Singleton</h5>
+                           <p class="text-xs text-black-lite ">Nutritionist</p>
+                        </div>
+                     </div>
+                     <a class="text-[17px] text-green-lite font-semibold " href="">Read More <img class="inline-block"
+                           src="./images/icons/Send.png" alt="Icon"></a>
                   </div>
                </div>
             </div>
          </div>
-      </section>
-      <!-- 09. Newsletter section End -->
-      <!-- 08. Client Testimonial section start -->
-      <section class="py-[100px]">
-         <div class="container relative">
-            <div class="flex justify-between items-center mb-8">
+      </div>
+   </section>
+   <!-- 08. Client Testimonial section end -->
+   <!-- 09. Footer Section Start -->
+   <footer
+      class="lg:bg-footer bg-no-repeat pt-8 md:pt-[80px] lg:pt-[320px] bg-[#0D2F3F] lg:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
+      <img class="absolute left-0 bottom-20 z-[-1]" src="./images/icons/treeshape.png" alt="tree shape">
+      <div class="container">
+         <div class="grid grid-cols-12 pb-[60px] gap-[30px]  ">
+            <div class="col-span-12 lg:col-span-6 ">
                <div>
-                  <h2 class=" text-[26px] md:text-[40px] font-semibold text-title ">Our Latest Blog</h2>
-                  <img class="w-5/6" src="./images/icons/title-line.png" alt="line">
+                  <h4 class="text-[30px] font-semibold text-white ">About Hotel</h4>
+                  <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                  <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                  <p class="leading-[30px] pt-10 text-white md:w-2/3 ">Welcome to the best five-star deluxe hotel in New
+                     York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                  <a class="text-white block pt-[25px]" href=""><i class="fa-solid text-yello mr-2  fa-map"></i> Check
+                     on google map</a>
                </div>
-               <div><a class="text-green font-semibold whitespace-nowrap " href="./blog.html">See All Blog <i class="fa-solid fa-arrow-right-long"></i></a></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] ">
-               <div class="col-span-1">
-                  <div class="rounded-xl shadow-icon">
-                     <div>
-                        <img class="w-full" src="./images/home/blog.jpg" alt="blog image">
-                     </div>
-                     <div class="px-6 pt-6  bg-white  ">
-                        <span class="flex text-title text-sm mb-4"><img class="pr-1" src="./images/icons/Icon.svg" alt="icon">SEPTEMBER 19, 2022</span>
-                       <a href="" class="pb-4 block  text-[22px] text-title font-semibold ">The Bottom Line on Dietary Supplements</a>
-                        <p class="leading-6 text-black-lite">One may not need charts and graphs at this point to know that in the past couple of years expecially, the buying and selling on....</p>
-                     </div>
-                     <div class="flex justify-between items-center pb-8 px-6 pt-6  ">
-                        <div class="flex items-center gap-3">
-                           <img class="h-10 w-10" src="./images/blog_images/blogone.png" alt="blog image">
-                           <div>
-                              <h5 class="font-semibold text-title " >John Singleton</h5>
-                              <p class="text-xs text-black-lite ">Nutritionist</p>
-                           </div>
-                        </div>
-                        <a class="text-[17px] text-green-lite font-semibold " href="">Read More <img class="inline-block" src="./images/icons/Send.png" alt="send icon"></a>
-                     </div>
-                  </div>
+            <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
+               <div>
+                  <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
+                  <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                  <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                  <ul class="mt-10 space-y-4 ">
+                     <li><a class="text-white font-semibold" href="">Home</a></li>
+                     <li><a class="text-white font-semibold" href="">Rooms & Suites</a></li>
+                     <li><a class="text-white font-semibold" href="">Restaurant</a></li>
+                     <li><a class="text-white font-semibold" href="">Spa & Wellness</a></li>
+                     <li><a class="text-white font-semibold" href="">About Hotel</a></li>
+                     <li><a class="text-white font-semibold" href="">Contact</a></li>
+                  </ul>
                </div>
-               <div class="col-span-1">
-                  <div class="rounded-xl shadow-icon">
-                     <div>
-                        <img class="w-full" src="./images/home/blog1.jpg" alt="blog image">
-                     </div>
-                     <div class="px-6 pt-6  bg-white  ">
-                        <span class="flex text-title text-sm mb-4"><img class="pr-1" src="./images/icons/Icon.svg" alt="icon">SEPTEMBER 19, 2022</span>
-                        <a href="" class="pb-4 block  text-[22px] text-title font-semibold ">The Bottom Line on Dietary Supplements</a>
-                        <p class="leading-6 text-black-lite ">One may not need charts and graphs at this point to know that in the past couple of years expecially, the buying and selling on....</p>
-                     </div>
-                     <div class="flex justify-between items-center pb-8 px-6 pt-6  ">
-                        <div class="flex items-center gap-3">
-                           <img class="h-10 w-10" src="./images/blog_images/blogone.png" alt="blog image">
-                           <div>
-                              <h5 class="font-semibold text-title " >John Singleton</h5>
-                              <p class="text-xs text-black-lite ">Nutritionist</p>
-                           </div>
-                        </div>
-                        <a class="text-[17px] text-green-lite font-semibold " href="">Read More <img class="inline-block" src="./images/icons/Send.png" alt="send icon"></a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  <div class="rounded-xl shadow-icon">
-                     <div>
-                        <img class="w-full" src="./images/home/blog2.jpg" alt="blog image">
-                     </div>
-                     <div class="px-6 pt-6  bg-white  ">
-                        <span class="flex text-title text-sm mb-4"><img class="pr-1" src="./images/icons/Icon.svg" alt="Icon">SEPTEMBER 19, 2022</span>
-                       <a href="" class="pb-4 block text-[22px] text-title font-semibold ">The Bottom Line on Dietary Supplements</a>
-                        <p class="leading-6 text-black-lite">One may not need charts and graphs at this point to know that in the past couple of years expecially, the buying and selling on....</p>
-                     </div>
-                     <div class="flex justify-between items-center pb-8 px-6 pt-6  ">
-                        <div class="flex items-center gap-3">
-                           <img class="h-10 w-10" src="./images/blog_images/blogone.png" alt="blog image">
-                           <div>
-                              <h5 class="font-semibold text-title " >John Singleton</h5>
-                              <p class="text-xs text-black-lite ">Nutritionist</p>
-                           </div>
-                        </div>
-                        <a class="text-[17px] text-green-lite font-semibold " href="">Read More <img class="inline-block" src="./images/icons/Send.png" alt="Icon"></a>
-                     </div>
-                  </div>
+            </div>
+            <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
+               <div>
+                  <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
+                  <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
+                  <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
+                  <p class="leading-[30px] pt-10 text-white  ">1616 Broadway NY, New York 10001 <br>
+                     United States of America
+                  </p>
+                  <a class="text-white block text-[26px] font-medium pt-[25px]" href="tel:8551004444"><i
+                        class="fa-solid transform -rotate-45 mr-2 fa-phone-volume"></i>8551004444</a>
+                  <a class="text-white block pt-[25px]" href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
+                  <img src="./images/icons/yelloline.png" alt="">
+                  <ul class="pt-[22px] flex gap-7">
+                     <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li>
+                     <li class=""><a href=""><i class="fa-brands text-white fa-twitter"></i></a></li>
+                     <li class=""><a href=""><i class="fa-brands text-white fa-instagram"></i></a></li>
+                     <li class=""><a href=""><i class="fa-brands text-white fa-youtube"></i></a></li>
+                     <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
+                  </ul>
                </div>
             </div>
          </div>
-      </section>
-      <!-- 08. Client Testimonial section end -->
-      <!-- 09. Footer Section Start -->
-      <footer class="lg:bg-footer bg-no-repeat pt-8 md:pt-[80px] lg:pt-[320px] bg-[#0D2F3F] lg:bg-transparent after:bg-[#2E875C] after:left-0 after:top-[320px] after:w-full  after:absolute after:z-[-1] bg-cover relative bg-top ">
-        <img class="absolute left-0 bottom-20 z-[-1]" src="./images/icons/treeshape.png" alt="tree shape">
-         <div class="container">
-            <div class="grid grid-cols-12 pb-[60px] gap-[30px]  ">
-               <div class="col-span-12 lg:col-span-6 ">
-                  <div>
-                     <h4 class="text-[30px] font-semibold text-white ">About Hotel</h4>
-                     <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
-                     <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
-                     <p class="leading-[30px] pt-10 text-white md:w-2/3 ">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
-                     <a class="text-white block pt-[25px]" href=""><i class="fa-solid text-yello mr-2  fa-map"></i> Check on google map</a>
-                  </div>
-               </div>
-               <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
-                  <div>
-                     <h4 class="text-[30px] font-semibold text-white ">Explore</h4>
-                     <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
-                     <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
-                     <ul class="mt-10 space-y-4 ">
-                        <li><a class="text-white font-semibold" href="">Home</a></li>
-                        <li><a class="text-white font-semibold" href="">Rooms & Suites</a></li>
-                        <li><a class="text-white font-semibold" href="">Restaurant</a></li>
-                        <li><a class="text-white font-semibold" href="">Spa & Wellness</a></li>
-                        <li><a class="text-white font-semibold" href="">About Hotel</a></li>
-                        <li><a class="text-white font-semibold" href="">Contact</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-span-12 md:col-span-6 lg:col-span-3 ">
-                  <div>
-                     <h4 class="text-[30px] font-semibold text-white ">Contact</h4>
-                     <span class="w-[60px] h-[2px] bg-yello block mt-[6px] "></span>
-                     <span class="w-[35px] h-[2px] bg-yello block mt-[6px]"></span>
-                     <p class="leading-[30px] pt-10 text-white  ">1616 Broadway NY, New York 10001 <br>
-                        United States of America
-                     </p>
-                     <a class="text-white block text-[26px] font-medium pt-[25px]" href="tel:8551004444"><i class="fa-solid transform -rotate-45 mr-2 fa-phone-volume"></i>8551004444</a>
-                     <a class="text-white block pt-[25px]" href="mailto:info@hoteladmin.com">info@hoteladmin.com</a>
-                     <img src="./images/icons/yelloline.png" alt="">
-                     <ul class="pt-[22px] flex gap-7">
-                        <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li>
-                        <li class=""><a href=""><i class="fa-brands text-white fa-twitter"></i></a></li>
-                        <li class=""><a href=""><i class="fa-brands text-white fa-instagram"></i></a></li>
-                        <li class=""><a href=""><i class="fa-brands text-white fa-youtube"></i></a></li>
-                        <!-- <li class=""><a href=""><i class="fa-brands text-white fa-facebook-f"></i></a></li> -->
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <hr class="text-white">
-            <p class="py-[30px] text-center text-white ">© 2022 Portfolio @ All Rights Reserved</p>
-         </div>
-      </footer>
-      <!-- 09. Footer Section End -->
-      <!-- jquary link -->
-      <script src="./js/vendor/jquary.min.js"></script>
-      <!-- select2 js link -->
-      <script src="./js/vendor/select2.min.js"></script>
-      <!-- swiper js link -->
-      <script src="./js/vendor/swiper.min.js"></script>
-      <!-- date picker -->
-      <script src="./js/vendor/datepicker.js"></script>
-      <!-- video modal js link -->
-      <script src="./js/vendor/jquery-modal-video.min.js"></script>
+         <hr class="text-white">
+         <p class="py-[30px] text-center text-white ">© 2022 Portfolio @ All Rights Reserved</p>
+      </div>
+   </footer>
+   <!-- 09. Footer Section End -->
+   <!-- jquary link -->
+   <script src="./js/vendor/jquary.min.js"></script>
+   <!-- select2 js link -->
+   <script src="./js/vendor/select2.min.js"></script>
+   <!-- swiper js link -->
+   <script src="./js/vendor/swiper.min.js"></script>
+   <!-- date picker -->
+   <script src="./js/vendor/datepicker.js"></script>
+   <!-- video modal js link -->
+   <script src="./js/vendor/jquery-modal-video.min.js"></script>
 
-      <!-- date picker -->
-      <script src="./js/vendor/moment.min.js"></script>
-      <script src="./js/vendor/daterangepicker.js"></script>      <!-- main js link -->
-      <script src="./js/main.js"></script>
-      <script>
-         $(".js-modal").modalVideo();
-      </script>
-   </body>
+   <!-- date picker -->
+   <script src="./js/vendor/moment.min.js"></script>
+   <script src="./js/vendor/daterangepicker.js"></script> <!-- main js link -->
+   <script src="./js/main.js"></script>
+</body>
+
 </html>

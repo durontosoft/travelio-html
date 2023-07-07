@@ -754,4 +754,24 @@ span.clockpicker-span-hours.text-primary, span.clockpicker-span-minutes.text-pri
     background: #999;
 }
 
+/* Currency select */
+.currency-select-wrapper ul.show {
+    margin-top: 10px;
+    visibility: visible;
+    opacity: 1;
+}
 
+/* Lang select */
+.lang-select-wrapper .lang-select-box.show {
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.lang-select-items a.selected {
+    background-color: rgba(31,127,123,.05);
+}
+
+.lang-select-items a.selected .lang-select-checked {
+    opacity: 1;
+}
